@@ -25,37 +25,37 @@ import com.google.gwt.resources.client.TextResource;
 
 import javax.annotation.Generated;
 
-@Generated(value = "MapLayerClientBundleGenerator", date = "2018-02-07T03:32:47Z")
+@Generated(value = "MapLayerClientBundleGenerator", date = "2018-02-07T06:40:07Z")
 public interface MapLayerClientBundle extends ClientBundle {
 
     MapLayerClientBundle INSTANCE = GWT.create(MapLayerClientBundle.class);
 
 
-    @Source("maps/js/canadaLow.js")
+    @Source("layers/canadaLow.js") 
     TextResource canadaLowJs();
 
 
-    @Source("maps/js/franceLow.js")
+    @Source("layers/franceLow.js") 
     TextResource franceLowJs();
 
 
-    @Source("maps/js/philippinesLow.js")
+    @Source("layers/philippinesLow.js") 
     TextResource philippinesLowJs();
 
 
-    @Source("maps/js/usa2Low.js")
+    @Source("layers/usa2Low.js") 
     TextResource usa2LowJs();
 
 
-    @Source("maps/js/usaLow.js")
+    @Source("layers/usaLow.js") 
     TextResource usaLowJs();
 
 
-    @Source("maps/js/usaTerritoriesLow.js")
+    @Source("layers/usaTerritoriesLow.js") 
     TextResource usaTerritoriesLowJs();
 
 
-    @Source("maps/js/worldLow.js")
+    @Source("layers/worldLow.js") 
     TextResource worldLowJs();
 
 

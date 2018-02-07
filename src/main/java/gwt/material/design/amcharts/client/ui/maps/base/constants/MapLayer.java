@@ -23,10 +23,10 @@ import gwt.material.design.amcharts.client.ui.maps.resources.MapLayerClientBundl
 
 import javax.annotation.Generated;
 
-@Generated(value = "MapLayerGenerator", date = "2018-02-07T03:32:47Z")
+@Generated(value = "MapLayerGenerator", date = "2018-02-07T06:40:07Z")
 public enum MapLayer {
 
-
+    
     CANADA_LOW("canadaLow", MapLayerClientBundle.INSTANCE.canadaLowJs().getText()),
 
     FRANCE_LOW("franceLow", MapLayerClientBundle.INSTANCE.franceLowJs().getText()),

@@ -105,7 +105,7 @@ public class MapLayerGenerator {
 
                 String fileName = listOfFiles[i].getName();
 
-                builder.append("\n    ").append("@Source(\"maps/js/" + fileName + "\") " +
+                builder.append("\n    ").append("@Source(\"layers/" + fileName + "\") " +
                         "\n    TextResource " + fileName.replace(".js", "Js") + "();\n\n");
             }
         }

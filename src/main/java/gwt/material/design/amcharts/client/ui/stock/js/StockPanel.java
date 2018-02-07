@@ -29,6 +29,7 @@ import jsinterop.annotations.*;
 
 import java.util.Date;
 
+// TODO Clean this up
 /**
  * AreasSettings is a class which defines the default settings for all MapArea objects.
  *
@@ -41,16 +42,22 @@ public class StockPanel {
 
     @JsProperty
     public double percentHeight;
+
     @JsProperty
     private boolean allowTurningOff;
+
     @JsProperty
     private boolean drawingIconsEnabled;
+
     @JsProperty
     private AmValueAxis drawOnAxis;
+
     @JsProperty
     private boolean eraseAll;
+
     @JsProperty
     private int iconSize;
+
     @JsProperty
     private Date recalculateFromDate;
 
