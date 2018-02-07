@@ -128,7 +128,7 @@
                 <version>${tbroyer.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <moduleName>gwt.material.design.amcharts.GwtMaterialAmChart</moduleName>
+                    <moduleName>gwt.material.design.amcharts.GwtMaterialAmCharts</moduleName>
                     <style>OBFUSCATED</style>
                     <logLevel>INFO</logLevel>
                     <sourceLevel>1.8</sourceLevel>
