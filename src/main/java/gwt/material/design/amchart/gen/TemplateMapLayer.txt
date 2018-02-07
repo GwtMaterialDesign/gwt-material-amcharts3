@@ -1,0 +1,26 @@
+package gwt.material.design.amchart.client.ui.maps.base.constants;
+
+import gwt.material.design.amchart.client.ui.maps.resources.MapLayerClientBundle;
+import javax.annotation.Generated;
+
+@Generated(value = "MapLayerGenerator", date = "${generationDate}")
+public enum  MapLayer {
+
+    ${mapLayers}
+
+    String name;
+    String jsResource;
+
+    MapLayer(String name, String jsResource) {
+        this.name = name;
+        this.jsResource = jsResource;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getJsResource() {
+        return jsResource;
+    }
+}
