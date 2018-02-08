@@ -23,17 +23,9 @@ import com.google.gwt.event.shared.HandlerRegistration;
 
 public interface HasStockChartHandlers {
 
-    HandlerRegistration addBuildStartedHandler(BuildStartedEvent.BuildStartedHandler handler);
-
     HandlerRegistration addClickStockHandler(ClickStockEvent.ClickStockHandler handler);
 
-    HandlerRegistration addDataUpdatedHander(DataUpdatedEvent.DataUpdateddHandler handler);
-
-    HandlerRegistration addInitHandler(InitEvent.InitHandler handler);
-
     HandlerRegistration addPanelRemovedHandler(PanelRemovedEvent.PanelRemovedHandler handler);
-
-    HandlerRegistration addRenderedHandler(RenderedEvent.RenderedHandler handler);
 
     HandlerRegistration addRollOutStockHandler(RollOutStockEvent.RollOutStockHandler handler);
 

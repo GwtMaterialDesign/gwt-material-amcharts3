@@ -21,12 +21,8 @@ package gwt.material.design.amcharts.client.ui.stock.events;
 
 public interface StockChartEvents {
 
-    String BUILD_STARTED = "buildStarted";
     String CLICK_STOCK_EVENT = "clickStockEvent";
-    String DATA_UPDATED = "dataUpdated";
-    String INIT = "init";
     String PANEL_REMOVED = "panelRemoved";
-    String RENDERED = "rendered";
     String ROLL_OUT_STOCK_EVENT = "rollOutStockEvent";
     String ROLL_OVER_STOCK_EVENT = "rollOverStockEvent";
     String ZOOMED = "zoomed";

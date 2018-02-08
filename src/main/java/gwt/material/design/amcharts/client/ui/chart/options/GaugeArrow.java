@@ -59,6 +59,7 @@ public class GaugeArrow extends ChartOptions {
      */
     public void setAxis(GaugeAxis axis) {
         getAmGaugeArrow().axis = axis.getAmGaugeAxis();
+        axis.load();
     }
 
     public int getBorderAlpha() {

@@ -181,6 +181,7 @@ public abstract class CoordinateChart extends AbstractChart implements HasCoordi
     public void setValueAxes(ValueAxis... valueAxes) {
         for (int i = 0; i < valueAxes.length; i++) {
             getChart().valueAxes[i] = valueAxes[i].getAmValueAxis();
+            valueAxes[i].load();
         }
     }
 
@@ -197,6 +198,7 @@ public abstract class CoordinateChart extends AbstractChart implements HasCoordi
      */
     public void addValueAxis(ValueAxis valueAxis) {
         getChart().addValueAxis(valueAxis.getAmValueAxis());
+        valueAxis.load();
     }
 
     /**
@@ -254,6 +256,7 @@ public abstract class CoordinateChart extends AbstractChart implements HasCoordi
      */
     public void removeValueAxis(ValueAxis valueAxis) {
         getChart().removeValueAxis(valueAxis.getAmValueAxis());
+        valueAxis.unload();
     }
 
     /**

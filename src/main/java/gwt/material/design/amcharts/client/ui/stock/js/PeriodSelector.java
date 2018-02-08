@@ -23,7 +23,6 @@ package gwt.material.design.amcharts.client.ui.stock.js;
 
 import gwt.material.design.amcharts.client.ui.chart.base.constants.Position;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -34,7 +33,7 @@ import jsinterop.annotations.JsType;
  * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/PeriodSelector">Official Documentation</a>
  */
 //@formatter:on
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "AmCharts")
 public class PeriodSelector {
 
     @JsProperty
@@ -154,7 +153,7 @@ public class PeriodSelector {
      * You can add listeners of events using this property. Example: listeners = [{"event":"changed", "method":handleEvent}];
      */
     @JsOverlay
-    public final void setListeners(Object[] listeners) {
+    public final void setListeners(Object... listeners) {
         this.listeners = listeners;
     }
 
@@ -171,7 +170,7 @@ public class PeriodSelector {
      * Example: {period:"DD", count:10, label:"10 days", selected:false}.
      */
     @JsOverlay
-    public final void setPeriods(Object[] periods) {
+    public final void setPeriods(Period... periods) {
         this.periods = periods;
     }
 

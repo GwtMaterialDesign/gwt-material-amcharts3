@@ -50,18 +50,8 @@ public class ZoomedData {
     }
 
     @JsOverlay
-    public final void setType(String type) {
-        this.type = type;
-    }
-
-    @JsOverlay
     public final JsDate getStartDate() {
         return startDate;
-    }
-
-    @JsOverlay
-    public final void setStartDate(JsDate startDate) {
-        this.startDate = startDate;
     }
 
     @JsOverlay
@@ -70,27 +60,12 @@ public class ZoomedData {
     }
 
     @JsOverlay
-    public final void setEndDate(JsDate endDate) {
-        this.endDate = endDate;
-    }
-
-    @JsOverlay
     public final double getPeriod() {
         return period;
     }
 
     @JsOverlay
-    public final void setPeriod(double period) {
-        this.period = period;
-    }
-
-    @JsOverlay
     public final AmStockChart getChart() {
         return chart;
-    }
-
-    @JsOverlay
-    public final void setChart(AmStockChart chart) {
-        this.chart = chart;
     }
 }

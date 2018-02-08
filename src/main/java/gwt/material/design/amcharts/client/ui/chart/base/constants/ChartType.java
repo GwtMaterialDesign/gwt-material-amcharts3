@@ -21,6 +21,10 @@ package gwt.material.design.amcharts.client.ui.chart.base.constants;
 
 import gwt.material.design.amcharts.client.ui.chart.resources.ChartTypeClientBundle;
 import gwt.material.design.amcharts.client.ui.chart.resources.ChartTypeClientDebugBundle;
+import gwt.material.design.amcharts.client.ui.maps.resources.MapClientBundle;
+import gwt.material.design.amcharts.client.ui.maps.resources.MapClientDebugBundle;
+import gwt.material.design.amcharts.client.ui.stock.resources.StockChartClientBundle;
+import gwt.material.design.amcharts.client.ui.stock.resources.StockChartClientDebugBundle;
 import gwt.material.design.client.base.helper.EnumHelper;
 import gwt.material.design.client.constants.CssType;
 
@@ -63,11 +67,32 @@ public enum ChartType implements CssType {
             ChartTypeClientBundle.INSTANCE.ganttJs().getText(),
             ChartTypeClientDebugBundle.INSTANCE.ganttDebugJs().getText()),
 
-    MAP("map", null, null);
+    MAP("map",
+            MapClientBundle.INSTANCE.amMapJs().getText(),
+            MapClientDebugBundle.INSTANCE.amMapDebugJs().getText(),
+            MapClientBundle.INSTANCE.ammapCss().getText(),
+            MapClientDebugBundle.INSTANCE.ammapDebugCss().getText()),
+
+
+    STOCK("stock",
+            StockChartClientBundle.INSTANCE.stockChartJs().getText(),
+            StockChartClientDebugBundle.INSTANCE.stockChartDebugJs().getText(),
+            StockChartClientBundle.INSTANCE.stockChartCss().getText(),
+            StockChartClientDebugBundle.INSTANCE.stockChartDebugCss().getText());
 
     private String name;
     private String jsResource;
     private String jsDebugResource;
+    private String cssResource;
+    private String cssDebugResource;
+
+    ChartType(String name, String jsResource, String jsDebugResource, String cssResource, String cssDebugResource) {
+        this.name = name;
+        this.jsResource = jsResource;
+        this.jsDebugResource = jsDebugResource;
+        this.cssResource = cssResource;
+        this.cssDebugResource = cssDebugResource;
+    }
 
     ChartType(String name, String jsResource, String jsDebugResource) {
         this.name = name;
@@ -94,5 +119,13 @@ public enum ChartType implements CssType {
 
     public String getJsDebugResource() {
         return jsDebugResource;
+    }
+
+    public String getCssResource() {
+        return cssResource;
+    }
+
+    public String getCssDebugResource() {
+        return cssDebugResource;
     }
 }

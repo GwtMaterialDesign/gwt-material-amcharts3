@@ -26,20 +26,19 @@ import gwt.material.design.amcharts.client.ui.stock.constants.RecalculateToPerce
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
  * PanelsSettings settings set's settings for all StockPanels. If you change a property after the chart is initialized,
  * you should call stockChart.validateNow() method in order for it to work. If there is no default value specified,
- * default value of StockPanel class will be used.
+ * default value of AmStockPanel class will be used.
  *
  * @author kevzlou7979@gmail.com
  * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/PanelsSettings">Official Documentation</a>
  */
 //@formatter:on
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "AmCharts")
 public class PanelsSettings {
 
     @JsProperty

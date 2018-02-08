@@ -19,13 +19,12 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.js.options;
 
+import com.google.gwt.core.client.JsDate;
 import gwt.material.design.jquery.client.api.Functions;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 //@formatter:off
 
@@ -91,14 +90,14 @@ public class AmCategoryAxis extends AmAxisBase {
      * Returns Date of the coordinate, in case parseDates is set to true and equalSpacing is set to false.
      */
     @JsMethod
-    public native Date coordinateToDate(int coordinate);
+    public native JsDate coordinateToDate(int coordinate);
 
     /**
      * Returns coordinate of the date, in case parseDates is set to true. if parseDates is false, use
      * categoryToCoordinate method.
      */
     @JsMethod
-    public native int dateToCoordinate(Date date);
+    public native int dateToCoordinate(JsDate date);
 
     /**
      * Returns index of the category which is most close to specified coordinate.

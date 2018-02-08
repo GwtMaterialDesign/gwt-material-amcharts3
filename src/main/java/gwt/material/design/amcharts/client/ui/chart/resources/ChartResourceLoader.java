@@ -30,8 +30,16 @@ public class ChartResourceLoader extends ResourceLoader {
     public static void loadChartTypeResource(ChartType type) {
         if (GwtMaterialAmChart.isDebug()) {
             injectDebugJs(type.getName(), type.getJsResource());
+
+            if (type.getCssDebugResource() != null) {
+                injectCss(type.getCssDebugResource());
+            }
         } else {
             injectJs(type.getName(), type.getJsResource());
+
+            if (type.getCssResource() != null) {
+                injectCss(type.getCssResource());
+            }
         }
     }
 

@@ -19,15 +19,11 @@
  */
 package gwt.material.design.amcharts.client.ui.maps;
 
-import gwt.material.design.amcharts.client.ui.GwtMaterialAmChart;
 import gwt.material.design.amcharts.client.ui.chart.base.AbstractChart;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.ChartType;
 import gwt.material.design.amcharts.client.ui.maps.base.constants.Projection;
 import gwt.material.design.amcharts.client.ui.maps.js.AmMap;
 import gwt.material.design.amcharts.client.ui.maps.js.options.*;
-import gwt.material.design.amcharts.client.ui.maps.resources.MapClientBundle;
-import gwt.material.design.amcharts.client.ui.maps.resources.MapClientDebugBundle;
-import gwt.material.design.client.MaterialDesign;
 import gwt.material.design.jquery.client.api.Functions;
 
 /**
@@ -39,16 +35,6 @@ import gwt.material.design.jquery.client.api.Functions;
  */
 //@formatter:on
 public class Map extends AbstractChart {
-
-    static {
-        if (GwtMaterialAmChart.isDebug()) {
-            MaterialDesign.injectDebugJs(MapClientDebugBundle.INSTANCE.amMapDebugJs());
-            MaterialDesign.injectCss(MapClientDebugBundle.INSTANCE.ammapDebugCss());
-        } else {
-            MaterialDesign.injectJs(MapClientBundle.INSTANCE.amMapJs());
-            MaterialDesign.injectCss(MapClientBundle.INSTANCE.ammapCss());
-        }
-    }
 
     private AmMap amMap;
 

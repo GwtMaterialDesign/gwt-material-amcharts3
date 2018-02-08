@@ -24,10 +24,10 @@ package gwt.material.design.amcharts.client.ui.stock.js;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.ChartScrollbarPosition;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.GraphType;
 import gwt.material.design.amcharts.client.ui.chart.js.AmGraph;
+import gwt.material.design.amcharts.client.ui.chart.options.Graph;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -40,7 +40,7 @@ import jsinterop.annotations.JsType;
  * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/ChartScrollbarSettings">Official Documentation</a>
  */
 //@formatter:on
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "AmCharts")
 public class ChartScrollbarSettings {
 
     @JsProperty
@@ -261,8 +261,8 @@ public class ChartScrollbarSettings {
      * Specifies which graph will be displayed in the scrollbar.
      */
     @JsOverlay
-    public final void setGraph(AmGraph graph) {
-        this.graph = graph;
+    public final void setGraph(Graph graph) {
+        this.graph = graph.getAmGraph();
     }
 
     @JsOverlay

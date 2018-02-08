@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.ui.stock.events.object;
 
 import gwt.material.design.amcharts.client.ui.stock.js.AmStockChart;
-import gwt.material.design.amcharts.client.ui.stock.js.StockPanel;
+import gwt.material.design.amcharts.client.ui.stock.js.AmStockPanel;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +33,7 @@ public class PanelRemovedData {
     private String type;
 
     @JsProperty
-    private StockPanel panel;
+    private AmStockPanel panel;
 
     @JsProperty
     private AmStockChart chart;
@@ -44,27 +44,12 @@ public class PanelRemovedData {
     }
 
     @JsOverlay
-    public final void setType(String type) {
-        this.type = type;
-    }
-
-    @JsOverlay
-    public final StockPanel getPanel() {
+    public final AmStockPanel getPanel() {
         return panel;
-    }
-
-    @JsOverlay
-    public final void setPanel(StockPanel panel) {
-        this.panel = panel;
     }
 
     @JsOverlay
     public final AmStockChart getChart() {
         return chart;
-    }
-
-    @JsOverlay
-    public final void setChart(AmStockChart chart) {
-        this.chart = chart;
     }
 }

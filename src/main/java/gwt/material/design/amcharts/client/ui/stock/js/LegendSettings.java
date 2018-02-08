@@ -26,20 +26,19 @@ import gwt.material.design.amcharts.client.ui.stock.constants.MarkerType;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
  * Common settings of legends. If you change a property after the chart is initialized, you should call
  * stockChart.validateNow() method in order for it to work. If there is no default value specified, default value of
- * StockLegend class will be used.
+ * AmStockLegend class will be used.
  *
  * @author kevzlou7979@gmail.com
  * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/LegendSettings">Official Documentation</a>
  */
 //@formatter:on
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "AmCharts")
 public class LegendSettings {
 
     @JsProperty

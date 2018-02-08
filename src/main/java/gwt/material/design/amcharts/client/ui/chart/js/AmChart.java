@@ -442,7 +442,7 @@ public class AmChart {
     /**
      * Adds a legend to the chart. By default, you don't need to create div for your legend, however if you want it to
      * be positioned in some different way, you can create div anywhere you want and pass id or reference to your div
-     * as a second parameter. (NOTE: This method will not work on StockPanel.)
+     * as a second parameter. (NOTE: This method will not work on AmStockPanel.)
      *
      * @param legend          {@link AmLegend}
      * @param targetElementId id or reference to legend div

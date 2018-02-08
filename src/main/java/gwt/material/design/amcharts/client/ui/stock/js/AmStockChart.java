@@ -23,6 +23,7 @@ package gwt.material.design.amcharts.client.ui.stock.js;
 
 import com.google.gwt.core.client.JsDate;
 import gwt.material.design.amcharts.client.ui.chart.js.AmBalloon;
+import gwt.material.design.amcharts.client.ui.chart.js.AmChart;
 import gwt.material.design.amcharts.client.ui.chart.js.AmSerialChart;
 import gwt.material.design.amcharts.client.ui.chart.plugins.export.js.AmExportOption;
 import gwt.material.design.jquery.client.api.Functions;
@@ -40,7 +41,7 @@ import java.util.Date;
  */
 //@formatter:on
 @JsType(isNative = true, namespace = "AmCharts")
-public class AmStockChart {
+public class AmStockChart extends AmChart {
 
     @JsProperty
     public boolean addClassNames;
@@ -118,7 +119,7 @@ public class AmStockChart {
     public boolean mouseWheelScrollEnabled;
 
     @JsProperty
-    public StockPanel[] panels;
+    public AmStockPanel[] panels;
 
     @JsProperty
     public PanelsSettings panelsSettings;
@@ -160,10 +161,10 @@ public class AmStockChart {
     public native void addListener(String type, Functions.Func handler);
 
     @JsMethod
-    public native void addPanel(StockPanel panel);
+    public native void addPanel(AmStockPanel panel);
 
     @JsMethod
-    public native void addPanelAt(StockPanel panel, int index);
+    public native void addPanelAt(AmStockPanel panel, int index);
 
     @JsMethod
     public native void clear();
@@ -175,7 +176,7 @@ public class AmStockChart {
     public native void removeListener(Object obj, String type, Functions.Func handler);
 
     @JsMethod
-    public native void removePanel(StockPanel panel);
+    public native void removePanel(AmStockPanel panel);
 
     @JsMethod
     public native void showStockEvents();
@@ -194,4 +195,7 @@ public class AmStockChart {
 
     @JsMethod
     public native void zoomOut();
+
+    @JsMethod
+    public native void write(String elementId);
 }

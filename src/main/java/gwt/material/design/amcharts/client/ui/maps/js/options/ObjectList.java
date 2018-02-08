@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client.ui.maps.js.options;
 
 import gwt.material.design.amcharts.client.ui.maps.js.AmMap;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,4 +42,14 @@ public class ObjectList {
      */
     @JsProperty
     public String container;
+
+    @JsOverlay
+    public final String getContainer() {
+        return container;
+    }
+
+    @JsOverlay
+    public final void setContainer(String container) {
+        this.container = container;
+    }
 }

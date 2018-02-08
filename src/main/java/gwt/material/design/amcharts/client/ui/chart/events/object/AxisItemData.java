@@ -33,16 +33,16 @@ import jsinterop.annotations.JsType;
 public class AxisItemData {
 
     @JsProperty
-    public AmAxisBase axisBase;
+    private AmAxisBase axisBase;
 
     @JsProperty
-    public Label target;
+    private Label target;
 
     @JsProperty
-    public AmRectangularChart chart;
+    private AmRectangularChart chart;
 
     @JsProperty
-    public MouseEvent event;
+    private MouseEvent event;
 
     @JsProperty
     private String type;

@@ -20,74 +20,79 @@
 package gwt.material.design.amcharts.client.ui.stock;
 
 import com.google.gwt.core.client.JsDate;
-import com.google.gwt.dom.client.Document;
 import com.google.gwt.event.shared.HandlerRegistration;
 import gwt.material.design.amcharts.client.ui.GwtMaterialAmChart;
+import gwt.material.design.amcharts.client.ui.chart.base.AbstractChart;
+import gwt.material.design.amcharts.client.ui.chart.base.constants.ChartType;
+import gwt.material.design.amcharts.client.ui.chart.events.core.BuildStartedEvent;
 import gwt.material.design.amcharts.client.ui.chart.js.AmBalloon;
+import gwt.material.design.amcharts.client.ui.chart.js.AmChart;
 import gwt.material.design.amcharts.client.ui.chart.js.AmSerialChart;
 import gwt.material.design.amcharts.client.ui.chart.options.Balloon;
 import gwt.material.design.amcharts.client.ui.chart.plugins.export.ExportOption;
 import gwt.material.design.amcharts.client.ui.chart.plugins.export.js.AmExportOption;
+import gwt.material.design.amcharts.client.ui.chart.resources.ChartClientBundle;
+import gwt.material.design.amcharts.client.ui.chart.resources.ChartClientDebugBundle;
+import gwt.material.design.amcharts.client.ui.chart.resources.ChartTypeClientBundle;
+import gwt.material.design.amcharts.client.ui.chart.resources.ChartTypeClientDebugBundle;
 import gwt.material.design.amcharts.client.ui.stock.constants.DayOfWeek;
 import gwt.material.design.amcharts.client.ui.stock.events.*;
+import gwt.material.design.amcharts.client.ui.stock.events.object.PanelRemovedData;
+import gwt.material.design.amcharts.client.ui.stock.events.object.StockDateData;
+import gwt.material.design.amcharts.client.ui.stock.events.object.ZoomedData;
 import gwt.material.design.amcharts.client.ui.stock.js.*;
-import gwt.material.design.amcharts.client.ui.stock.resources.StockChartClientBundle;
-import gwt.material.design.amcharts.client.ui.stock.resources.StockChartClientDebugBundle;
 import gwt.material.design.client.MaterialDesign;
-import gwt.material.design.client.base.JsLoader;
-import gwt.material.design.client.base.MaterialWidget;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 import gwt.material.design.jquery.client.api.Functions;
 
 import java.util.Date;
 
-public class StockChart extends MaterialWidget implements JsLoader, HasStockChartHandlers {
+public class StockChart extends AbstractChart implements HasStockChartHandlers {
 
     static {
         if (GwtMaterialAmChart.isDebug()) {
-            MaterialDesign.injectDebugJs(StockChartClientDebugBundle.INSTANCE.stockChartDebugJs());
-            MaterialDesign.injectCss(StockChartClientDebugBundle.INSTANCE.stockChartDebugCss());
+            MaterialDesign.injectDebugJs(ChartClientDebugBundle.INSTANCE.amChartDebugJs());
+            MaterialDesign.injectDebugJs(ChartTypeClientDebugBundle.INSTANCE.serialDebugJs());
         } else {
-            MaterialDesign.injectJs(StockChartClientBundle.INSTANCE.stockChartJs());
-            MaterialDesign.injectCss(StockChartClientBundle.INSTANCE.stockChartCss());
+            MaterialDesign.injectJs(ChartClientBundle.INSTANCE.amChartJs());
+            MaterialDesign.injectJs(ChartTypeClientBundle.INSTANCE.serialJs());
         }
     }
 
     private AmStockChart amStockChart;
+    private Functions.Func1<Object> clickStockEvent, panelRemovedEvent, rollOutStockEvent, rollOverStockEvent, zoomedEvent;
 
     public StockChart() {
-        super(Document.get().createDivElement());
+        super(ChartType.STOCK);
     }
 
     @Override
-    protected void onLoad() {
-        super.onLoad();
+    protected void loadEvents() {
+        super.loadEvents();
 
-        load();
-    }
+        clickStockEvent = object -> ClickStockEvent.fire(this, (StockDateData) object);
+        panelRemovedEvent = object -> PanelRemovedEvent.fire(this, (PanelRemovedData) object);
+        rollOutStockEvent = object -> RollOutStockEvent.fire(this, (StockDateData) object);
+        rollOverStockEvent = object -> RollOverStockEvent.fire(this, (StockDateData) object);
+        zoomedEvent = object -> ZoomedEvent.fire(this, (ZoomedData) object);
 
-    @Override
-    public void load() {
-
-    }
-
-    @Override
-    protected void onUnload() {
-        super.onUnload();
-
-        unload();
+        addListener(StockChartEvents.CLICK_STOCK_EVENT, clickStockEvent);
+        addListener(StockChartEvents.PANEL_REMOVED, panelRemovedEvent);
+        addListener(StockChartEvents.ROLL_OUT_STOCK_EVENT, rollOutStockEvent);
+        addListener(StockChartEvents.ROLL_OVER_STOCK_EVENT, rollOverStockEvent);
+        addListener(StockChartEvents.ZOOMED, zoomedEvent);
     }
 
     @Override
     public void unload() {
+        super.unload();
 
-    }
-
-    @Override
-    public void reload() {
-        unload();
-        load();
+        removeListener(getChart(), StockChartEvents.CLICK_STOCK_EVENT, clickStockEvent);
+        removeListener(getChart(), StockChartEvents.PANEL_REMOVED, panelRemovedEvent);
+        removeListener(getChart(), StockChartEvents.ROLL_OUT_STOCK_EVENT, rollOutStockEvent);
+        removeListener(getChart(), StockChartEvents.ROLL_OVER_STOCK_EVENT, rollOverStockEvent);
+        removeListener(getChart(), StockChartEvents.ZOOMED, zoomedEvent);
     }
 
     public boolean isAddClassNames() {
@@ -359,7 +364,7 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
     /**
      * You can add listeners of events using this property. Example: listeners = [{"event":"dataUpdated", "method":handleEvent}];
      */
-    public void setListeners(Object[] listeners) {
+    public void setListeners(Object... listeners) {
         getAmStockChart().listeners = listeners;
     }
 
@@ -385,15 +390,17 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
         getAmStockChart().mouseWheelScrollEnabled = mouseWheelScrollEnabled;
     }
 
-    public StockPanel[] getPanels() {
+    public AmStockPanel[] getPanels() {
         return getAmStockChart().panels;
     }
 
     /**
      * Array of StockPanels (charts).
      */
-    public void setPanels(StockPanel[] panels) {
-        getAmStockChart().panels = panels;
+    public void setPanels(StockPanel... panels) {
+        for (int i = 0; i < panels.length; i++) {
+            getAmStockChart().panels[i] = panels[i].getChart();
+        }
     }
 
     public PanelsSettings getPanelsSettings() {
@@ -506,17 +513,6 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
         getAmStockChart().stockEventsSettings = stockEventsSettings;
     }
 
-    public String getType() {
-        return getAmStockChart().type;
-    }
-
-    /**
-     * Read-only. Type of the chart.
-     */
-    public void setType(String type) {
-        getAmStockChart().type = type;
-    }
-
     public ValueAxesSettings getValueAxesSettings() {
         return getAmStockChart().valueAxesSettings;
     }
@@ -561,14 +557,14 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
      * Adds panel to the stock chart. Requires stockChart.validateNow() method to be called after this action.
      */
     public void addPanel(StockPanel panel) {
-        getAmStockChart().addPanel(panel);
+        getAmStockChart().addPanel(panel.getChart());
     }
 
     /**
      * Adds panel to the stock chart at a specified index. Requires stockChart.validateNow() method to be called after this action.
      */
     public void addPanelAt(StockPanel panel, int index) {
-        getAmStockChart().addPanelAt(panel, index);
+        getAmStockChart().addPanelAt(panel.getChart(), index);
     }
 
     /**
@@ -596,7 +592,7 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
      * Removes panel from the stock chart. Requires stockChart.validateNow() method to be called after this action.
      */
     public void removePanel(StockPanel panel) {
-        getAmStockChart().removePanel(panel);
+        getAmStockChart().removePanel(panel.getChart());
     }
 
     /**
@@ -639,6 +635,12 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
         getAmStockChart().zoomOut();
     }
 
+
+    @Override
+    public AmChart getChart() {
+        return getAmStockChart();
+    }
+
     public AmStockChart getAmStockChart() {
         if (amStockChart == null) {
             amStockChart = new AmStockChart();
@@ -657,23 +659,8 @@ public class StockChart extends MaterialWidget implements JsLoader, HasStockChar
     }
 
     @Override
-    public HandlerRegistration addDataUpdatedHander(DataUpdatedEvent.DataUpdateddHandler handler) {
-        return addHandler(handler, DataUpdatedEvent.getType());
-    }
-
-    @Override
-    public HandlerRegistration addInitHandler(InitEvent.InitHandler handler) {
-        return addHandler(handler, InitEvent.getType());
-    }
-
-    @Override
     public HandlerRegistration addPanelRemovedHandler(PanelRemovedEvent.PanelRemovedHandler handler) {
         return addHandler(handler, PanelRemovedEvent.getType());
-    }
-
-    @Override
-    public HandlerRegistration addRenderedHandler(RenderedEvent.RenderedHandler handler) {
-        return addHandler(handler, RenderedEvent.getType());
     }
 
     @Override

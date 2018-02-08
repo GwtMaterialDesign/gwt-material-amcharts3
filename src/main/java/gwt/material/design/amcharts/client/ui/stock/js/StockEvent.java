@@ -68,7 +68,7 @@ public class StockEvent {
     private double fontSize;
 
     @JsProperty
-    private StockGraph graph;
+    private AmStockGraph graph;
 
     @JsProperty
     private String rollOverColor;
@@ -217,7 +217,7 @@ public class StockEvent {
     }
 
     @JsOverlay
-    public final StockGraph getGraph() {
+    public final AmStockGraph getGraph() {
         return graph;
     }
 
@@ -225,7 +225,7 @@ public class StockEvent {
      * Graph on which event will be displayed. You can use a reference to the stock graph object or id of the graph.
      */
     @JsOverlay
-    public final void setGraph(StockGraph graph) {
+    public final void setGraph(AmStockGraph graph) {
         this.graph = graph;
     }
 

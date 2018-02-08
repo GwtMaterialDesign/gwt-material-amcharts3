@@ -25,7 +25,6 @@ import gwt.material.design.amcharts.client.ui.chart.base.constants.UnitPosition;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -38,7 +37,7 @@ import jsinterop.annotations.JsType;
  * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/ValueAxesSettings">Official Documentation</a>
  */
 //@formatter:on
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "AmCharts")
 public class ValueAxesSettings {
 
     @JsProperty

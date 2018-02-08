@@ -40,17 +40,7 @@ public class StockBaseData {
     }
 
     @JsOverlay
-    public final void setType(String type) {
-        this.type = type;
-    }
-
-    @JsOverlay
     public final AmStockChart getChart() {
         return chart;
-    }
-
-    @JsOverlay
-    public final void setChart(AmStockChart chart) {
-        this.chart = chart;
     }
 }

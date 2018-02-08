@@ -51,7 +51,7 @@ public class DataSet {
     private Object[] dataProvider;
 
     @JsProperty
-    private Object[] fieldMappings;
+    private FieldMapping[] fieldMappings;
 
     @JsProperty
     private boolean showInCompare;
@@ -130,17 +130,17 @@ public class DataSet {
     }
 
     @JsOverlay
-    public final Object[] getFieldMappings() {
+    public final FieldMapping[] getFieldMappings() {
         return fieldMappings;
     }
 
     /**
      * Array of field mappings. Field mapping is an object with fromField and toField properties. fromField is a name
      * of your value field in dataProvider. toField might be chosen freely, it will be used to set
-     * value/open/close/high/low fields for the StockGraph. Example: {fromField:"val1", toField:"value"}.
+     * value/open/close/high/low fields for the AmStockGraph. Example: {fromField:"val1", toField:"value"}.
      */
     @JsOverlay
-    public final void setFieldMappings(Object[] fieldMappings) {
+    public final void setFieldMappings(FieldMapping... fieldMappings) {
         this.fieldMappings = fieldMappings;
     }
 

@@ -17,32 +17,35 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.ui.stock.constants;
+package gwt.material.design.amcharts.client.ui.stock.js;
 
 //@formatter:off
 
+import gwt.material.design.amcharts.client.ui.chart.js.AmLegend;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
+//TODO Migrate to EventBus class
+
 /**
- * Property used by {@link gwt.material.design.amcharts.client.ui.stock.StockGraph#setPeriodValue(PeriodValue)}
+ * AmStockLegend is a legend of AmStockPanel.
  *
  * @author kevzlou7979@gmail.com
+ * @see <a href="https://docs.amcharts.com/3/javascriptstockchart/StockLegend">Official Documentation</a>
  */
 //@formatter:on
-public enum PeriodValue {
+@JsType(isNative = true, namespace = "AmCharts", name = "StockLegend")
+public class AmStockLegend extends AmLegend {
 
-    SQUARE("Open"),
-    CIRCLE("Low"),
-    DIAMOND("High"),
-    TRIANGLE_UP("Close"),
-    TRIANGLE_DOWN("Average"),
-    TRIANGLE_LEFT("Sum");
+    @JsProperty
+    public String periodValueTextComparing;
 
-    private String name;
+    @JsProperty
+    public String periodValueTextRegular;
 
-    PeriodValue(String name) {
-        this.name = name;
-    }
+    @JsProperty
+    public String valueTextComparing;
 
-    public String getName() {
-        return name;
-    }
+    @JsProperty
+    public String valueTextRegular;
 }

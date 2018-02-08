@@ -22,7 +22,12 @@ package gwt.material.design.amcharts.client.ui.chart.resources;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.dom.client.StyleInjector;
 
+import java.util.HashMap;
+
 public class ResourceLoader {
+
+
+    static HashMap<String, String> bundles = new HashMap<>();
 
     //TODO Unload all injected js
 
@@ -35,14 +40,18 @@ public class ResourceLoader {
     }
 
     public static void directInjectJs(String resourceName, String textResource, boolean removeTag, boolean sourceUrl) {
-        String text = textResource + (sourceUrl ?
-                "//# sourceURL=" + resourceName + ".js" : "");
+        bundles.put(resourceName, textResource);
 
-        // Inject the script resource
-        ScriptInjector.fromString(text)
-                .setWindow(ScriptInjector.TOP_WINDOW)
-                .setRemoveTag(removeTag)
-                .inject();
+        if (bundles.get(resourceName) != null) {
+            String text = textResource + (sourceUrl ?
+                    "//# sourceURL=" + resourceName + ".js" : "");
+
+            // Inject the script resource
+            ScriptInjector.fromString(text)
+                    .setWindow(ScriptInjector.TOP_WINDOW)
+                    .setRemoveTag(removeTag)
+                    .inject();
+        }
     }
 
     public static void injectCss(String resource) {
