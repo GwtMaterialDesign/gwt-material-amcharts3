@@ -91,6 +91,12 @@ public class AmGanttChart extends AmSerialChart {
     public String segmentsField;
 
     /**
+     * Color field in your data provider
+     */
+    @JsProperty
+    public String colorField;
+
+    /**
      * Initial date of value axis. If you set this date (you can do it using time stamp, Date object or date string),
      * you can then set start/end/duration of segments using number of periods instead of providing exact dates.
      */

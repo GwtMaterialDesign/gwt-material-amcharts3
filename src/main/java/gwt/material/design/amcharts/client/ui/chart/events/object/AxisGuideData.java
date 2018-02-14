@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.ui.chart.events.object;
 
 import gwt.material.design.amcharts.client.ui.chart.js.AmRectangularChart;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmGuide;
+import gwt.material.design.amcharts.client.ui.chart.js.options.Guide;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +33,7 @@ public class AxisGuideData {
     private String type;
 
     @JsProperty
-    private AmGuide graph;
+    private Guide graph;
 
     @JsProperty
     private AmRectangularChart chart;
@@ -44,7 +44,7 @@ public class AxisGuideData {
     }
 
     @JsOverlay
-    public final AmGuide getGraph() {
+    public final Guide getGraph() {
         return graph;
     }
 

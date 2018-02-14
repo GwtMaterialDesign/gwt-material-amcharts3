@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.js;
 
+import gwt.material.design.amcharts.client.ui.chart.js.options.GraphDataItem;
 import gwt.material.design.jquery.client.api.Functions;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -50,7 +51,7 @@ public class AmPieChart extends AmSlicedChart {
 
     /**
      * If you set some function, the graph will call it and pass
-     * {@link gwt.material.design.amcharts.client.ui.chart.js.options.AmGraphDataItem} object to it. This function
+     * {@link GraphDataItem} object to it. This function
      * should return a string which will be displayed in a balloon.
      */
     @JsProperty

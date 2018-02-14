@@ -21,7 +21,7 @@ package gwt.material.design.amcharts.client.ui.chart.events.object;
 
 import gwt.material.design.amcharts.client.ui.chart.js.AmRectangularChart;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmAxisBase;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmSerialDataItem;
+import gwt.material.design.amcharts.client.ui.chart.js.options.SerialDataItem;
 import gwt.material.design.amcharts.client.ui.chart.js.options.Label;
 import gwt.material.design.jquery.client.api.MouseEvent;
 import jsinterop.annotations.JsOverlay;
@@ -51,7 +51,7 @@ public class AxisItemData {
     private Object value;
 
     @JsProperty
-    private AmSerialDataItem serialDataItem;
+    private SerialDataItem serialDataItem;
 
     @JsOverlay
     public final String getType() {
@@ -64,7 +64,7 @@ public class AxisItemData {
     }
 
     @JsOverlay
-    public final AmSerialDataItem getSerialDataItem() {
+    public final SerialDataItem getSerialDataItem() {
         return serialDataItem;
     }
 

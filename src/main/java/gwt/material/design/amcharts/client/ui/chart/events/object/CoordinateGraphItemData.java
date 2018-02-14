@@ -21,7 +21,7 @@ package gwt.material.design.amcharts.client.ui.chart.events.object;
 
 import gwt.material.design.amcharts.client.ui.chart.js.AmChart;
 import gwt.material.design.amcharts.client.ui.chart.js.AmGraph;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmGraphDataItem;
+import gwt.material.design.amcharts.client.ui.chart.js.options.GraphDataItem;
 import gwt.material.design.jquery.client.api.MouseEvent;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -35,7 +35,7 @@ public class CoordinateGraphItemData {
     private AmGraph graph;
 
     @JsProperty
-    private AmGraphDataItem item;
+    private GraphDataItem item;
 
     @JsProperty
     private int index;
@@ -52,7 +52,7 @@ public class CoordinateGraphItemData {
     }
 
     @JsOverlay
-    public final AmGraphDataItem getItem() {
+    public final GraphDataItem getItem() {
         return item;
     }
 

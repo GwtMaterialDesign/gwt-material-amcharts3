@@ -141,7 +141,7 @@ public class AmChartScrollbar {
     public String selectedBackgroundColor;
 
     @JsProperty
-    public int selectedGraphFillAlpha;
+    public double selectedGraphFillAlpha;
 
     @JsProperty
     public String selectedGraphFillColor;

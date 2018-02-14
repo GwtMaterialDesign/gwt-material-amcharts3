@@ -87,38 +87,6 @@ public abstract class RectangularChart extends CoordinateChart {
     }
 
     /**
-     * Number of pixels between the container's bottom border and plot area. This space can be used for bottom axis'
-     * values. If autoMargin is true and bottom side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginLeft(int marginLeft) {
-        getChart().marginLeft = marginLeft;
-    }
-
-    /**
-     * Number of pixels between the container's bottom border and plot area. This space can be used for left axis' values.
-     * If autoMargin is true and left side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginBottom(int marginBottom) {
-        getChart().marginBottom = marginBottom;
-    }
-
-    /**
-     * Number of pixels between the container's right border and plot area. This space can be used for Right axis'
-     * values. If autoMargin is true and right side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginRight(int marginRight) {
-        getChart().marginRight = marginRight;
-    }
-
-    /**
-     * Number of pixels between the container's top border and plot area. This space can be used for top axis' values.
-     * If autoMargin is true and top side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginTop(int marginTop) {
-        getChart().marginTop = marginTop;
-    }
-
-    /**
      * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
      * Default to false
      */

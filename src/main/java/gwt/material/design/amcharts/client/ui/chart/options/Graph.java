@@ -24,6 +24,7 @@ import gwt.material.design.amcharts.client.ui.chart.base.constants.GraphBullet;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.GraphType;
 import gwt.material.design.amcharts.client.ui.chart.js.AmBalloon;
 import gwt.material.design.amcharts.client.ui.chart.js.AmGraph;
+import gwt.material.design.amcharts.client.ui.chart.js.options.GraphDataItem;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
@@ -106,7 +107,7 @@ public class Graph extends ChartOptions {
         getAmGraph().balloonColor = balloonColor;
     }
 
-    public Functions.Func getBalloonFunction() {
+    public Functions.FuncRet1<GraphDataItem> getBalloonFunction() {
         return getAmGraph().balloonFunction;
     }
 
@@ -114,7 +115,7 @@ public class Graph extends ChartOptions {
      * If you set some function, the graph will call it and pass GraphDataItem and AmGraph objects to it. This function
      * should return getAmGraph(). a string which will be displayed in a balloon.
      */
-    public void setBalloonFunction(Functions.Func balloonFunction) {
+    public void setBalloonFunction(Functions.FuncRet1<GraphDataItem> balloonFunction) {
         getAmGraph().balloonFunction = balloonFunction;
     }
 
@@ -157,14 +158,14 @@ public class Graph extends ChartOptions {
     }
 
 
-    public int getBulletAlpha() {
+    public double getBulletAlpha() {
         return getAmGraph().bulletAlpha;
     }
 
     /**
      * Opacity of bullets. Value range is 0 - 1.
      */
-    public void setBulletAlpha(int bulletAlpha) {
+    public void setBulletAlpha(double bulletAlpha) {
         getAmGraph().bulletAlpha = bulletAlpha;
     }
 
@@ -185,14 +186,14 @@ public class Graph extends ChartOptions {
     }
 
 
-    public int getBulletBorderAlpha() {
+    public double getBulletBorderAlpha() {
         return getAmGraph().bulletBorderAlpha;
     }
 
     /**
      * Bullet border opacity.
      */
-    public void setBulletBorderAlpha(int bulletBorderAlpha) {
+    public void setBulletBorderAlpha(double bulletBorderAlpha) {
         getAmGraph().bulletBorderAlpha = bulletBorderAlpha;
     }
 
@@ -212,14 +213,14 @@ public class Graph extends ChartOptions {
         getAmGraph().bulletBorderColor = bulletBorderColor;
     }
 
-    public String getBulletBorderThickness() {
+    public int getBulletBorderThickness() {
         return getAmGraph().bulletBorderThickness;
     }
 
     /**
      * Bullet border thickness.
      */
-    public void setBulletBorderThickness(String bulletBorderThickness) {
+    public void setBulletBorderThickness(int bulletBorderThickness) {
         getAmGraph().bulletBorderThickness = bulletBorderThickness;
     }
 
@@ -327,7 +328,7 @@ public class Graph extends ChartOptions {
     }
 
 
-    public String getClustered() {
+    public boolean isClustered() {
         return getAmGraph().clustered;
     }
 
@@ -336,7 +337,7 @@ public class Graph extends ChartOptions {
      * the columns will be clustered next to each other.
      * NOTE: clustering works only for graphs of type "column".
      */
-    public void setClustered(String clustered) {
+    public void setClustered(boolean clustered) {
         getAmGraph().clustered = clustered;
     }
 
@@ -381,7 +382,7 @@ public class Graph extends ChartOptions {
     }
 
 
-    public String getColumnWidth() {
+    public double getColumnWidth() {
         return getAmGraph().columnWidth;
     }
 
@@ -389,7 +390,7 @@ public class Graph extends ChartOptions {
      * You can specify custom column width for each graph individually. Value range is 0 - 1 (we set relative width,
      * not pixel width here).
      */
-    public void setColumnWidth(String columnWidth) {
+    public void setColumnWidth(double columnWidth) {
         getAmGraph().columnWidth = columnWidth;
     }
 
@@ -422,7 +423,7 @@ public class Graph extends ChartOptions {
     }
 
 
-    public int getCursorBulletAlpha() {
+    public double getCursorBulletAlpha() {
         return getAmGraph().cursorBulletAlpha;
     }
 
@@ -430,7 +431,7 @@ public class Graph extends ChartOptions {
      * If bulletsEnabled of ChartCurosor is true, a bullet on each graph follows the cursor. You can set opacity of
      * each graphs bullet. In case you want to disable these bullets for a certain graph, set opacity to 0.
      */
-    public void setCursorBulletAlpha(int cursorBulletAlpha) {
+    public void setCursorBulletAlpha(double cursorBulletAlpha) {
         getAmGraph().cursorBulletAlpha = cursorBulletAlpha;
     }
 
@@ -533,7 +534,7 @@ public class Graph extends ChartOptions {
     }
 
 
-    public int getFillAlphas() {
+    public double getFillAlphas() {
         return getAmGraph().fillAlphas;
     }
 
@@ -542,7 +543,7 @@ public class Graph extends ChartOptions {
      * array of numbers to generate gradients. Although you can set array here, only first value of this array will be
      * used.
      */
-    public void setFillAlphas(int fillAlphas) {
+    public void setFillAlphas(double fillAlphas) {
         getAmGraph().fillAlphas = fillAlphas;
     }
 
@@ -765,7 +766,7 @@ public class Graph extends ChartOptions {
     }
 
 
-    public Functions.Func getLabelFunction() {
+    public Functions.FuncRet1<Object> getLabelFunction() {
         return getAmGraph().labelFunction;
     }
 
@@ -774,7 +775,7 @@ public class Graph extends ChartOptions {
      * reference to GraphDataItem and formatted text as attributes. This function should return getAmGraph(). string which will
      * be displayed as label.
      */
-    public void setLabelFunction(Functions.Func labelFunction) {
+    public void setLabelFunction(Functions.FuncRet1<Object> labelFunction) {
         getAmGraph().labelFunction = labelFunction;
     }
 

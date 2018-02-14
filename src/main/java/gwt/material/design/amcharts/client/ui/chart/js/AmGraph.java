@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.js;
 
+import gwt.material.design.amcharts.client.ui.chart.js.options.GraphDataItem;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 import gwt.material.design.jquery.client.api.Functions;
 import jsinterop.annotations.JsMethod;
@@ -53,7 +54,7 @@ public class AmGraph {
     public String balloonColor;
 
     @JsProperty
-    public Functions.Func balloonFunction;
+    public Functions.FuncRet1<GraphDataItem> balloonFunction;
 
     @JsProperty
     public String balloonText;
@@ -65,19 +66,19 @@ public class AmGraph {
     public String bullet;
 
     @JsProperty
-    public int bulletAlpha;
+    public double bulletAlpha;
 
     @JsProperty
     public AmValueAxis bulletAxis;
 
     @JsProperty
-    public int bulletBorderAlpha;
+    public double bulletBorderAlpha;
 
     @JsProperty
     public String bulletBorderColor;
 
     @JsProperty
-    public String bulletBorderThickness;
+    public int bulletBorderThickness;
 
     @JsProperty
     public String bulletColor;
@@ -104,7 +105,7 @@ public class AmGraph {
     public String closeField;
 
     @JsProperty
-    public String clustered;
+    public boolean clustered;
 
     @JsProperty
     public String color;
@@ -116,7 +117,7 @@ public class AmGraph {
     public String columnIndexField;
 
     @JsProperty
-    public String columnWidth;
+    public double columnWidth;
 
     @JsProperty
     public boolean connect;
@@ -125,7 +126,7 @@ public class AmGraph {
     public int cornerRadiusTop;
 
     @JsProperty
-    public int cursorBulletAlpha;
+    public double cursorBulletAlpha;
 
     @JsProperty
     public String customBullet;
@@ -152,7 +153,7 @@ public class AmGraph {
     public String errorField;
 
     @JsProperty
-    public int fillAlphas;
+    public double fillAlphas;
 
     @JsProperty
     public String fillColors;
@@ -206,7 +207,7 @@ public class AmGraph {
     public String labelColorField;
 
     @JsProperty
-    public Functions.Func labelFunction;
+    public Functions.FuncRet1<Object> labelFunction;
 
     @JsProperty
     public int labelOffset;
