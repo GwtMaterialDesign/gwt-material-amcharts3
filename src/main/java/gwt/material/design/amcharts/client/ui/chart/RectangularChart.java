@@ -26,6 +26,7 @@ import gwt.material.design.amcharts.client.ui.chart.options.ChartScrollbar;
 import gwt.material.design.amcharts.client.ui.chart.options.TrendLine;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
+import gwt.material.design.client.ui.MaterialToast;
 
 //@formatter:off
 
@@ -92,6 +93,31 @@ public abstract class RectangularChart extends CoordinateChart {
      */
     public void setMarginsUpdated(boolean marginsUpdated) {
         getChart().marginsUpdated = marginsUpdated;
+    }
+
+    @Override
+    public void setMargin(double margin) {
+        super.setMargin(margin);
+    }
+
+    @Override
+    public void setMarginTop(double marginTop) {
+        getChart().marginTop = (int) marginTop;
+    }
+
+    @Override
+    public void setMarginBottom(double marginBottom) {
+        getChart().marginBottom = (int) marginBottom;
+    }
+
+    @Override
+    public void setMarginLeft(double marginLeft) {
+        getChart().marginLeft = (int) marginLeft;
+    }
+
+    @Override
+    public void setMarginRight(double marginRight) {
+        getChart().marginRight = (int) marginRight;
     }
 
     /**
