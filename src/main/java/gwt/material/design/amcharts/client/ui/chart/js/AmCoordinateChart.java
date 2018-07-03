@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.js;
 
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmGuide;
+import gwt.material.design.amcharts.client.ui.chart.js.options.Guide;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -69,7 +69,7 @@ public class AmCoordinateChart extends AmChart {
      * specify a different valueAxis for the guide.
      */
     @JsProperty
-    public AmGuide[] guides;
+    public Guide[] guides;
 
     /**
      * Specifies whether the animation should be sequenced or all objects should appear at once. Default to true

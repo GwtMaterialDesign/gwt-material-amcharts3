@@ -30,7 +30,7 @@ import gwt.material.design.amcharts.client.ui.chart.events.object.AxisItemData;
 import gwt.material.design.amcharts.client.ui.chart.events.object.Listener;
 import gwt.material.design.amcharts.client.ui.chart.js.AmBalloon;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmAxisBase;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmGuide;
+import gwt.material.design.amcharts.client.ui.chart.js.options.Guide;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
 
@@ -367,7 +367,7 @@ public abstract class AxisBase extends ChartOptions implements HasAxisHandlers {
         getAmAxis().gridThickness = gridThickness;
     }
 
-    public AmGuide[] getGuides() {
+    public Guide[] getGuides() {
         return getAmAxis().guides;
     }
 
@@ -375,9 +375,7 @@ public abstract class AxisBase extends ChartOptions implements HasAxisHandlers {
      * The array of guides belonging to this axis.
      */
     public void setGuides(Guide... guides) {
-        for (int i = 0; i < guides.length; i++) {
-            getAmAxis().guides[i] = guides[i].getAmGuide();
-        }
+        getAmAxis().guides = guides;
     }
 
     public boolean isIgnoreAxisWidth() {
@@ -654,14 +652,14 @@ public abstract class AxisBase extends ChartOptions implements HasAxisHandlers {
     /**
      * Adds guide to the axis.
      */
-    public void addGuide(AmGuide guide) {
+    public void addGuide(Guide guide) {
         getAmAxis().addGuide(guide);
     }
 
     /**
      * Removes guide from the axis.
      */
-    public void removeGuide(AmGuide guide) {
+    public void removeGuide(Guide guide) {
         getAmAxis().removeGuide(guide);
     }
 

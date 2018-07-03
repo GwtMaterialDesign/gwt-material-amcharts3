@@ -24,13 +24,9 @@ import gwt.material.design.amcharts.client.ui.chart.SerialChart;
 import gwt.material.design.amcharts.client.ui.chart.XyChart;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.*;
 import gwt.material.design.amcharts.client.ui.chart.events.AmChartEvents;
-import gwt.material.design.amcharts.client.ui.chart.events.object.LogarithmicAxisFailedData;
-import gwt.material.design.amcharts.client.ui.chart.events.object.ValueAxisChangedData;
-import gwt.material.design.amcharts.client.ui.chart.events.object.ValueAxisZoomedData;
-import gwt.material.design.amcharts.client.ui.chart.events.valueaxis.AxisChangedEvent;
-import gwt.material.design.amcharts.client.ui.chart.events.valueaxis.AxisZoomedEvent;
-import gwt.material.design.amcharts.client.ui.chart.events.valueaxis.LogarithmicAxisFailedEvent;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmAxisBase;
+import gwt.material.design.amcharts.client.ui.chart.events.axis.ClickItemEvent;
+import gwt.material.design.amcharts.client.ui.chart.events.object.AxisItemData;
+import gwt.material.design.amcharts.client.ui.chart.events.object.Listener;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
@@ -51,28 +47,24 @@ import java.util.Date;
 public class ValueAxis extends AxisBase {
 
     private AmValueAxis axis;
-    private Functions.Func1<Object> axisChangedEvent, axisZoomedEvent, logarithmicAxisFailedEvent;
 
     @Override
     public void load() {
         super.load();
 
-        axisChangedEvent = object -> AxisChangedEvent.fire(this, (ValueAxisChangedData) object);
-        axisZoomedEvent = object -> AxisZoomedEvent.fire(this, (ValueAxisZoomedData) object);
-        logarithmicAxisFailedEvent = object -> LogarithmicAxisFailedEvent.fire(this, (LogarithmicAxisFailedData) object);
+        Listener axisChangedEvent = new Listener();
+        axisChangedEvent.setEvent(AmChartEvents.CLICK_ITEM);
+        axisChangedEvent.setMethod(object -> ClickItemEvent.fire(this, (AxisItemData) object));
 
-        addListener(AmChartEvents.AXIS_CHANGED, axisChangedEvent);
-        addListener(AmChartEvents.AXIS_ZOOMED, axisZoomedEvent);
-        addListener(AmChartEvents.LOGARITHMIC_AXIS_FAILED, logarithmicAxisFailedEvent);
-    }
+        Listener axisZoomedEvent = new Listener();
+        axisZoomedEvent.setEvent(AmChartEvents.CLICK_ITEM);
+        axisZoomedEvent.setMethod(object -> ClickItemEvent.fire(this, (AxisItemData) object));
 
-    @Override
-    public void unload() {
-        super.unload();
+        Listener logarithmicAxisFailedEvent = new Listener();
+        logarithmicAxisFailedEvent.setEvent(AmChartEvents.CLICK_ITEM);
+        logarithmicAxisFailedEvent.setMethod(object -> ClickItemEvent.fire(this, (AxisItemData) object));
 
-        removeListener(getAmValueAxis(), AmChartEvents.AXIS_CHANGED, axisChangedEvent);
-        removeListener(getAmValueAxis(), AmChartEvents.AXIS_ZOOMED, axisZoomedEvent);
-        removeListener(getAmValueAxis(), AmChartEvents.LOGARITHMIC_AXIS_FAILED, logarithmicAxisFailedEvent);
+        setListeners(axisChangedEvent, axisZoomedEvent, logarithmicAxisFailedEvent);
     }
 
     public AmValueAxis getSynchronizeWith() {
@@ -655,7 +647,7 @@ public class ValueAxis extends AxisBase {
     }
 
     @Override
-    protected AmAxisBase getAmAxis() {
+    protected AmValueAxis getAmAxis() {
         return getAmValueAxis();
     }
 }

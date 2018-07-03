@@ -30,9 +30,9 @@ import gwt.material.design.amcharts.client.ui.chart.events.object.CoordinateGrap
 import gwt.material.design.amcharts.client.ui.chart.events.object.CoordinateGraphItemData;
 import gwt.material.design.amcharts.client.ui.chart.js.AmCoordinateChart;
 import gwt.material.design.amcharts.client.ui.chart.js.AmGraph;
+import gwt.material.design.amcharts.client.ui.chart.js.options.Guide;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 import gwt.material.design.amcharts.client.ui.chart.options.Graph;
-import gwt.material.design.amcharts.client.ui.chart.options.Guide;
 import gwt.material.design.amcharts.client.ui.chart.options.ValueAxis;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
@@ -133,9 +133,7 @@ public abstract class CoordinateChart extends AbstractChart implements HasCoordi
      * specify a different valueAxis for the guide.
      */
     public void setGuides(Guide... guides) {
-        for (int i = 0; i < guides.length; i++) {
-            getChart().guides[i] = guides[i].getAmGuide();
-        }
+        getChart().guides = guides;
     }
 
     /**

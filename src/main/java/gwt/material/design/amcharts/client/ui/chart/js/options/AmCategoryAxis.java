@@ -80,28 +80,15 @@ public class AmCategoryAxis extends AmAxisBase {
     @JsProperty
     public String widthField;
 
-    /**
-     * Returns coordinate of a category. Works only if parseDates is false. If parseDates is true, use dateToCoordinate method.
-     */
     @JsMethod
     public native int categoryToCoordinate(String category);
 
-    /**
-     * Returns Date of the coordinate, in case parseDates is set to true and equalSpacing is set to false.
-     */
     @JsMethod
     public native JsDate coordinateToDate(int coordinate);
 
-    /**
-     * Returns coordinate of the date, in case parseDates is set to true. if parseDates is false, use
-     * categoryToCoordinate method.
-     */
     @JsMethod
     public native int dateToCoordinate(JsDate date);
 
-    /**
-     * Returns index of the category which is most close to specified coordinate.
-     */
     @JsMethod
     public native int xToIndex(int x);
 }

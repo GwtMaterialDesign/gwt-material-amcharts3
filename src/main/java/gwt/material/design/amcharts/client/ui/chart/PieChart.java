@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.constants.ChartType;
 import gwt.material.design.amcharts.client.ui.chart.js.AmPieChart;
+import gwt.material.design.amcharts.client.ui.chart.js.options.GraphDataItem;
 import gwt.material.design.jquery.client.api.Functions;
 
 //@formatter:off
@@ -57,7 +58,7 @@ public class PieChart extends SliceChart {
 
     /**
      * If you set some function, the graph will call it and pass
-     * {@link gwt.material.design.amcharts.client.ui.chart.options.GraphDataItem} object to it. This function
+     * {@link GraphDataItem} object to it. This function
      * should return a string which will be displayed in a balloon.
      */
     public void setBalloonFunction(Functions.Func balloonFunction) {

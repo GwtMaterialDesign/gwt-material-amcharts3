@@ -21,8 +21,8 @@ package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.constants.ChartType;
 import gwt.material.design.amcharts.client.ui.chart.js.AmGanttChart;
-import gwt.material.design.amcharts.client.ui.chart.js.AmGraph;
-import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
+import gwt.material.design.amcharts.client.ui.chart.options.Graph;
+import gwt.material.design.amcharts.client.ui.chart.options.ValueAxis;
 
 //@formatter:off
 
@@ -36,6 +36,7 @@ import gwt.material.design.amcharts.client.ui.chart.js.options.AmValueAxis;
 //@formatter:on
 public class GanttChart extends SerialChart {
 
+    private AmGanttChart amGanttChart;
 
     public GanttChart() {
         super(ChartType.GANTT);
@@ -83,8 +84,8 @@ public class GanttChart extends SerialChart {
      * Graph of a Gantt chart. Gant chart actually creates multiple graphs (separate for each segment). Properties of
      * this graph are passed to each of the created graphs - this allows you to control the look of segments.
      */
-    public void setGraph(AmGraph graph) {
-        getChart().graph = graph;
+    public void setGraph(Graph graph) {
+        getChart().graph = graph.getAmGraph();
     }
 
     /**
@@ -92,6 +93,10 @@ public class GanttChart extends SerialChart {
      */
     public void setPeriod(String period) {
         getChart().period = period;
+    }
+
+    public void setColorField(String colorField) {
+        getChart().colorField = colorField;
     }
 
     /**
@@ -121,12 +126,16 @@ public class GanttChart extends SerialChart {
     /**
      * Value axis of Gantt chart. Set it's type to "date" if your data is date or time based.
      */
-    public void setValueAxis(AmValueAxis valueAxis) {
-        getChart().valueAxis = valueAxis;
+    public void setValueAxis(ValueAxis valueAxis) {
+        getChart().valueAxis = valueAxis.getAmValueAxis();
+        valueAxis.load();
     }
 
     @Override
     public AmGanttChart getChart() {
-        return new AmGanttChart();
+        if (amGanttChart == null) {
+            amGanttChart = new AmGanttChart();
+        }
+        return amGanttChart;
     }
 }

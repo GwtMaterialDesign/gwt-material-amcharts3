@@ -696,6 +696,14 @@ public abstract class AbstractChart extends MaterialWidget implements JsLoader, 
     }
 
     /**
+     * This method should be called after you changed one or more properties of any class. The chart will redraw after
+     * this method is called.Both attributes, validateData and skipEvents are optional (false by default).
+     */
+    public void validateNow() {
+        getChart().validateNow();
+    }
+
+    /**
      * Adds chart to the specified DIV.
      *
      * @param elementId id of a DIV or DIV object which will hold the chart

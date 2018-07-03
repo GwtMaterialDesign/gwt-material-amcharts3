@@ -114,7 +114,7 @@ public class AmAxisBase {
     public int gridThickness;
 
     @JsProperty
-    public AmGuide[] guides;
+    public Guide[] guides;
 
     @JsProperty
     public boolean ignoreAxisWidth;
@@ -186,8 +186,8 @@ public class AmAxisBase {
     public int titleRotation;
 
     @JsMethod
-    public native void addGuide(AmGuide guide);
+    public native void addGuide(Guide guide);
 
     @JsMethod
-    public native void removeGuide(AmGuide guide);
+    public native void removeGuide(Guide guide);
 }

@@ -246,14 +246,14 @@ public class ChartCursor extends ChartOptions implements HasCursorHandlers {
         getAmChartCursor().color = color;
     }
 
-    public int getCursorAlpha() {
+    public double getCursorAlpha() {
         return getAmChartCursor().cursorAlpha;
     }
 
     /**
      * Opacity of the cursor line. Default to 1
      */
-    public void setCursorAlpha(int cursorAlpha) {
+    public void setCursorAlpha(double cursorAlpha) {
         getAmChartCursor().cursorAlpha = cursorAlpha;
     }
 

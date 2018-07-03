@@ -25,10 +25,7 @@ import gwt.material.design.amcharts.client.ui.chart.js.options.Label;
 import gwt.material.design.amcharts.client.ui.chart.js.options.Title;
 import gwt.material.design.amcharts.client.ui.chart.plugins.export.js.AmExportOption;
 import gwt.material.design.jquery.client.api.Functions;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 //@formatter:off
 
@@ -532,6 +529,13 @@ public class AmChart {
      */
     @JsMethod
     public native void validateNow(Object validateData, boolean skipEvents);
+
+    /**
+     * This method should be called after you changed one or more properties of any class. The chart will redraw after
+     * this method is called.Both attributes, validateData and skipEvents are optional (false by default).
+     */
+    @JsMethod
+    public native void validateNow();
 
     /**
      * Adds chart to the specified DIV.

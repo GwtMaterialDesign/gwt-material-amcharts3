@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.options;
 
+import com.google.gwt.core.client.JsDate;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.GridPosition;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.Period;
 import gwt.material.design.amcharts.client.ui.chart.base.constants.TickPosition;
@@ -238,6 +239,35 @@ public class CategoryAxis extends AxisBase {
      */
     public void setWidthField(String widthField) {
         getAmCategoryAxis().widthField = widthField;
+    }
+
+    /**
+     * Returns coordinate of a category. Works only if parseDates is false. If parseDates is true, use dateToCoordinate method.
+     */
+    public int categoryToCoordinate(String category) {
+        return getAmCategoryAxis().categoryToCoordinate(category);
+    }
+
+    /**
+     * Returns Date of the coordinate, in case parseDates is set to true and equalSpacing is set to false.
+     */
+    public JsDate coordinateToDate(int coordinate) {
+        return getAmCategoryAxis().coordinateToDate(coordinate);
+    }
+
+    /**
+     * Returns coordinate of the date, in case parseDates is set to true. if parseDates is false, use
+     * categoryToCoordinate method.
+     */
+    public int dateToCoordinate(JsDate date) {
+        return dateToCoordinate(date);
+    }
+
+    /**
+     * Returns index of the category which is most close to specified coordinate.
+     */
+    public int xToIndex(int x) {
+        return xToIndex(x);
     }
 
     public AmCategoryAxis getAmCategoryAxis() {

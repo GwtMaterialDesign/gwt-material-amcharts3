@@ -78,7 +78,7 @@ public class AmChartCursor {
     public String color;
 
     @JsProperty
-    public int cursorAlpha;
+    public double cursorAlpha;
 
     @JsProperty
     public String cursorColor;

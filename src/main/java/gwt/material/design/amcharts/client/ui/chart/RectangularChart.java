@@ -26,6 +26,7 @@ import gwt.material.design.amcharts.client.ui.chart.options.ChartScrollbar;
 import gwt.material.design.amcharts.client.ui.chart.options.TrendLine;
 import gwt.material.design.client.base.helper.ColorHelper;
 import gwt.material.design.client.constants.Color;
+import gwt.material.design.client.ui.MaterialToast;
 
 //@formatter:off
 
@@ -87,43 +88,36 @@ public abstract class RectangularChart extends CoordinateChart {
     }
 
     /**
-     * Number of pixels between the container's bottom border and plot area. This space can be used for bottom axis'
-     * values. If autoMargin is true and bottom side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginLeft(int marginLeft) {
-        getChart().marginLeft = marginLeft;
-    }
-
-    /**
-     * Number of pixels between the container's bottom border and plot area. This space can be used for left axis' values.
-     * If autoMargin is true and left side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginBottom(int marginBottom) {
-        getChart().marginBottom = marginBottom;
-    }
-
-    /**
-     * Number of pixels between the container's right border and plot area. This space can be used for Right axis'
-     * values. If autoMargin is true and right side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginRight(int marginRight) {
-        getChart().marginRight = marginRight;
-    }
-
-    /**
-     * Number of pixels between the container's top border and plot area. This space can be used for top axis' values.
-     * If autoMargin is true and top side has axis, this property is ignored. Default to 20
-     */
-    public void setMarginTop(int marginTop) {
-        getChart().marginTop = marginTop;
-    }
-
-    /**
      * Flag which should be set to false if you need margins to be recalculated on next chart.validateNow() call.
      * Default to false
      */
     public void setMarginsUpdated(boolean marginsUpdated) {
         getChart().marginsUpdated = marginsUpdated;
+    }
+
+    @Override
+    public void setMargin(double margin) {
+        super.setMargin(margin);
+    }
+
+    @Override
+    public void setMarginTop(double marginTop) {
+        getChart().marginTop = (int) marginTop;
+    }
+
+    @Override
+    public void setMarginBottom(double marginBottom) {
+        getChart().marginBottom = (int) marginBottom;
+    }
+
+    @Override
+    public void setMarginLeft(double marginLeft) {
+        getChart().marginLeft = (int) marginLeft;
+    }
+
+    @Override
+    public void setMarginRight(double marginRight) {
+        getChart().marginRight = (int) marginRight;
     }
 
     /**

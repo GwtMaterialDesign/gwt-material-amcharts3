@@ -472,14 +472,14 @@ public class ChartScrollbar extends ChartOptions {
         getAmChartScrollbar().selectedBackgroundColor = selectedBackgroundColor;
     }
 
-    public int getSelectedGraphFillAlpha() {
+    public double getSelectedGraphFillAlpha() {
         return getAmChartScrollbar().selectedGraphFillAlpha;
     }
 
     /**
      * Selected graph's fill opacity. Value range is 0 - 1. Default to 1
      */
-    public void setSelectedGraphFillAlpha(int selectedGraphFillAlpha) {
+    public void setSelectedGraphFillAlpha(double selectedGraphFillAlpha) {
         getAmChartScrollbar().selectedGraphFillAlpha = selectedGraphFillAlpha;
     }
 
