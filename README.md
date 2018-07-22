@@ -13,12 +13,21 @@ AmCharts Official Documentation can be found [here](https://docs.amcharts.com/3/
 
 
 ## Maven
+### Current Version
+```xml
+<dependency>
+    <groupId>com.github.gwtmaterialdesign</groupId>
+    <artifactId>gwt-material-amcharts</artifactId>
+    <version>2.1</version>
+</dependency>
+```
+
 ### Snapshot Version 2.1-SNAPSHOT
 ```xml
 <dependency>
     <groupId>com.github.gwtmaterialdesign</groupId>
     <artifactId>gwt-material-amcharts</artifactId>
-    <version>2.1-SNAPSHOT</version>
+    <version>2.2-SNAPSHOT</version>
 </dependency>
 ```
 
