@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class PieChart {
+public class PieChart extends SerialChart {
 
     @JsProperty
     public ListTemplate<PieSeries> series;
@@ -15,6 +15,4 @@ public class PieChart {
     @JsProperty
     public Object[] data;
 
-    @JsProperty
-    public DataSource dataSource;
 }

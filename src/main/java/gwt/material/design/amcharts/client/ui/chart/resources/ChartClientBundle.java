@@ -34,4 +34,7 @@ public interface ChartClientBundle extends ClientBundle {
 
     @Source("js/themes/animated.js")
     TextResource animatedJs();
+
+    @Source("js/themes/material.js")
+    TextResource materialJs();
 }

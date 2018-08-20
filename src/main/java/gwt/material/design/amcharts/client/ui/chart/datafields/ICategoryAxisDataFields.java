@@ -4,17 +4,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class IPieSeriesDataFields extends ISeriesDataFields {
+public class ICategoryAxisDataFields {
 
     @JsProperty
     public String category;
 
     @JsProperty
-    public Object hiddenInLegend;
-
-    @JsProperty
-    public String radiusValue;
-
-    @JsProperty
-    public Object visible;
+    public String data;
 }
