@@ -47,5 +47,9 @@ public class GwtMaterialAmChart implements EntryPoint {
     public void onModuleLoad() {
         // Initialize the startup state.
         checkStartupState();
+
+        // Inject the necessary javascript resources
+        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.coreJs());
+        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.chartsJs());
     }
 }

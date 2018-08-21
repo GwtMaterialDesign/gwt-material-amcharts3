@@ -5,7 +5,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class Component {
+public class Component extends Container {
 
     @JsProperty
     public DataSource dataSource;
