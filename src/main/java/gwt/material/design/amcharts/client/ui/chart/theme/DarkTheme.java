@@ -5,15 +5,15 @@ import gwt.material.design.client.MaterialDesignBase;
 
 import static gwt.material.design.jquery.client.api.JQuery.window;
 
-public class MaterialTheme implements ChartTheme {
+public class DarkTheme implements ChartTheme {
 
     @Override
     public void loadResource() {
-        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.materialJs());
+        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.darkJs());
     }
 
     @Override
     public Object get() {
-        return window().getPropertyObject("am4themes_material");
+        return window().getPropertyObject("am4themes_dark");
     }
 }

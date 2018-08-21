@@ -1,11 +1,8 @@
 package gwt.material.design.amcharts.client.ui.chart.theme;
 
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+public interface ChartTheme {
 
-@JsType(isNative = true, namespace = "")
-public class ChartTheme {
+    void loadResource();
 
-    @JsProperty(name = "am4themes_material")
-    public static MaterialTheme am4themes_material;
+    Object get();
 }

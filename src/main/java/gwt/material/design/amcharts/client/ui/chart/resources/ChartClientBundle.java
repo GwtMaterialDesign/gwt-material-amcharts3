@@ -37,4 +37,10 @@ public interface ChartClientBundle extends ClientBundle {
 
     @Source("js/themes/material.js")
     TextResource materialJs();
+
+    @Source("js/themes/kelly.js")
+    TextResource kellyJs();
+
+    @Source("js/themes/dark.js")
+    TextResource darkJs();
 }

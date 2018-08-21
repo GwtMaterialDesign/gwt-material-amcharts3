@@ -1,7 +1,6 @@
 package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
-import gwt.material.design.amcharts.client.ui.chart.data.DataSource;
 import gwt.material.design.amcharts.client.ui.chart.series.PieSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
