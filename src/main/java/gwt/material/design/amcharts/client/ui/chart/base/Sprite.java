@@ -1,7 +1,9 @@
 package gwt.material.design.amcharts.client.ui.chart.base;
 
+import gwt.material.design.amcharts.client.ui.chart.adapter.Adapter;
 import gwt.material.design.amcharts.client.ui.chart.animation.Animation;
 import gwt.material.design.amcharts.client.ui.chart.export.Export;
+import gwt.material.design.amcharts.client.ui.chart.formatter.DateFormatter;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,9 +23,11 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = "am4core")
 public class Sprite {
 
-    //TODO
-    /*@JsProperty
-    public Adapter adapter;*/
+    /**
+     * Holds Adapter.
+     */
+    @JsProperty
+    public Adapter adapter;
 
     @JsProperty
     public Export exporting;
@@ -98,6 +102,12 @@ public class Sprite {
 
     @JsProperty
     public Color stroke;
+
+    @JsProperty
+    public DateFormatter dateFormatter;
+
+    @JsProperty
+    public int zIndex;
 
     @JsMethod
     public native void hide();

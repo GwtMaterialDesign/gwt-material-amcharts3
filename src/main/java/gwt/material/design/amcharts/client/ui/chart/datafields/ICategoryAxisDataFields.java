@@ -4,11 +4,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class ICategoryAxisDataFields {
+public class ICategoryAxisDataFields extends IAxisDataFields {
 
     @JsProperty
     public String category;
-
-    @JsProperty
-    public String data;
 }
