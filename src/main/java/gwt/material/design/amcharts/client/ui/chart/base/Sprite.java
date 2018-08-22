@@ -2,6 +2,7 @@ package gwt.material.design.amcharts.client.ui.chart.base;
 
 import gwt.material.design.amcharts.client.ui.chart.adapter.Adapter;
 import gwt.material.design.amcharts.client.ui.chart.animation.Animation;
+import gwt.material.design.amcharts.client.ui.chart.events.SpriteEventDispatcher;
 import gwt.material.design.amcharts.client.ui.chart.export.Export;
 import gwt.material.design.amcharts.client.ui.chart.formatter.DateFormatter;
 import jsinterop.annotations.JsMethod;
@@ -95,7 +96,7 @@ public class Sprite {
     public String valign;
 
     @JsProperty
-    public int strokeWidth;
+    public Number strokeWidth;
 
     @JsProperty
     public Color fill;
@@ -109,8 +110,9 @@ public class Sprite {
     @JsProperty
     public int zIndex;
 
+    @JsProperty
+    public SpriteEventDispatcher events;
+
     @JsMethod
     public native void hide();
-
-
 }

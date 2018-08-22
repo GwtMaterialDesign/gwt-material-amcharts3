@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
  * @author kevzlou7979
  */
 @JsType(isNative = true, namespace = "am4charts")
-public class XYChartScrollbar {
+public class XYChartScrollbar extends Scrollbar {
 
     /**
      * A chart that Scrollbar belongs to.

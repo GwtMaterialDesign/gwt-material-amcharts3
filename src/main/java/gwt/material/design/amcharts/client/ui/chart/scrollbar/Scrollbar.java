@@ -29,4 +29,7 @@ public class Scrollbar extends Container {
      */
     @JsProperty
     public int end;
+
+    @JsProperty
+    public boolean updateWhileMoving;
 }
