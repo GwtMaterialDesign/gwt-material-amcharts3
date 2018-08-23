@@ -1,8 +1,8 @@
 package gwt.material.design.amcharts.client.ui.chart.theme;
 
-public interface ChartTheme {
+import gwt.material.design.amcharts.client.ui.chart.base.GlobalObject;
+
+public interface ChartTheme extends GlobalObject {
 
     void loadResource();
-
-    Object get();
 }

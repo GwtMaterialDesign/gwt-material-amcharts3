@@ -2,9 +2,11 @@ package gwt.material.design.amcharts.client.ui.chart.base;
 
 import gwt.material.design.amcharts.client.ui.chart.adapter.Adapter;
 import gwt.material.design.amcharts.client.ui.chart.animation.Animation;
+import gwt.material.design.amcharts.client.ui.chart.dictionary.DictionaryTemplate;
 import gwt.material.design.amcharts.client.ui.chart.events.SpriteEventDispatcher;
 import gwt.material.design.amcharts.client.ui.chart.export.Export;
 import gwt.material.design.amcharts.client.ui.chart.formatter.DateFormatter;
+import gwt.material.design.amcharts.client.ui.chart.state.SpriteState;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -90,6 +92,9 @@ public class Sprite {
     public Object width;
 
     @JsProperty
+    public Container parent;
+
+    @JsProperty
     public Object height;
 
     @JsProperty
@@ -111,7 +116,13 @@ public class Sprite {
     public int zIndex;
 
     @JsProperty
+    public String tooltipText;
+
+    @JsProperty
     public SpriteEventDispatcher events;
+
+    @JsProperty
+    public DictionaryTemplate<SpriteState> states;
 
     @JsMethod
     public native void hide();

@@ -43,4 +43,10 @@ public interface ChartClientBundle extends ClientBundle {
 
     @Source("js/themes/dark.js")
     TextResource darkJs();
+
+    @Source("js/maps.js")
+    TextResource mapJs();
+
+    @Source("js/geodata/worldLow.js")
+    TextResource worldLowJs();
 }
