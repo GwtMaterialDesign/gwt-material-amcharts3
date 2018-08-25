@@ -4,6 +4,7 @@ import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcharts.client.ui.Am4Charts;
 import gwt.material.design.amcharts.client.ui.Am4Core;
 import gwt.material.design.amcharts.client.ui.chart.axis.Axis;
+import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.List;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.cursor.XYCursor;
@@ -43,4 +44,7 @@ public class XYChart extends SerialChart {
 
     @JsProperty
     public XYCursor cursor;
+
+    @JsProperty
+    public Container plotContainer;
 }

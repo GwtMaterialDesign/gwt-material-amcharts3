@@ -4,7 +4,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class Label {
+public class Label extends Container {
 
     @JsProperty
     public String text;

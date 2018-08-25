@@ -5,6 +5,8 @@ import gwt.material.design.amcharts.client.ui.chart.animation.Animation;
 import gwt.material.design.amcharts.client.ui.chart.dictionary.DictionaryTemplate;
 import gwt.material.design.amcharts.client.ui.chart.events.SpriteEventDispatcher;
 import gwt.material.design.amcharts.client.ui.chart.export.Export;
+import gwt.material.design.amcharts.client.ui.chart.filter.DesaturateFilter;
+import gwt.material.design.amcharts.client.ui.chart.filter.Filter;
 import gwt.material.design.amcharts.client.ui.chart.formatter.DateFormatter;
 import gwt.material.design.amcharts.client.ui.chart.state.SpriteState;
 import jsinterop.annotations.JsMethod;
@@ -124,6 +126,42 @@ public class Sprite {
     @JsProperty
     public DictionaryTemplate<SpriteState> states;
 
+    @JsProperty
+    public Object marginLeft;
+
+    @JsProperty
+    public Object marginRight;
+
+    @JsProperty
+    public Object marginTop;
+
+    @JsProperty
+    public Object marginBottom;
+
+    @JsProperty
+    public Object paddingLeft;
+
+    @JsProperty
+    public Object paddingRight;
+
+    @JsProperty
+    public Object paddingBottom;
+
+    @JsProperty
+    public Object paddingTop;
+
+    @JsProperty
+    public boolean disabled;
+
+    @JsProperty
+    public double fillOpacity;
+
+    @JsProperty
+    public ListTemplate<DesaturateFilter> filters;
+
     @JsMethod
     public native void hide();
+
+    @JsMethod
+    public native void removeChildren();
 }
