@@ -12,4 +12,10 @@ public class Container extends Sprite {
 
     @JsMethod
     public native Object createChild(Object object);
+
+    @JsProperty
+    public Object fontSize;
+
+    @JsProperty
+    public String fontWeight;
 }

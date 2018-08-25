@@ -1,6 +1,7 @@
 package gwt.material.design.amcharts.client.ui.chart.scrollbar;
 
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
+import gwt.material.design.amcharts.client.ui.chart.base.button.Button;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -32,4 +33,7 @@ public class Scrollbar extends Container {
 
     @JsProperty
     public boolean updateWhileMoving;
+
+    @JsProperty
+    public Button thumb;
 }
