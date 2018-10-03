@@ -3,10 +3,10 @@
   <component name="FacetManager">
     <facet type="gwt" name="GWT">
       <configuration>
-        <setting name="compilerParameters" value="-compileReport -XcompilerMetrics" />
+        <setting name="additionalCompilerParameters" value="-Xms1g -XX:CompileThreshold=7000" />
+        <setting name="compilerParameters" value="-compileReport -XcompilerMetrics -failOnError -logLevel INFO -optimize 9 -sourceLevel 1.8" />
         <setting name="compilerMaxHeapSize" value="1024" />
-        <setting name="gwtScriptOutputStyle" value="DETAILED" />
-        <setting name="gwtSdkUrl" value="file://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.8.2" />
+        <setting name="gwtSdkUrl" value="file://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.8.2/" />
         <setting name="gwtSdkType" value="maven" />
         <packaging>
           <module name="gwt.material.design.amcharts.GwtMaterialAmChartsBase" enabled="false" />
