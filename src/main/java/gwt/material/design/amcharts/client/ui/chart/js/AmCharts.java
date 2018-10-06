@@ -149,6 +149,9 @@ public class AmCharts {
      */
     public static native void makeChart(String elementId, Object value);
 
+    @JsMethod(namespace = "AmCharts")
+    public static native void loadFile(String dataSetUrl, Functions.Func1<Object> data);
+
     @JsMethod
-    public static native Object parseJSON(String value);
+    public static native Object parseJSON(Object value);
 }
