@@ -49,7 +49,7 @@ public class AmGaugeAxis extends AmAxisBase {
     public double bandAlpha;
 
     @JsProperty
-    public int[] bandGradientRatio;
+    public double[] bandGradientRatio;
 
     @JsProperty
     public double bandOutlineAlpha;

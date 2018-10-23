@@ -85,7 +85,7 @@ public class GaugeBand extends ChartOptions {
         getAmGaugeBand().setEndValue(value);
     }
 
-    public int[] getGradientRatio() {
+    public double[] getGradientRatio() {
         return getAmGaugeBand().gradientRatio;
     }
 
@@ -93,7 +93,7 @@ public class GaugeBand extends ChartOptions {
      * Example: [-0.2, 0, -0.2]. Will make bands to be filled with color gradients. Negative value means the color will
      * be darker than the original, and positive number means the color will be lighter.
      */
-    public void setGradientRatio(int[] gradientRatio) {
+    public void setGradientRatio(double[] gradientRatio) {
         getAmGaugeBand().gradientRatio = gradientRatio;
     }
 

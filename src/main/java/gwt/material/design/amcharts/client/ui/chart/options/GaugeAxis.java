@@ -113,7 +113,7 @@ public class GaugeAxis extends ChartOptions implements HasGaugeAxisHandlers {
     }
 
 
-    public int[] getBandGradientRatio() {
+    public double[] getBandGradientRatio() {
         return getAmGaugeAxis().bandGradientRatio;
     }
 
@@ -121,7 +121,7 @@ public class GaugeAxis extends ChartOptions implements HasGaugeAxisHandlers {
      * Example: [-0.2, 0, -0.2]. Will make bands to be filled with color gradients. Negative value means the color will
      * be darker than the original, and positive number means the color will be lighter.
      */
-    public void setBandGradientRatio(int[] bandGradientRatio) {
+    public void setBandGradientRatio(double[] bandGradientRatio) {
         getAmGaugeAxis().bandGradientRatio = bandGradientRatio;
     }
 

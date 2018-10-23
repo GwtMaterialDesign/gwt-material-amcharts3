@@ -49,7 +49,7 @@ public class AmGaugeBand {
     public int endValue;
 
     @JsProperty
-    public int[] gradientRatio;
+    public double[] gradientRatio;
 
     @JsProperty
     public String id;
