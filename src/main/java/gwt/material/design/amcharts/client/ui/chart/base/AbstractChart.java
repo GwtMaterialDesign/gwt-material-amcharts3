@@ -319,6 +319,10 @@ public abstract class AbstractChart extends MaterialWidget implements JsLoader, 
         getChart().dataProvider = dataProvider;
     }
 
+    public Object getDataProvider(){
+        return getChart().dataProvider;
+    }
+
     /**
      * Decimal separator.
      */
