@@ -73,6 +73,9 @@ public class AmDataLoader {
     public String url;
 
     @JsProperty
+    public AmDataLoaderHeader[] headers;
+    
+    @JsProperty
     public boolean reverse;
 
     @JsProperty

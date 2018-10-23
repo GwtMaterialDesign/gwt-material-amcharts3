@@ -19,8 +19,13 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.options;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import gwt.material.design.amcharts.client.ui.chart.base.ChartOptions;
 import gwt.material.design.amcharts.client.ui.chart.js.options.AmDataLoader;
+import gwt.material.design.amcharts.client.ui.chart.js.options.AmDataLoaderHeader;
 import gwt.material.design.jquery.client.api.Functions;
 
 //@formatter:off
@@ -257,4 +262,25 @@ public class DataLoader extends ChartOptions {
         }
         return dataLoader;
     }
+    
+    /**
+     * Add an HTTP Header to the DataLoader
+     * @param key Header key
+     * @param value Header value
+     */
+    public void addHeader(String key, String value){
+    	List<AmDataLoaderHeader> headers;
+    	if(this.getAmDataLoader().headers!=null){
+    		headers=new ArrayList<AmDataLoaderHeader>(Arrays.asList(this.getAmDataLoader().headers));
+    	}else{
+    		headers=new ArrayList<AmDataLoaderHeader>();
+    	}
+    	AmDataLoaderHeader header=new AmDataLoaderHeader();
+    	header.key=key;
+    	header.value=value;
+    	headers.add(header);
+    	AmDataLoaderHeader[] array=new AmDataLoaderHeader[headers.size()];
+    	this.getAmDataLoader().headers=headers.toArray(array);
+    }
+
 }
