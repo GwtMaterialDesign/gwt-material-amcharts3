@@ -1,3 +1,22 @@
+/*
+ * #%L
+ * GwtMaterial
+ * %%
+ * Copyright (C) 2015 - 2018 GwtMaterialDesign
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package gwt.material.design.amcharts.client.ui.chart.base;
 
 import jsinterop.annotations.JsConstructor;
@@ -5,11 +24,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Represents a color.
- *
- * @author kevzlou7979
- */
 @JsType(isNative = true, namespace = "am4core", name = "color")
 public class Color {
 
@@ -18,73 +32,30 @@ public class Color {
     @JsConstructor
     public Color(String color) {}
 
-    /**
-     * Set alpha (transparency) of the color.
-     * <p>
-     * Returns current transparency.
-     */
     @JsProperty
-    public int alpha;
+    public Number alpha;
 
-    /**
-     * Returns a either light or dark color that contrasts specifically with this color.
-     * <p>
-     * Uses properties darkColor (default black) and lightColor (default white).
-     * <p>
-     * Useful when determining which color label should be on a colored background, so that it stands out.
-     */
     @JsProperty
     public Color alternative;
 
-    /**
-     * Sets "dark" color. Used when determining contrasting color.
-     * <p>
-     * Returns current dark color setting.
-     */
     @JsProperty
     public Color darkColor;
 
-    /**
-     * Returns color hex value string, e.g. "#FF0000".
-     */
     @JsProperty
     public String hex;
 
-    /**
-     * Sets "light" color. Used when determining contrasting color.
-     * <p>
-     * Returns current light color setting.
-     */
     @JsProperty
     public Color lightColor;
 
-    /**
-     * Returns an rgba() representation of the color, e.g.:
-     */
     @JsProperty
     public String rgba;
 
-    /**
-     * Returns a new Color which is percent brighter (positive value), or darker (negative value).
-     * <p>
-     * Parameter is in the scale of -1 to 1.
-     */
     @JsMethod
     public native Color brighten(double percent);
 
-    /**
-     * Returns a new Color which is percent lighter (positive value), or darker (negative value).
-     * <p>
-     * Parameter is in the scale of -1 to 1.
-     */
     @JsMethod
     public native Color lighten(double percent);
 
-    /**
-     * Returns a new Color based on current color with specific saturation applied.
-     * <p>
-     * saturation can be in the range of 0 (fully desaturated) to 1 (fully saturated).
-     */
     @JsMethod
     public native Color saturate(double saturation);
 }

@@ -1,3 +1,22 @@
+/*
+ * #%L
+ * GwtMaterial
+ * %%
+ * Copyright (C) 2015 - 2018 GwtMaterialDesign
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package gwt.material.design.amcharts.client.ui.chart.scrollbar;
 
 import gwt.material.design.amcharts.client.ui.chart.XYChart;
@@ -7,37 +26,16 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * A special version of the Scrollbar that has an XY chart in it.
- * <p>
- * Used mainly as an advanced scrollbar with a preview for other XY charts.
- * <p>
- * However, can be used as standalone element.
- *
- * @author kevzlou7979
- */
+
 @JsType(isNative = true, namespace = "am4charts")
 public class XYChartScrollbar extends Scrollbar {
 
-    /**
-     * A chart that Scrollbar belongs to.
-     */
     @JsProperty
     public XYChart chart;
 
-    /**
-     * A chart element that is used to display graphs in the Scrollbar.
-     * <p>
-     * This is not the same as chart. It's a totally independent instance of XYChart with separate config, series, etc.
-     * <p>
-     * It can be configured just like any other XYChart.
-     */
     @JsProperty
     public XYChart scrollbarChart;
 
-    /**
-     * A list of series that are used to draw graph(s) on the scrollbar.
-     */
     @JsProperty
     public List<XYSeries> series;
 

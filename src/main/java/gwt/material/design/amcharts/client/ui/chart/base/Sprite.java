@@ -1,3 +1,22 @@
+/*
+ * #%L
+ * GwtMaterial
+ * %%
+ * Copyright (C) 2015 - 2018 GwtMaterialDesign
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package gwt.material.design.amcharts.client.ui.chart.base;
 
 import gwt.material.design.amcharts.client.ui.chart.adapter.Adapter;
@@ -6,125 +25,181 @@ import gwt.material.design.amcharts.client.ui.chart.dictionary.DictionaryTemplat
 import gwt.material.design.amcharts.client.ui.chart.events.SpriteEventDispatcher;
 import gwt.material.design.amcharts.client.ui.chart.export.Export;
 import gwt.material.design.amcharts.client.ui.chart.filter.DesaturateFilter;
-import gwt.material.design.amcharts.client.ui.chart.filter.Filter;
 import gwt.material.design.amcharts.client.ui.chart.formatter.DateFormatter;
+import gwt.material.design.amcharts.client.ui.chart.formatter.NumberFormatter;
 import gwt.material.design.amcharts.client.ui.chart.state.SpriteState;
+import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Sprite represents any displayable element.
- * <p>
- * This is the main class that encapsulates every object on the chart.
- * <p>
- * If it's an element that is to be displayed on the screen at some point, its class must extend Sprite class.
- * <p>
- * Sprite class represents the a hierarchical structure. Every object that extends Sprite can have children, that would
- * inherit their properties, such as language, formatters, etc.
- *
- * @author kevzlou7979
- */
-@JsType(isNative = true, namespace = "am4core")
-public class Sprite {
 
-    /**
-     * Holds Adapter.
-     */
+@JsType(isNative = true, namespace = "am4core")
+public class Sprite extends BaseObjectsEvents {
+
     @JsProperty
     public Adapter adapter;
 
     @JsProperty
-    public Export exporting;
-
-    /**
-     * Controls horizontal alignment of the element.
-     * <p>
-     * This is used by parent {@link Container} when layouting its children.
-     * <p>
-     * Accepted values are in {@link gwt.material.design.amcharts.client.ui.chart.constants.Align} interface
-     * </p>
-     */
-    @JsProperty
     public String align;
 
-    /**
-     * Returns a list elements's animations currently being played.
-     * <p>
-     * If the list has not been initialized it is created.
-     */
     @JsProperty
-    public Animation[] animation;
+    public Animation[] animations;
 
-    /**
-     * Specifies if a property changes on this object should be propaged to the objects cloned from this object.
-     * <p>
-     * This setting affects property changes *after* cloning, since at the moment of cloning all of properties from source
-     * object are copied to the clone anyway.
-     */
+    @JsProperty
+    public boolean appeared;
+
     @JsProperty
     public boolean applyOnClones;
 
-    /**
-     * Indicates if the element is clickable.
-     * <p>
-     * Some times of the elements, like buttons are clickable by default.
-     * <p>
-     * Most of the elements are not clickable by default.
-     * <p>
-     * Use hit, doublehit, up, down, toggled events to watch for respective click/touch actions.
-     */
     @JsProperty
-    public boolean clickable;
-
-    /**
-     * A field in data context of element's dataItem that holds config values for this element.
-     * <p>
-     * This is a very powerful feature, allowing changing virtually any setting, including those for element's children,
-     * for the element via data.
-     */
-    @JsProperty
-    public String configField;
-
-    //TODO
-    /*@JsProperty
-    public IStyleProperty cursorDownStyle;*/
+    public String baseId;
 
     @JsProperty
-    public Object width;
+    public Object configField;
 
-    @JsProperty
-    public Container parent;
+    //TODO: IStyleProperty[] cursorDownStyle;
 
-    @JsProperty
-    public Object height;
+    //TODO: ICursorOptions cursorOptions;
 
-    @JsProperty
-    public String valign;
+    //TODO: IStyleProperty[] cursorOverStyle;
 
-    @JsProperty
-    public Number strokeWidth;
-
-    @JsProperty
-    public Color fill;
-
-    @JsProperty
-    public Color stroke;
+    //TODO: DataItem dataItem;
 
     @JsProperty
     public DateFormatter dateFormatter;
 
-    @JsProperty
-    public int zIndex;
+    //TODO: Sprite State defaultState
 
     @JsProperty
-    public String tooltipText;
+    public boolean disabled;
+
+    //TODO: SVGSVGElement dom
+
+    @JsProperty
+    public boolean draggable;
+
+    @JsProperty
+    public Object dummyData;
+
+    //TODO: DurationFormatter durationFormatter
+
+    @JsProperty
+    public Number dx;
+
+    @JsProperty
+    public Number dy;
+
+    //TODO: AMElement element;
 
     @JsProperty
     public SpriteEventDispatcher events;
 
     @JsProperty
-    public DictionaryTemplate<SpriteState> states;
+    public Number ex;
+
+    @JsProperty
+    public boolean exportable;
+
+    @JsProperty
+    public Export exporting;
+
+    @JsProperty
+    public Number ey;
+
+    @JsProperty
+    public Object fill;
+
+    //TODO: ColorModifier fillModifier
+
+    @JsProperty
+    public Number fillOpacity;
+
+    // List<Filter> filters
+
+    @JsProperty
+    public boolean focusable;
+
+    @JsProperty
+    public Number globalScale;
+
+    //TODO Group group
+
+    @JsProperty
+    public Object height;
+
+    @JsProperty
+    public boolean hidden;
+
+    //TODO: SpriteState hiddenState
+
+    //TODO: IHitOptions hitOptions
+
+    //TODO: HorizontalCenter horizontalCenter
+
+    @JsProperty
+    public boolean hoverOnFocus;
+
+    //TODO: IHoverOptions hoverOptions
+
+    @JsProperty
+    public boolean hoverable;
+
+    @JsProperty
+    public Element htmlContainer;
+
+    @JsProperty
+    public String id;
+
+    @JsProperty
+    public boolean inert;
+
+    //TODO: Dictionary InertialOptions
+
+    @JsProperty
+    public boolean inited;
+
+    @JsProperty
+    public Number innerHeight;
+
+    @JsProperty
+    public Number innerWidth;
+
+    //TODO: InteractioObject interactions
+
+    @JsProperty
+    public boolean interactionsEnabled;
+
+    @JsProperty
+    public boolean isActive;
+
+    @JsProperty
+    public boolean isDown;
+
+    @JsProperty
+    public boolean isDragged;
+
+    @JsProperty
+    public boolean isFocused;
+
+    @JsProperty
+    public boolean isHidden;
+
+    @JsProperty
+    public boolean isHiding;
+
+    @JsProperty
+    public boolean isHover;
+
+    @JsProperty
+    public boolean isShowing;
+
+    //TODO: IKeyboardOptions keyboardOptions
+
+    //TODO: Language language
+
+    @JsProperty
+    public Object marginBottom;
 
     @JsProperty
     public Object marginLeft;
@@ -136,7 +211,45 @@ public class Sprite {
     public Object marginTop;
 
     @JsProperty
-    public Object marginBottom;
+    public Number maxHeight;
+
+    @JsProperty
+    public Number maxWidth;
+
+    @JsProperty
+    public Number measuredHeight;
+
+    @JsProperty
+    public Number measuredWidth;
+
+    @JsProperty
+    public Number minHeight;
+
+    @JsProperty
+    public Number minWidth;
+
+    //TODO: Modal modal
+
+    @JsProperty
+    public boolean nonScaling;
+
+    @JsProperty
+    public boolean nonScalingStroke;
+
+    @JsProperty
+    public NumberFormatter numberFormatter;
+
+    @JsProperty
+    public Number opacity;
+
+    @JsProperty
+    public Number outerHeight;
+
+    @JsProperty
+    public Number outerWidth;
+
+    @JsProperty
+    public Object paddingBottom;
 
     @JsProperty
     public Object paddingLeft;
@@ -145,16 +258,217 @@ public class Sprite {
     public Object paddingRight;
 
     @JsProperty
-    public Object paddingBottom;
-
-    @JsProperty
     public Object paddingTop;
 
     @JsProperty
-    public boolean disabled;
+    public Container parent;
 
     @JsProperty
-    public double fillOpacity;
+    public String path;
+
+    @JsProperty
+    public Number pixelHeight;
+
+    @JsProperty
+    public Number pixelMarginBottom;
+
+    @JsProperty
+    public Number pixelMarginLeft;
+
+    @JsProperty
+    public Number pixelMarginRight;
+
+    @JsProperty
+    public Number pixelMarginTop;
+
+    @JsProperty
+    public Number pixelPaddingBottom;
+
+    @JsProperty
+    public Number pixelPaddingLeft;
+
+    @JsProperty
+    public Number pixelPaddingRight;
+
+    @JsProperty
+    public Number pixelPaddingTop;
+
+    @JsProperty
+    public boolean pixelPerfect;
+
+    @JsProperty
+    public Number pixelWidth;
+
+    @JsProperty
+    public Number pixelX;
+
+    @JsProperty
+    public Number pixelY;
+
+    //TODO: ListTemplate<Popup> popups
+
+    //TODO: ISpriteProperties properties
+
+    @JsProperty
+    public Object propertyFields;
+
+    @JsProperty
+    public String readerDescription;
+
+    @JsProperty
+    public boolean readerHidden;
+
+    @JsProperty
+    public String readerTitle;
+
+    @JsProperty
+    public Object realFill;
+
+    @JsProperty
+    public Object realStroke;
+
+    @JsProperty
+    public Number relativeMarginBottom;
+
+    @JsProperty
+    public Number relativeMarginLeft;
+
+    @JsProperty
+    public Number relativeMarginRight;
+
+    @JsProperty
+    public Number relativeMarginTop;
+
+    @JsProperty
+    public Number relativePaddingBottom;
+
+    @JsProperty
+    public Number relativePaddingLeft;
+
+    @JsProperty
+    public Number relativePaddingRight;
+
+    @JsProperty
+    public Number relativePaddingTop;
+
+    @JsProperty
+    public Number relativeX;
+
+    @JsProperty
+    public Number relativeY;
+
+    @JsProperty
+    public boolean resizable;
+
+    //TODO: Roles role
+
+    @JsProperty
+    public Number rollOutDelay;
+
+    @JsProperty
+    public Number rotation;
+
+    @JsProperty
+    public boolean rtl;
+
+    @JsProperty
+    public Number scale;
+
+    //TODO: ShapeRendering shapeRendering
+
+    @JsProperty
+    public boolean shouldClone;
+
+    @JsProperty
+    public boolean showOnInit;
+
+    @JsProperty
+    public boolean showSystemTooltip;
+
+    //TODO: Sprite Stats states
+
+    @JsProperty
+    public Object stroke;
+
+    @JsProperty
+    public String strokeDasharray;
+
+    //TODO: ColorModifier strokeModifier
+
+    @JsProperty
+    public Number strokeOpacity;
+
+    @JsProperty
+    public Number strokeWidth;
+
+    //TODO: SVGCOntainer svgContainer
+
+    //TODO: Swipe Options
+
+    @JsProperty
+    public boolean swipeable;
+
+    @JsProperty
+    public Number tabindex;
+
+    @JsProperty
+    public boolean togglable;
+
+    //TODO: TOoltip tooltip
+
+    //TODO: Sprite tooltipColorSource
+
+    //TODO: DataItem tooltipDataItem
+
+    //TODO: tooltipPosition
+
+    @JsProperty
+    public String tooltipText;
+
+    @JsProperty
+    public String tooltipHTML;
+
+    @JsProperty
+    public boolean trackable;
+
+    @JsProperty
+    public String url;
+
+    @JsProperty
+    public String urlTarget;
+
+    @JsProperty
+    public String valign;
+
+    //TODO: VerticalCenter verticalCenter ;
+
+    @JsProperty
+    public boolean visible;
+
+    @JsProperty
+    public boolean wheelable;
+
+    @JsProperty
+    public Object width;
+
+    @JsProperty
+    public Object x;
+
+    @JsProperty
+    public Object y;
+
+    @JsProperty
+    public Number zIndex;
+
+    @JsProperty
+    public boolean clickable;
+
+
+    /////////////////////////////////
+
+
+    @JsProperty
+    public DictionaryTemplate<SpriteState> states;
 
     @JsProperty
     public ListTemplate<DesaturateFilter> filters;

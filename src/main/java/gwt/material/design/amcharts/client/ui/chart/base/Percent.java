@@ -1,33 +1,38 @@
+/*
+ * #%L
+ * GwtMaterial
+ * %%
+ * Copyright (C) 2015 - 2018 GwtMaterialDesign
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package gwt.material.design.amcharts.client.ui.chart.base;
 
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Represents a relative value. (percent)
- *
- * @author kevzlou7979
- */
+
 @JsType(isNative = true, namespace = "am4core", name = "percent")
 public class Percent {
 
     @JsConstructor
     public Percent(int percent) {}
 
-    /**
-     * Value in percent.
-     */
     @JsProperty
     public int percent;
 
-    /**
-     * Relative value.
-     * <p>
-     * E.g. 100% is 1, 50% is 0.5, etc.
-     * <p>
-     * This is useful to apply transformations to other values. E.g.:
-     */
     @JsProperty
     public int value;
 }
