@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.ui.chart.scrollbar;
 
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
-import gwt.material.design.amcharts.client.ui.chart.base.button.Button;
+import gwt.material.design.amcharts.client.ui.chart.base.Button;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

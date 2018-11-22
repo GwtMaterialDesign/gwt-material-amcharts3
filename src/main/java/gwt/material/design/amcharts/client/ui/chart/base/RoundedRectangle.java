@@ -19,9 +19,25 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.base;
 
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
 public class RoundedRectangle extends Sprite {
 
+    @JsProperty
+    public Number cornerRadiusBottomLeft;
+
+    @JsProperty
+    public Number cornerRadiusBottomRight;
+
+    @JsProperty
+    public Number cornerRadiusTopLeft;
+
+    @JsProperty
+    public Number cornerRadiusTopRight;
+
+    @JsMethod
+    public native void cornerRadius(Number topLeft, Number topRight, Number belowLeft, Number belowRight);
 }

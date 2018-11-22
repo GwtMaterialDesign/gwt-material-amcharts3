@@ -17,11 +17,8 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.ui.chart.base.button;
+package gwt.material.design.amcharts.client.ui.chart.base;
 
-import gwt.material.design.amcharts.client.ui.chart.base.Container;
-import gwt.material.design.amcharts.client.ui.chart.base.Label;
-import gwt.material.design.amcharts.client.ui.chart.base.Sprite;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

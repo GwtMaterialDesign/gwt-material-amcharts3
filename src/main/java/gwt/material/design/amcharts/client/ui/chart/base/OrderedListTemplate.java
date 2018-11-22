@@ -17,32 +17,18 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.ui.chart;
+package gwt.material.design.amcharts.client.ui.chart.base;
 
-import gwt.material.design.amcharts.client.ui.chart.base.Component;
-import gwt.material.design.amcharts.client.ui.chart.base.Container;
-import gwt.material.design.amcharts.client.ui.chart.base.Label;
-import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
-import gwt.material.design.amcharts.client.ui.chart.legend.Legend;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class Chart extends Component {
+public class OrderedListTemplate<T extends Object> extends List<T> {
 
     @JsProperty
-    public Container chartAndLegendContainer;
-
-    @JsProperty
-    public Container chartContainer;
-
-    @JsProperty
-    public Legend legend;
-
-    @JsProperty
-    public ListTemplate<Label> titles;
+    public T template;
 
     @JsMethod
-    public native void copyFrom(Chart source);
+    public native T getIndex(int index);
 }

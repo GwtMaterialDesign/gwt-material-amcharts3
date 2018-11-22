@@ -21,8 +21,10 @@ package gwt.material.design.amcharts.client.ui;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Widget;
+import gwt.material.design.amcharts.client.ui.chart.base.Circle;
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.Rectangle;
+import gwt.material.design.amcharts.client.ui.chart.base.Trapezoid;
 import gwt.material.design.amcharts.client.ui.chart.theme.ChartTheme;
 import jsinterop.annotations.*;
 
@@ -34,6 +36,12 @@ public class Am4Core {
 
     @JsProperty(namespace = "am4core", name = "Rectangle")
     public static Rectangle Rectangle;
+
+    @JsProperty(namespace = "am4core", name = "Trapezoid")
+    public static Trapezoid Trapezoid;
+
+    @JsProperty(namespace = "am4core", name = "Circle")
+    public static Circle Circle;
 
     @JsMethod(namespace = "am4core")
     public static native Object create(String div, Object object);

@@ -40,6 +40,9 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Adapter adapter;
 
+    /**
+     * @see gwt.material.design.amcharts.client.ui.chart.constants.Align
+     */
     @JsProperty
     public String align;
 
@@ -437,6 +440,9 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public String urlTarget;
 
+    /**
+     * @see gwt.material.design.amcharts.client.ui.chart.constants.Valign
+     */
     @JsProperty
     public String valign;
 

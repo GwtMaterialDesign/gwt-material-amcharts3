@@ -19,7 +19,12 @@
  */
 package gwt.material.design.amcharts.client.ui.chart;
 
+import gwt.material.design.amcharts.client.ui.chart.base.ColorSet;
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
+import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
+import gwt.material.design.amcharts.client.ui.chart.datafields.ISerialChartDataFields;
+import gwt.material.design.amcharts.client.ui.chart.series.Series;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +32,23 @@ import jsinterop.annotations.JsType;
 public class SerialChart extends Chart {
 
     @JsProperty
+    public Container bulletsContainer;
+
+    @JsProperty
+    public ISerialChartDataFields dataFields;
+
+    @JsProperty
+    public ColorSet colors;
+
+    @JsProperty
+    public ListTemplate<Series> series;
+
+    @JsProperty
     public Container seriesContainer;
+
+    @JsMethod
+    public native void copyFrom(SerialChart copyFrom);
+
+    @JsMethod
+    public native void dispose();
 }

@@ -25,4 +25,13 @@ public interface FontWeight {
     String BOLD = "bold";
     String BOLDER = "bolder";
     String LIGHTER = "lighter";
+    String _100 = "100";
+    String _200 = "200";
+    String _300 = "300";
+    String _400 = "400";
+    String _500 = "500";
+    String _600 = "600";
+    String _700 = "700";
+    String _800 = "800";
+    String _900 = "900";
 }

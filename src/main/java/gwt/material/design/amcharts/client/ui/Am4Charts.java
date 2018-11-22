@@ -20,6 +20,8 @@
 package gwt.material.design.amcharts.client.ui;
 
 import gwt.material.design.amcharts.client.ui.chart.PieChart;
+import gwt.material.design.amcharts.client.ui.chart.RadarChart;
+import gwt.material.design.amcharts.client.ui.chart.TreeMap;
 import gwt.material.design.amcharts.client.ui.chart.XYChart;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,4 +35,10 @@ public class Am4Charts {
 
     @JsProperty(name = "XYChart")
     public static XYChart XYChart;
+
+    @JsProperty(name = "RadarChart")
+    public static RadarChart RadarChart;
+
+    @JsProperty(name = "TreeMap")
+    public static TreeMap TreeMap;
 }

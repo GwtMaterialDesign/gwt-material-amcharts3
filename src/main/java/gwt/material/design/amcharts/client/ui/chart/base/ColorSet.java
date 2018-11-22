@@ -19,5 +19,54 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.base;
 
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
+@JsType(isNative = true, namespace = "am4core")
 public class ColorSet {
+
+    @JsProperty
+    public Color baseColor;
+
+    @JsProperty
+    public Color[] list;
+
+    @JsProperty
+    public Number maxLightness;
+
+    @JsProperty
+    public Number minColors;
+
+    @JsProperty
+    public Number minLightness;
+
+    @JsProperty
+    public boolean reuse;
+
+    @JsProperty
+    public Number saturation;
+
+    @JsProperty
+    public boolean shuffle;
+
+    @JsProperty
+    public Number step;
+
+    //TODO: IColorSetStepOptions stepOptions
+
+    @JsProperty
+    public boolean wrap;
+
+    @JsMethod
+    public native Color next();
+
+    @JsMethod
+    public native void reset();
+
+    @JsMethod
+    public native Color getIndex(Number index);
+
+    @JsMethod
+    public native void generate(Number count);
 }

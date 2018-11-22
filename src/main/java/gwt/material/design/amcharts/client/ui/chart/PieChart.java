@@ -25,12 +25,20 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class PieChart extends SerialChart {
+public class PieChart extends PercentChart {
+
+    @JsProperty
+    public Number endAngle;
+
+    @JsProperty
+    public Object innerRadius;
+
+    @JsProperty
+    public Object radius;
+
+    @JsProperty
+    public Number startAngle;
 
     @JsProperty
     public ListTemplate<PieSeries> series;
-
-    @JsProperty
-    public Object[] data;
-
 }

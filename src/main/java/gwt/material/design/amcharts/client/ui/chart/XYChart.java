@@ -23,18 +23,18 @@ import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcharts.client.ui.Am4Charts;
 import gwt.material.design.amcharts.client.ui.Am4Core;
 import gwt.material.design.amcharts.client.ui.chart.axis.Axis;
+import gwt.material.design.amcharts.client.ui.chart.base.Button;
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.List;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.cursor.XYCursor;
+import gwt.material.design.amcharts.client.ui.chart.datafields.IXYChartDataFields;
+import gwt.material.design.amcharts.client.ui.chart.properties.IRange;
 import gwt.material.design.amcharts.client.ui.chart.resources.ChartClientBundle;
 import gwt.material.design.amcharts.client.ui.chart.scrollbar.XYChartScrollbar;
 import gwt.material.design.amcharts.client.ui.chart.series.XYSeries;
 import gwt.material.design.client.MaterialDesignBase;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class XYChart extends SerialChart {
@@ -47,13 +47,22 @@ public class XYChart extends SerialChart {
     }
 
     @JsProperty
-    public ListTemplate<XYSeries> series;
+    public XYCursor cursor;
 
     @JsProperty
-    public List<Axis> xAxes;
+    public boolean maskBullets;
+
+    /**
+     * @see gwt.material.design.amcharts.client.ui.chart.constants.MouseWheelBehaviour
+     */
+    @JsProperty
+    public String mouseWheelBehavior;
 
     @JsProperty
-    public List<Axis> yAxes;
+    public Container plotContainer;
+
+    @JsProperty
+    public IXYChartDataFields dataFields;
 
     @JsProperty
     public XYChartScrollbar scrollbarX;
@@ -62,8 +71,29 @@ public class XYChart extends SerialChart {
     public XYChartScrollbar scrollbarY;
 
     @JsProperty
-    public XYCursor cursor;
+    public List<Axis> xAxes;
 
     @JsProperty
-    public Container plotContainer;
+    public List<Axis> yAxes;
+
+    @JsProperty
+    public Button zoomOutButton;
+
+    @JsMethod
+    public native void addData(Object[] rawDataItem);
+
+    @JsMethod
+    public native void addData(Object[] rawDataItem, Number removeCount);
+
+    @JsMethod
+    public native void copyFrom(XYChart source);
+
+    @JsMethod
+    public native IRange getUpdatedRange(Axis axis, IRange range);
+
+    /////////////////////////
+    @JsProperty
+    public ListTemplate<XYSeries> series;
+
+
 }
