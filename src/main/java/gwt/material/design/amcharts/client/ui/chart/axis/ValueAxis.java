@@ -19,8 +19,14 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.axis;
 
+import gwt.material.design.amcharts.client.ui.chart.SerialChart;
+import gwt.material.design.amcharts.client.ui.chart.base.List;
 import gwt.material.design.amcharts.client.ui.chart.datafields.IValueAxisDataFields;
 import gwt.material.design.amcharts.client.ui.chart.formatter.NumberFormatter;
+import gwt.material.design.amcharts.client.ui.chart.properties.IOrientationPoint;
+import gwt.material.design.amcharts.client.ui.chart.properties.IPoint;
+import gwt.material.design.amcharts.client.ui.chart.series.XYSeries;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -28,8 +34,91 @@ import jsinterop.annotations.JsType;
 public class ValueAxis extends Axis {
 
     @JsProperty
-    public IValueAxisDataFields dataFields;
+    public Number baseValue;
 
     @JsProperty
-    public NumberFormatter numberFormatter;
+    public boolean calculateTotals;
+
+    @JsProperty
+    public SerialChart chart;
+
+    @JsProperty
+    public Number extraMax;
+
+    @JsProperty
+    public Number extraMin;
+
+    @JsProperty
+    public boolean logarithmic;
+
+    @JsProperty
+    public Number max;
+
+    @JsProperty
+    public Number maxPrecision;
+
+    @JsProperty
+    public Number maxZoomed;
+
+    @JsProperty
+    public Number min;
+
+    @JsProperty
+    public Number minZoomed;
+
+    @JsProperty
+    public List<XYSeries> series;
+
+    @JsProperty
+    public Number step;
+
+    @JsProperty
+    public boolean strictMinMax;
+
+    @JsMethod
+    public native IOrientationPoint anyToPoint(Number value);
+
+    @JsMethod
+    public native Number anyToPosition(Number value);
+
+    @JsMethod
+    public native void copyFrom(ValueAxis source);
+
+    //TODO: ValueAxisDataItem fillRUle
+
+    @JsMethod
+    public native String formatLabel(Number value);
+
+    @JsMethod
+    public native String getPositionLabel(Number position);
+
+    @JsMethod
+    public native Number pointToPosition(IPoint point);
+
+    @JsMethod
+    public native Number positionToValue(Number position);
+
+    @JsMethod
+    public native void showTooltipAt(Number value);
+
+    @JsMethod
+    public native IOrientationPoint valueToPoint(Number value);
+
+    @JsMethod
+    public native Number valueToPosition(Number value);
+
+    @JsMethod
+    public native Number xToValue(Number x);
+
+    @JsMethod
+    public native Number yToValue(Number y);
+
+    @JsMethod
+    public native void zoomToValues(Number start, Number end);
+
+    @JsMethod
+    public native void zoomToValues(Number start, Number end, boolean skipRangeEvent, boolean instantly);
+
+    @JsProperty
+    public IValueAxisDataFields dataFields;
 }

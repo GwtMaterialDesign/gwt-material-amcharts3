@@ -19,10 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui;
 
-import gwt.material.design.amcharts.client.ui.chart.PieChart;
-import gwt.material.design.amcharts.client.ui.chart.RadarChart;
-import gwt.material.design.amcharts.client.ui.chart.TreeMap;
-import gwt.material.design.amcharts.client.ui.chart.XYChart;
+import gwt.material.design.amcharts.client.ui.chart.*;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,4 +38,10 @@ public class Am4Charts {
 
     @JsProperty(name = "TreeMap")
     public static TreeMap TreeMap;
+
+    @JsProperty(name = "SankeyDiagram")
+    public static SankeyDiagram SankeyDiagram;
+
+    @JsProperty(name = "GaugeChart")
+    public static GaugeChart GaugeChart;
 }

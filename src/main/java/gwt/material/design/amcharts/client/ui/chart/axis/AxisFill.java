@@ -1,6 +1,7 @@
-package gwt.material.design.amcharts.client.ui.chart.base;
+package gwt.material.design.amcharts.client.ui.chart.axis;
 
 import gwt.material.design.amcharts.client.ui.chart.axis.Axis;
+import gwt.material.design.amcharts.client.ui.chart.base.Sprite;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

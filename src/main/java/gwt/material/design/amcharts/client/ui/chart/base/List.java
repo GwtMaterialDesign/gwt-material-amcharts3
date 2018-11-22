@@ -30,4 +30,7 @@ public class List<T extends Object> {
 
     @JsMethod
     public native T getIndex(int index);
+
+    @JsMethod
+    public native T create();
 }

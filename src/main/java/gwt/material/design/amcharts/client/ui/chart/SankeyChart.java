@@ -19,33 +19,36 @@
  */
 package gwt.material.design.amcharts.client.ui.chart;
 
+import gwt.material.design.amcharts.client.ui.chart.base.ColorSet;
+import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
-import gwt.material.design.amcharts.client.ui.chart.base.Percent;
-import gwt.material.design.amcharts.client.ui.chart.series.PieSeries;
+import gwt.material.design.amcharts.client.ui.chart.datafields.ISerialChartDataFields;
+import gwt.material.design.amcharts.client.ui.chart.series.Series;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class PieChart extends PercentChart {
+public class SankeyChart extends RadarChart {
 
     @JsProperty
-    public Number endAngle;
-
-    /**
-     * Accepts {@link Number} or {@link Percent}
-     */
-    @JsProperty
-    public Object innerRadius;
-
-    /**
-     * Accepts {@link Number} or {@link Percent}
-     */
-    @JsProperty
-    public Object radius;
+    public Container bulletsContainer;
 
     @JsProperty
-    public Number startAngle;
+    public ISerialChartDataFields dataFields;
 
     @JsProperty
-    public ListTemplate<PieSeries> series;
+    public ColorSet colors;
+
+    @JsProperty
+    public ListTemplate<Series> series;
+
+    @JsProperty
+    public Container seriesContainer;
+
+    @JsMethod
+    public native void copyFrom(SankeyChart copyFrom);
+
+    @JsMethod
+    public native void dispose();
 }

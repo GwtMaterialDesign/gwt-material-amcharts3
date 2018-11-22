@@ -9,6 +9,9 @@ public class Circle extends Sprite {
     @JsProperty
     public Number pixelRadius;
 
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
     @JsProperty
     public Object radius;
 }

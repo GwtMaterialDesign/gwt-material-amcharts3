@@ -1,6 +1,7 @@
 package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
+import gwt.material.design.amcharts.client.ui.chart.base.Percent;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -10,6 +11,9 @@ public class RadarChart extends XYChart {
     @JsProperty
     public Number endAngle;
 
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
     @JsProperty
     public Object innerRadius;
 
@@ -19,6 +23,9 @@ public class RadarChart extends XYChart {
     @JsProperty
     public Container radarContainer;
 
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
     @JsProperty
     public Object radius;
 
