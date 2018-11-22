@@ -1,15 +1,17 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
-import gwt.material.design.amcharts.client.ui.chart.dataitem.TreeMapDataItem;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class TreeMapSeries extends LineSeries {
+public class StepLineSeries extends LineSeries {
 
     @JsProperty
-    public Number level;
+    public Number endLocation;
 
     @JsProperty
-    public TreeMapDataItem parentDataItem;
+    public boolean noRisers;
+
+    @JsProperty
+    public Number startLocation;
 }

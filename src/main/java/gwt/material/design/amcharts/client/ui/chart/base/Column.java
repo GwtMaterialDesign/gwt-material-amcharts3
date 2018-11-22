@@ -17,47 +17,18 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.ui.chart.series;
+package gwt.material.design.amcharts.client.ui.chart.base;
 
-import gwt.material.design.amcharts.client.ui.chart.axis.Axis;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IXYSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class XYSeries extends Series {
+public class Column {
 
     @JsProperty
-    public Axis baseAxis;
-
-    @JsProperty
-    public boolean stacked;
-
-    @JsProperty
-    public Axis xAxis;
-
-    @JsProperty
-    public Axis yAxis;
-
-    @JsProperty
-    public IXYSeriesDataFields dataFields;
+    public RoundedRectangle column;
 
     @JsMethod
-    public native String getAxisField(Axis axis);
-
-    @JsMethod
-    public native void hide();
-
-    @JsMethod
-    public native void hide(Number duration);
-
-    @JsMethod
-    public native void hideTooltip();
-
-    @JsMethod
-    public native void show();
-
-    @JsMethod
-    public native void show(Number duration);
+    public native void copyFrom(Column source);
 }

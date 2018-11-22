@@ -19,37 +19,9 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.series;
 
-import gwt.material.design.amcharts.client.ui.chart.base.Column;
-import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
-import gwt.material.design.amcharts.client.ui.chart.dataitem.ColumnSeriesDataItem;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class ColumnSeries extends XYSeries {
-
-    @JsProperty
-    public boolean clustered;
-
-    @JsProperty
-    public ListTemplate<Column> columns;
-
-    //TODO : dropFromOpenState
-
-    //TODO: dropFromPreviousState
-
-    //TODO: riseFromOpenState
-
-    //TODO: riseFromPreviousState
-
-    @JsProperty
-    public boolean simplifiedProcessing;
-
-    @JsMethod
-    public native void copyFrom(ColumnSeries source);
-
-    @JsMethod
-    public native void disableUnusedColumns(ColumnSeriesDataItem dataItem);
+public class ConeSeries extends ColumnSeries {
 
 }

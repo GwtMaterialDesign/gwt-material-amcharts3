@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.map.series;
 
+import gwt.material.design.amcharts.client.ui.chart.data.DataSource;
 import gwt.material.design.amcharts.client.ui.chart.series.Series;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,5 +29,29 @@ import jsinterop.annotations.JsType;
 public class MapSeries extends Series {
 
     @JsProperty
+    public Number east;
+
+    @JsProperty
+    public String[] exclude;
+
+    @JsProperty
+    public Object geodata;
+
+    @JsProperty
+    public DataSource geodataSource;
+
+    @JsProperty
+    public String[] include;
+
+    @JsProperty
+    public Number north;
+
+    @JsProperty
+    public Number south;
+
+    @JsProperty
     public boolean useGeodata;
+
+    @JsProperty
+    public Number west;
 }
