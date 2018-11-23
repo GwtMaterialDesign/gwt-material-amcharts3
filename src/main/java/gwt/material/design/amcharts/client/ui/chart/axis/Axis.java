@@ -24,7 +24,7 @@ import gwt.material.design.amcharts.client.ui.chart.base.Label;
 import gwt.material.design.amcharts.client.ui.chart.base.List;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.base.Sprite;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IAxisDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.axis.IAxisDataFields;
 import gwt.material.design.amcharts.client.ui.chart.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.ui.chart.properties.IOrientationPoint;
 import gwt.material.design.amcharts.client.ui.chart.properties.IPoint;
@@ -75,9 +75,6 @@ public class Axis extends Sprite {
     @JsProperty
     public Label title;
 
-    @JsProperty
-    public IAxisDataFields dataFields;
-
     @JsMethod
     public native IOrientationPoint anyToPoint(Number value);
 
@@ -94,6 +91,9 @@ public class Axis extends Sprite {
     // TODO: createSeriesRange
 
     // TODO: fillRule
+
+    @JsProperty
+    public IAxisDataFields dataFields;
 
     @JsMethod
     public native String getPositionLabel(Number position);

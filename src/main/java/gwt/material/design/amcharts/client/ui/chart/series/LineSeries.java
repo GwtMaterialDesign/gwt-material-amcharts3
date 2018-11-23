@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.ILineSeriesDataFields;
 import gwt.material.design.amcharts.client.ui.chart.segments.LineSeriesSegment;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,4 +42,7 @@ public class LineSeries extends XYSeries {
 
     @JsProperty
     public Number tensionY;
+
+    @JsProperty
+    public ILineSeriesDataFields dataFields;
 }

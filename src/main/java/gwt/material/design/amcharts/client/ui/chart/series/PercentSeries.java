@@ -1,6 +1,7 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
 import gwt.material.design.amcharts.client.ui.chart.base.*;
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.IPercentSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -22,6 +23,9 @@ public class PercentSeries extends Series {
 
     @JsProperty
     public ListTemplate<FunnelTick> ticks;
+
+    @JsProperty
+    public IPercentSeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(PercentSeries source);

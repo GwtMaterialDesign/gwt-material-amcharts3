@@ -20,7 +20,10 @@
 package gwt.material.design.amcharts.client.ui.map.series;
 
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
+import gwt.material.design.amcharts.client.ui.map.MapChart;
 import gwt.material.design.amcharts.client.ui.map.base.MapPolygon;
+import gwt.material.design.amcharts.client.ui.map.datafields.IMapPolygonSeriesDataFields;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -28,5 +31,17 @@ import jsinterop.annotations.JsType;
 public class MapPolygonSeries extends MapSeries {
 
     @JsProperty
+    public MapChart chart;
+
+    @JsProperty
     public ListTemplate<MapPolygon> mapPolygons;
+
+    @JsProperty
+    public IMapPolygonSeriesDataFields dataFields;
+
+    @JsMethod
+    public native void copyFrom(MapPolygonSeries source);
+
+    @JsMethod
+    public native MapPolygon getPolygonById(String id);
 }

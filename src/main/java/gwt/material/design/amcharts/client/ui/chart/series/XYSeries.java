@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
 import gwt.material.design.amcharts.client.ui.chart.axis.Axis;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IXYSeriesDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.IXYSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,9 +40,6 @@ public class XYSeries extends Series {
     @JsProperty
     public Axis yAxis;
 
-    @JsProperty
-    public IXYSeriesDataFields dataFields;
-
     @JsMethod
     public native String getAxisField(Axis axis);
 
@@ -60,4 +57,7 @@ public class XYSeries extends Series {
 
     @JsMethod
     public native void show(Number duration);
+
+    @JsProperty
+    public IXYSeriesDataFields dataFields;
 }

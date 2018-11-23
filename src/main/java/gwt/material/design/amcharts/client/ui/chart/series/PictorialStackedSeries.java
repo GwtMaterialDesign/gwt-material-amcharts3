@@ -1,7 +1,7 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
 import gwt.material.design.amcharts.client.ui.chart.base.Sprite;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IFunnelSeriesDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.IPictorialStackedSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -10,4 +10,7 @@ public class PictorialStackedSeries extends PyramidSeries {
 
     @JsProperty
     public Sprite maskSprite;
+
+    @JsProperty
+    public IPictorialStackedSeriesDataFields dataFields;
 }

@@ -23,6 +23,7 @@ import gwt.material.design.amcharts.client.ui.chart.base.Component;
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.Label;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.IChartDataFields;
 import gwt.material.design.amcharts.client.ui.chart.legend.Legend;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -42,6 +43,9 @@ public class Chart extends Component {
 
     @JsProperty
     public ListTemplate<Label> titles;
+
+    @JsProperty
+    public IChartDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(Chart source);

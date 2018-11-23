@@ -19,10 +19,13 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.series;
 
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.IRadarColumnSeriesDataFields;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class RadarColumnSeries extends ColumnSeries {
 
-
+    @JsProperty
+    public IRadarColumnSeriesDataFields dataFields;
 }

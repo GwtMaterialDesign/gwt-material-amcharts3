@@ -1,5 +1,6 @@
 package gwt.material.design.amcharts.client.ui.chart.series;
 
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.IPyramidSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -29,4 +30,7 @@ public class PyramidSeries extends FunnelSeries {
      */
     @JsProperty
     public String values;
+
+    @JsProperty
+    public IPyramidSeriesDataFields dataFields;
 }

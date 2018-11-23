@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.base.Percent;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.IPieChartDataFields;
 import gwt.material.design.amcharts.client.ui.chart.series.PieSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -45,6 +46,9 @@ public class PieChart extends PercentChart {
 
     @JsProperty
     public Number startAngle;
+
+    @JsProperty
+    public IPieChartDataFields dataFields;
 
     @JsProperty
     public ListTemplate<PieSeries> series;

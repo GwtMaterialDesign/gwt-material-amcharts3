@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.ui.chart.axis;
 
-import gwt.material.design.amcharts.client.ui.chart.datafields.IDateAxisDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.axis.IDateAxisDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

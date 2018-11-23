@@ -23,6 +23,7 @@ import gwt.material.design.amcharts.client.ui.chart.SerialChart;
 import gwt.material.design.amcharts.client.ui.chart.base.Bullet;
 import gwt.material.design.amcharts.client.ui.chart.base.Component;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
+import gwt.material.design.amcharts.client.ui.chart.datafields.series.ISeriesDataFields;
 import gwt.material.design.amcharts.client.ui.chart.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.ui.chart.dataitem.LegendDataItem;
 import gwt.material.design.amcharts.client.ui.chart.legend.LegendSettings;
@@ -78,6 +79,9 @@ public class Series extends Component {
 
     @JsProperty
     public boolean skipFocusThreshold;
+
+    @JsProperty
+    public ISeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(Series source);

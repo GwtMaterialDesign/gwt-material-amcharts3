@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client.ui.map.series;
 
 import gwt.material.design.amcharts.client.ui.chart.data.DataSource;
 import gwt.material.design.amcharts.client.ui.chart.series.Series;
+import gwt.material.design.amcharts.client.ui.map.datafields.IMapSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -54,4 +55,7 @@ public class MapSeries extends Series {
 
     @JsProperty
     public Number west;
+
+    @JsProperty
+    public IMapSeriesDataFields dataFields;
 }

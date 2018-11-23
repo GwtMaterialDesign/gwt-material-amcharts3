@@ -21,8 +21,7 @@ package gwt.material.design.amcharts.client.ui.chart.axis;
 
 import gwt.material.design.amcharts.client.ui.chart.SerialChart;
 import gwt.material.design.amcharts.client.ui.chart.base.List;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IValueAxisDataFields;
-import gwt.material.design.amcharts.client.ui.chart.formatter.NumberFormatter;
+import gwt.material.design.amcharts.client.ui.chart.datafields.axis.IValueAxisDataFields;
 import gwt.material.design.amcharts.client.ui.chart.properties.IOrientationPoint;
 import gwt.material.design.amcharts.client.ui.chart.properties.IPoint;
 import gwt.material.design.amcharts.client.ui.chart.series.XYSeries;
@@ -86,6 +85,9 @@ public class ValueAxis extends Axis {
 
     //TODO: ValueAxisDataItem fillRUle
 
+    @JsProperty
+    public IValueAxisDataFields dataFields;
+
     @JsMethod
     public native String formatLabel(Number value);
 
@@ -118,7 +120,4 @@ public class ValueAxis extends Axis {
 
     @JsMethod
     public native void zoomToValues(Number start, Number end, boolean skipRangeEvent, boolean instantly);
-
-    @JsProperty
-    public IValueAxisDataFields dataFields;
 }

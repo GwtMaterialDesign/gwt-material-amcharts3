@@ -4,7 +4,7 @@ import gwt.material.design.amcharts.client.ui.chart.base.ColorSet;
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.FlowDiagramLink;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IFlowDiagramDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.IFlowDiagramDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -17,9 +17,6 @@ public class FlowDiagram extends Chart {
 
     @JsProperty
     public ListTemplate<FlowDiagramLink> links;
-
-    @JsProperty
-    public IFlowDiagramDataFields dataFields;
 
     @JsProperty
     public Container linksContainer;
@@ -40,6 +37,9 @@ public class FlowDiagram extends Chart {
      */
     @JsProperty
     public String sortBy;
+
+    @JsProperty
+    public IFlowDiagramDataFields dataFields;
 
     @JsMethod
     public native void dispose();

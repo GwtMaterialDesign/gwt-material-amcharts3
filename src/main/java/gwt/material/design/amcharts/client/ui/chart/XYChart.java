@@ -28,12 +28,10 @@ import gwt.material.design.amcharts.client.ui.chart.base.Container;
 import gwt.material.design.amcharts.client.ui.chart.base.List;
 import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.cursor.XYCursor;
-import gwt.material.design.amcharts.client.ui.chart.datafields.IXYChartDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.IXYChartDataFields;
 import gwt.material.design.amcharts.client.ui.chart.properties.IRange;
-import gwt.material.design.amcharts.client.ui.chart.resources.ChartClientBundle;
 import gwt.material.design.amcharts.client.ui.chart.scrollbar.XYChartScrollbar;
 import gwt.material.design.amcharts.client.ui.chart.series.XYSeries;
-import gwt.material.design.client.MaterialDesignBase;
 import jsinterop.annotations.*;
 
 @JsType(isNative = true, namespace = "am4charts")
@@ -62,9 +60,6 @@ public class XYChart extends SerialChart {
     public Container plotContainer;
 
     @JsProperty
-    public IXYChartDataFields dataFields;
-
-    @JsProperty
     public XYChartScrollbar scrollbarX;
 
     @JsProperty
@@ -79,6 +74,12 @@ public class XYChart extends SerialChart {
     @JsProperty
     public Button zoomOutButton;
 
+    @JsProperty
+    public IXYChartDataFields dataFields;
+
+    @JsProperty
+    public ListTemplate<XYSeries> series;
+
     @JsMethod
     public native void addData(Object[] rawDataItem);
 
@@ -90,10 +91,4 @@ public class XYChart extends SerialChart {
 
     @JsMethod
     public native IRange getUpdatedRange(Axis axis, IRange range);
-
-    /////////////////////////
-    @JsProperty
-    public ListTemplate<XYSeries> series;
-
-
 }

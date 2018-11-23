@@ -1,7 +1,7 @@
 package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.base.Container;
-import gwt.material.design.amcharts.client.ui.chart.datafields.ISankeyDiagramDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.IChordDiagramDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -33,4 +33,7 @@ public class ChordDiagram extends FlowDiagram {
 
     @JsProperty
     public Number startAngle;
+
+    @JsProperty
+    public IChordDiagramDataFields dataFields;
 }

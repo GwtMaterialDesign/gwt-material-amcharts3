@@ -1,5 +1,6 @@
 package gwt.material.design.amcharts.client.ui.chart.base;
 
+import gwt.material.design.amcharts.client.ui.chart.datafields.INavigationBarDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -14,4 +15,7 @@ public class NavigationBar extends Component {
 
     @JsProperty
     public ListTemplate<Triangle> separators;
+
+    @JsProperty
+    public INavigationBarDataFields dataFields;
 }

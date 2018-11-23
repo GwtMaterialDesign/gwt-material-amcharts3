@@ -2,8 +2,9 @@ package gwt.material.design.amcharts.client.ui.chart;
 
 import gwt.material.design.amcharts.client.ui.chart.axis.ValueAxis;
 import gwt.material.design.amcharts.client.ui.chart.base.ColorSet;
+import gwt.material.design.amcharts.client.ui.chart.base.ListTemplate;
 import gwt.material.design.amcharts.client.ui.chart.base.NavigationBar;
-import gwt.material.design.amcharts.client.ui.chart.datafields.ITreeMapDataFields;
+import gwt.material.design.amcharts.client.ui.chart.datafields.chart.ITreeMapDataFields;
 import gwt.material.design.amcharts.client.ui.chart.dictionary.DictionaryTemplate;
 import gwt.material.design.amcharts.client.ui.chart.series.TreeMapSeries;
 import jsinterop.annotations.JsProperty;
@@ -25,9 +26,6 @@ public class TreeMap extends XYChart {
 
     @JsProperty
     public Object layoutAlgorithm;
-
-    @JsProperty
-    public ITreeMapDataFields dataFields;
 
     @JsProperty
     public Number maxLevels;
@@ -52,6 +50,12 @@ public class TreeMap extends XYChart {
 
     @JsProperty
     public boolean zoomable;
+
+    @JsProperty
+    public ITreeMapDataFields dataFields;
+
+    @JsProperty
+    public ListTemplate<TreeMapSeries> series;
 
     //TODO
     /*@JsMethod
