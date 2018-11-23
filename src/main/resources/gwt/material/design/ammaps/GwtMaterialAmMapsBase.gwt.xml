@@ -22,9 +22,18 @@
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
         "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to='GwtMaterialAmChart'>
-    <inherits name="gwt.material.design.amcharts.GwtMaterialAmChartsBase"/>
-    <inherits name="com.google.gwt.dom.DOM"/>
+    <set-configuration-property name="CssResource.conversionMode" value="strict"/>
 
-    <!-- Specify the app entry point class -->
-    <entry-point class='gwt.material.design.amcharts.client.GwtMaterialAmCharts'/>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.core.Core"/>
+
+    <inherits name="gwt.material.design.jquery.JQuery"/>
+    <inherits name='gwt.material.design.GwtMaterialDesignBase'/>
+    <inherits name="gwt.material.design.amcharts.GwtMaterialAmChartsBase"/>
+
+    <!-- Specify the paths for translatable code                    -->
+    <source path='client'/>
+
+    <set-configuration-property name="CssResource.enableGss" value="true"/>
+    <!--<set-configuration-property name="CssResource.legacy" value="true"/>-->
 </module>

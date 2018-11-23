@@ -29,5 +29,5 @@
     <inherits name="gwt.material.design.amcharts.GwtMaterialAmChartsBase"/>
 
     <!-- Specify the app entry point class -->
-    <entry-point class='gwt.material.design.amcharts.client.ui.GwtMaterialAmChart'/>
+    <entry-point class='gwt.material.design.amcharts.client.GwtMaterialAmCharts'/>
 </module>

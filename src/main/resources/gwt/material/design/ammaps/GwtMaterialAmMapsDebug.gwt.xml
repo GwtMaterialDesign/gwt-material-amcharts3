@@ -21,10 +21,13 @@
 
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
         "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
-<module rename-to='GwtMaterialAmChart'>
-    <inherits name="gwt.material.design.amcharts.GwtMaterialAmChartsBase"/>
-    <inherits name="com.google.gwt.dom.DOM"/>
+<module rename-to='GwtMaterialAmMap'>
+    <replace-with class="gwt.material.design.addins.client.StartupState.DebugState">
+        <when-type-is class="gwt.material.design.addins.client.StartupState"/>
+    </replace-with>
+
+    <inherits name="gwt.material.design.ammaps.GwtMaterialAmMapsBase"/>
 
     <!-- Specify the app entry point class -->
-    <entry-point class='gwt.material.design.amcharts.client.GwtMaterialAmCharts'/>
+    <entry-point class='gwt.material.design.ammaps.client.GwtMaterialAmMaps'/>
 </module>
