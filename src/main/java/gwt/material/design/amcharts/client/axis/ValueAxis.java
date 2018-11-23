@@ -20,10 +20,10 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.SerialChart;
-import gwt.material.design.amcharts.client.base.List;
-import gwt.material.design.amcharts.client.datafields.axis.IValueAxisDataFields;
-import gwt.material.design.amcharts.client.properties.IOrientationPoint;
-import gwt.material.design.amcharts.client.properties.IPoint;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcharts.client.datafield.axis.IValueAxisDataFields;
+import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.IPoint;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;

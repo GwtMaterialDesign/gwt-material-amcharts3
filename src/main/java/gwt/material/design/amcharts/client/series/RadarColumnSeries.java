@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafields.series.IRadarColumnSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.IRadarColumnSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

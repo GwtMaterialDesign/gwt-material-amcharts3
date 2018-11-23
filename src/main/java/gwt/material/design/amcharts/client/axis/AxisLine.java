@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcharts.client.base.Sprite;
+import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")

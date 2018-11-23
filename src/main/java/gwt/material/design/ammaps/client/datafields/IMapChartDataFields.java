@@ -19,7 +19,7 @@
  */
 package gwt.material.design.ammaps.client.datafields;
 
-import gwt.material.design.amcharts.client.datafields.chart.ISerialChartDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.ISerialChartDataFields;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)

@@ -26,21 +26,6 @@ import com.google.gwt.resources.client.TextResource;
 public interface ChartClientBundle extends ClientBundle {
     ChartClientBundle INSTANCE = GWT.create(ChartClientBundle.class);
 
-    @Source("js/core.js")
-    TextResource coreJs();
-
     @Source("js/charts.js")
     TextResource chartsJs();
-
-    @Source("js/themes/animated.js")
-    TextResource animatedJs();
-
-    @Source("js/themes/material.js")
-    TextResource materialJs();
-
-    @Source("js/themes/kelly.js")
-    TextResource kellyJs();
-
-    @Source("js/themes/dark.js")
-    TextResource darkJs();
 }

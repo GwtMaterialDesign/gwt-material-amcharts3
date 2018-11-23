@@ -19,7 +19,7 @@
  */
 package gwt.material.design.ammaps.client.base;
 
-import gwt.material.design.amcharts.client.base.Container;
+import gwt.material.design.amcore.client.base.Container;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4maps")

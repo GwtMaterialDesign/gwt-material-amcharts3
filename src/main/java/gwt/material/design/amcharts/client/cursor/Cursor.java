@@ -20,8 +20,9 @@
 package gwt.material.design.amcharts.client.cursor;
 
 import gwt.material.design.amcharts.client.Chart;
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.properties.IPoint;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.constants.CursorStick;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -51,7 +52,7 @@ public class Cursor extends Container {
     public native void triggerMove(IPoint point);
 
     /**
-     * @param stick See {@link gwt.material.design.amcharts.client.constants.CursorStick}
+     * @param stick See {@link CursorStick}
      */
     @JsMethod
     public native void triggerMove(IPoint point, String stick);

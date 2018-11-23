@@ -19,10 +19,10 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.ColorSet;
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.chart.ISerialChartDataFields;
+import gwt.material.design.amcore.client.color.ColorSet;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.chart.ISerialChartDataFields;
 import gwt.material.design.amcharts.client.series.Series;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;

@@ -20,8 +20,9 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.base.FunnelSlice;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.series.IFunnelSeriesDataFields;
+import gwt.material.design.amcore.client.constants.Orientation;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.series.IFunnelSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -32,7 +33,7 @@ public class FunnelSeries extends PercentSeries {
     public Number bottomRatio;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.Orientation
+     * @see Orientation
      */
     @JsProperty
     public String orientation;

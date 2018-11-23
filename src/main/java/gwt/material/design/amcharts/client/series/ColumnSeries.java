@@ -20,8 +20,8 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.base.Column;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.series.IColumnSeriesDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.series.IColumnSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;

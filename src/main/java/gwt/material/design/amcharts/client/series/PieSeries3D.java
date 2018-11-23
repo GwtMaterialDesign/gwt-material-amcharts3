@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafields.series.IPieSeries3DDataFields;
+import gwt.material.design.amcharts.client.datafield.series.IPieSeries3DDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

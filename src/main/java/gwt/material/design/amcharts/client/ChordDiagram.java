@@ -19,8 +19,9 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.datafields.chart.IChordDiagramDataFields;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcharts.client.datafield.chart.IChordDiagramDataFields;
+import gwt.material.design.amcore.client.base.Percent;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -34,7 +35,7 @@ public class ChordDiagram extends FlowDiagram {
     public Number endAngle;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object innerRadius;
@@ -45,7 +46,7 @@ public class ChordDiagram extends FlowDiagram {
     public boolean nonRibbon;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object radius;

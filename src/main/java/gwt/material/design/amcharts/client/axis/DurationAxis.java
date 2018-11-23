@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcharts.client.datafields.axis.IDurationAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.IDurationAxisDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

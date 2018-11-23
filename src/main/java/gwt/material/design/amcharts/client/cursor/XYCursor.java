@@ -20,10 +20,10 @@
 package gwt.material.design.amcharts.client.cursor;
 
 import gwt.material.design.amcharts.client.axis.Axis;
-import gwt.material.design.amcharts.client.base.Sprite;
-import gwt.material.design.amcharts.client.constants.XYCursorBehavior;
-import gwt.material.design.amcharts.client.events.SpriteEventDispatcher;
-import gwt.material.design.amcharts.client.properties.IRange;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.constants.XYCursorBehavior;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.properties.IRange;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

@@ -19,9 +19,10 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.animation.Animation;
-import gwt.material.design.amcharts.client.base.BaseObjectsEvents;
-import gwt.material.design.amcharts.client.base.Sprite;
+import gwt.material.design.amcore.client.animation.Animation;
+import gwt.material.design.amcore.client.base.BaseObjectsEvents;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.constants.CalculatedValue;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -108,7 +109,7 @@ public class DataItem extends BaseObjectsEvents {
     public native Number getValue(String name);
 
     /**
-     * @param calculatedValue @see {@link gwt.material.design.amcharts.client.constants.CalculatedValue}
+     * @param calculatedValue @see {@link CalculatedValue}
      */
     @JsMethod
     public native Number getValue(String name, String calculatedValue);
@@ -126,7 +127,7 @@ public class DataItem extends BaseObjectsEvents {
     public native void setCalculatedValue(String name, Number value);
 
     /**
-     * @param calculatedValue @see {@link gwt.material.design.amcharts.client.constants.CalculatedValue}
+     * @param calculatedValue @see {@link CalculatedValue}
      */
     @JsMethod
     public native void setCalculatedValue(String name, Number value, String calculatedValue);

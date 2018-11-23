@@ -19,8 +19,12 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.base.*;
-import gwt.material.design.amcharts.client.datafields.series.IPercentSeriesDataFields;
+import gwt.material.design.amcharts.client.base.FunnelSlice;
+import gwt.material.design.amcharts.client.tick.FunnelTick;
+import gwt.material.design.amcharts.client.datafield.series.IPercentSeriesDataFields;
+import gwt.material.design.amcore.client.color.ColorSet;
+import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

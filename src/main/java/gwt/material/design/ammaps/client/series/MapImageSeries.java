@@ -19,7 +19,7 @@
  */
 package gwt.material.design.ammaps.client.series;
 
-import gwt.material.design.amcharts.client.base.ListTemplate;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.ammaps.client.datafields.IMapImageSeriesDataFields;
 import gwt.material.design.ammaps.client.MapChart;
 import gwt.material.design.ammaps.client.base.MapImage;

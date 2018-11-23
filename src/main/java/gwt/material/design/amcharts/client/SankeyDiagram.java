@@ -19,7 +19,9 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.datafields.chart.ISankeyDiagramDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.ISankeyDiagramDataFields;
+import gwt.material.design.amcore.client.constants.NodeAlign;
+import gwt.material.design.amcore.client.constants.Orientation;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,13 +29,13 @@ import jsinterop.annotations.JsType;
 public class SankeyDiagram extends FlowDiagram {
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.NodeAlign
+     * @see NodeAlign
      */
     @JsProperty
     public String nodeAlign;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.Orientation
+     * @see Orientation
      */
     @JsProperty
     public String orientation;

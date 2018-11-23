@@ -20,14 +20,14 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.SerialChart;
-import gwt.material.design.amcharts.client.base.Bullet;
-import gwt.material.design.amcharts.client.base.Component;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.series.ISeriesDataFields;
+import gwt.material.design.amcharts.client.bullet.Bullet;
+import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.series.ISeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.dataitem.LegendDataItem;
-import gwt.material.design.amcharts.client.base.LegendSettings;
-import gwt.material.design.amcharts.client.properties.IHeatRule;
+import gwt.material.design.amcharts.client.legend.LegendSettings;
+import gwt.material.design.amcore.client.properties.IHeatRule;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

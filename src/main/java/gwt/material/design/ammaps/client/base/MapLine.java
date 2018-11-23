@@ -19,9 +19,9 @@
  */
 package gwt.material.design.ammaps.client.base;
 
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.base.PolyLine;
-import gwt.material.design.amcharts.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.ui.PolyLine;
+import gwt.material.design.amcore.client.properties.IOrientationPoint;
 import gwt.material.design.ammaps.client.properties.IGeoPoint;
 import gwt.material.design.ammaps.client.series.MapLineSeries;
 import jsinterop.annotations.JsMethod;

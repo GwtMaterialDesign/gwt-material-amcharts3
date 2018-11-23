@@ -19,8 +19,8 @@
  */
 package gwt.material.design.amcharts.client.scrollbar;
 
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.base.Button;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.ui.Button;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

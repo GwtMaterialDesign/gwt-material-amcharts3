@@ -19,8 +19,8 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.series.ILineSeriesDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.series.ILineSeriesDataFields;
 import gwt.material.design.amcharts.client.segments.LineSeriesSegment;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

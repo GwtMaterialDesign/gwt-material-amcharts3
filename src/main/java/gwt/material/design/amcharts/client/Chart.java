@@ -19,12 +19,12 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.Component;
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.base.Label;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.chart.IChartDataFields;
-import gwt.material.design.amcharts.client.base.Legend;
+import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.chart.IChartDataFields;
+import gwt.material.design.amcharts.client.legend.Legend;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

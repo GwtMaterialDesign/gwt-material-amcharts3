@@ -21,8 +21,8 @@ package gwt.material.design.amcharts.client.renderer;
 
 import gwt.material.design.amcharts.client.axis.AxisLabel;
 import gwt.material.design.amcharts.client.axis.Grid;
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.base.ListTemplate;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

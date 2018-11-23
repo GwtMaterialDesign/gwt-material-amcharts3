@@ -19,8 +19,8 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.base.Sprite;
-import gwt.material.design.amcharts.client.datafields.series.IPictorialStackedSeriesDataFields;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcharts.client.datafield.series.IPictorialStackedSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

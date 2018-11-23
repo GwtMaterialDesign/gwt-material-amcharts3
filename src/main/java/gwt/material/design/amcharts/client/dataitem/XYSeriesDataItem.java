@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.dataitem;
 
 import gwt.material.design.amcharts.client.base.Column;
-import gwt.material.design.amcharts.client.dictionary.Dictionary;
+import gwt.material.design.amcore.client.list.Dictionary;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

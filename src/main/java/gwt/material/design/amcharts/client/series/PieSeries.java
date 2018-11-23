@@ -19,7 +19,8 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafields.series.IPieSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.IPieSeriesDataFields;
+import gwt.material.design.amcore.client.base.Percent;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class PieSeries extends Series {
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object radius;

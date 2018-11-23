@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafields.series.ITreeMapSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.ITreeMapSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.TreeMapDataItem;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

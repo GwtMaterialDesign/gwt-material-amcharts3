@@ -19,9 +19,9 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.base.Percent;
-import gwt.material.design.amcharts.client.datafields.chart.IPieChartDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcharts.client.datafield.chart.IPieChartDataFields;
 import gwt.material.design.amcharts.client.series.PieSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

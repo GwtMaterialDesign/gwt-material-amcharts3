@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.cursor;
 
+import gwt.material.design.amcore.client.base.Percent;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,7 @@ public class RadarCursor extends XYCursor {
     public Number endAngle;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object innerRadius;
@@ -41,7 +42,7 @@ public class RadarCursor extends XYCursor {
     public Number pixelRadius;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object radius;

@@ -20,10 +20,10 @@
 package gwt.material.design.ammaps.client;
 
 import com.google.gwt.user.client.ui.Widget;
-import gwt.material.design.amcharts.client.Am4Core;
+import gwt.material.design.amcore.client.Am4Core;
 import gwt.material.design.amcharts.client.SerialChart;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.data.DataSource;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.data.DataSource;
 import gwt.material.design.ammaps.client.datafields.IMapChartDataFields;
 import gwt.material.design.ammaps.client.projections.Projection;
 import gwt.material.design.ammaps.client.series.MapSeries;

@@ -20,8 +20,9 @@
 package gwt.material.design.amcharts.client.dataitem;
 
 import gwt.material.design.amcharts.client.axis.*;
-import gwt.material.design.amcharts.client.base.Container;
-import gwt.material.design.amcharts.client.properties.IPoint;
+import gwt.material.design.amcharts.client.tick.AxisTick;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.properties.IPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

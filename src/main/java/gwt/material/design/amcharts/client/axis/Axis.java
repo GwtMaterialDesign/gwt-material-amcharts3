@@ -20,14 +20,14 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.Chart;
-import gwt.material.design.amcharts.client.base.Label;
-import gwt.material.design.amcharts.client.base.List;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.base.Sprite;
-import gwt.material.design.amcharts.client.datafields.axis.IAxisDataFields;
+import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcharts.client.datafield.axis.IAxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
-import gwt.material.design.amcharts.client.properties.IOrientationPoint;
-import gwt.material.design.amcharts.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.IPoint;
 import gwt.material.design.amcharts.client.renderer.AxisRenderer;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.JsMethod;

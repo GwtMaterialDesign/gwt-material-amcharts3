@@ -20,11 +20,12 @@
 package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcharts.client.axis.ValueAxis;
-import gwt.material.design.amcharts.client.base.ColorSet;
-import gwt.material.design.amcharts.client.base.ListTemplate;
+import gwt.material.design.amcore.client.color.ColorSet;
+import gwt.material.design.amcore.client.constants.Sorting;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.base.NavigationBar;
-import gwt.material.design.amcharts.client.datafields.chart.ITreeMapDataFields;
-import gwt.material.design.amcharts.client.dictionary.DictionaryTemplate;
+import gwt.material.design.amcharts.client.datafield.chart.ITreeMapDataFields;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcharts.client.series.TreeMapSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -56,7 +57,7 @@ public class TreeMap extends XYChart {
     public DictionaryTemplate<TreeMapSeries> seriesTemplates;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.Sorting
+     * @see Sorting
      */
     @JsProperty
     public String sorting;

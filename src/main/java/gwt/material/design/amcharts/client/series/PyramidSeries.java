@@ -19,7 +19,9 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafields.series.IPyramidSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.IPyramidSeriesDataFields;
+import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcore.client.constants.PyramidValues;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,25 +29,25 @@ import jsinterop.annotations.JsType;
 public class PyramidSeries extends FunnelSeries {
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object bottomWidth;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object pyramidHeight;
 
     /**
-     * Accepts {@link Number} or {@link gwt.material.design.amcharts.client.base.Percent}
+     * Accepts {@link Number} or {@link Percent}
      */
     @JsProperty
     public Object topWidth;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.PyramidValues
+     * @see PyramidValues
      */
     @JsProperty
     public String values;

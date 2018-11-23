@@ -19,6 +19,14 @@
  */
 package gwt.material.design.amcharts.client.base;
 
+import gwt.material.design.amcharts.client.bullet.Bullet;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.color.LinearGradient;
+import gwt.material.design.amcore.client.constants.ColorMode;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.ui.Line;
+import gwt.material.design.amcore.client.ui.PolyLine;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,7 +44,7 @@ public class FlowDiagramLink extends Container {
     public Sprite bulletsMask;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.ColorMode
+     * @see ColorMode
      */
     @JsProperty
     public String colorMode;

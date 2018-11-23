@@ -19,11 +19,12 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.ColorSet;
-import gwt.material.design.amcharts.client.base.Container;
+import gwt.material.design.amcore.client.color.ColorSet;
+import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.base.FlowDiagramLink;
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.chart.IFlowDiagramDataFields;
+import gwt.material.design.amcore.client.constants.FlowDiagramSortBy;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.chart.IFlowDiagramDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -52,7 +53,7 @@ public class FlowDiagram extends Chart {
     public Container nodesContainer;
 
     /**
-     * @see gwt.material.design.amcharts.client.constants.FlowDiagramSortBy
+     * @see FlowDiagramSortBy
      */
     @JsProperty
     public String sortBy;

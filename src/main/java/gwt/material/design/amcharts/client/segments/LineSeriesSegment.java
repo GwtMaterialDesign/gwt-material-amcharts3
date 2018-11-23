@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.segments;
 
-import gwt.material.design.amcharts.client.base.Container;
+import gwt.material.design.amcore.client.base.Container;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 

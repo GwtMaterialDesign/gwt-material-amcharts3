@@ -29,6 +29,7 @@
 
     <inherits name="gwt.material.design.jquery.JQuery"/>
     <inherits name='gwt.material.design.GwtMaterialDesignBase'/>
+    <inherits name="gwt.material.design.amcore.GwtMaterialAmCore"/>
 
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>

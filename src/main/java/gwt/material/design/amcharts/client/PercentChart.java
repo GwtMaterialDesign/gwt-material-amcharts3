@@ -19,8 +19,8 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.base.ListTemplate;
-import gwt.material.design.amcharts.client.datafields.chart.IPercentChartDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.datafield.chart.IPercentChartDataFields;
 import gwt.material.design.amcharts.client.series.PercentSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

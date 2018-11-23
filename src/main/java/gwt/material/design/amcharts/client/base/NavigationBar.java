@@ -19,7 +19,11 @@
  */
 package gwt.material.design.amcharts.client.base;
 
-import gwt.material.design.amcharts.client.datafields.INavigationBarDataFields;
+import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.ui.TextLink;
+import gwt.material.design.amcore.client.ui.Triangle;
+import gwt.material.design.amcharts.client.datafield.INavigationBarDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

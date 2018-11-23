@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.base.Color;
+import gwt.material.design.amcore.client.color.Color;
 import gwt.material.design.amcharts.client.series.TreeMapSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

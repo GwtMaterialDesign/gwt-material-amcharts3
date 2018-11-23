@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.scrollbar;
 
 import gwt.material.design.amcharts.client.XYChart;
-import gwt.material.design.amcharts.client.base.List;
+import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;

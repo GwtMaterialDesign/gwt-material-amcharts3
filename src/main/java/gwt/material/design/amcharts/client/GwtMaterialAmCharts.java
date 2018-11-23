@@ -20,36 +20,14 @@
 package gwt.material.design.amcharts.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 import gwt.material.design.amcharts.client.resources.ChartClientBundle;
 import gwt.material.design.client.MaterialDesignBase;
 
 public class GwtMaterialAmCharts implements EntryPoint {
 
-    private static StartupState startupState;
-
-    private static void checkStartupState() {
-        if (startupState == null) {
-            startupState = GWT.create(StartupState.class);
-        }
-    }
-
-    public static StartupState getStartupState() {
-        checkStartupState();
-        return startupState;
-    }
-
-    public static boolean isDebug() {
-        return GwtMaterialAmCharts.getStartupState() instanceof StartupState.DebugState;
-    }
-
     @Override
     public void onModuleLoad() {
-        // Initialize the startup state.
-        checkStartupState();
-
         // Inject Am4chart resources
-        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.coreJs());
-        MaterialDesignBase.injectDebugJs(ChartClientBundle.INSTANCE.chartsJs());
+        MaterialDesignBase.injectJs(ChartClientBundle.INSTANCE.chartsJs());
     }
 }

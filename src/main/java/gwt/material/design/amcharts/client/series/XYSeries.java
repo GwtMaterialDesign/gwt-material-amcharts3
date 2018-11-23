@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.axis.Axis;
-import gwt.material.design.amcharts.client.datafields.series.IXYSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.IXYSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
