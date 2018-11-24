@@ -21,11 +21,13 @@ package gwt.material.design.amcore.client;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Widget;
-import gwt.material.design.amcore.client.ui.Circle;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.language.Locale;
+import gwt.material.design.amcore.client.theme.ChartTheme;
+import gwt.material.design.amcore.client.ui.Circle;
 import gwt.material.design.amcore.client.ui.Rectangle;
 import gwt.material.design.amcore.client.ui.Trapezoid;
-import gwt.material.design.amcore.client.theme.ChartTheme;
+import gwt.material.design.client.MaterialDesign;
 import jsinterop.annotations.*;
 
 @JsType(isNative = true, namespace = JsPackage.GLOBAL)
@@ -61,5 +63,10 @@ public class Am4Core {
     public final static void useTheme(ChartTheme theme) {
         theme.loadResource();
         useTheme(theme.get());
+    }
+
+    @JsOverlay
+    public final static void useLanguage(Locale language) {
+        MaterialDesign.injectJs(language.getResource());
     }
 }

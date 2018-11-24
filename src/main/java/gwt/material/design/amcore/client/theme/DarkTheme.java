@@ -20,6 +20,7 @@
 package gwt.material.design.amcore.client.theme;
 
 import gwt.material.design.amcore.client.resources.CoreClientBundle;
+import gwt.material.design.amcore.client.resources.ThemeClientBundle;
 import gwt.material.design.client.MaterialDesignBase;
 
 import static gwt.material.design.jquery.client.api.JQuery.window;
@@ -28,7 +29,7 @@ public class DarkTheme implements ChartTheme {
 
     @Override
     public void loadResource() {
-        MaterialDesignBase.injectDebugJs(CoreClientBundle.INSTANCE.darkJs());
+        MaterialDesignBase.injectJs(ThemeClientBundle.INSTANCE.darkJs());
     }
 
     @Override

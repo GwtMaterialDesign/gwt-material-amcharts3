@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcore.client.base.Component;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Language;
 import gwt.material.design.amcore.client.ui.Label;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.IChartDataFields;
@@ -49,4 +50,8 @@ public class Chart extends Component {
 
     @JsMethod
     public native void copyFrom(Chart source);
+
+    //TODO: UPdate
+    @JsProperty
+    public Language language;
 }
