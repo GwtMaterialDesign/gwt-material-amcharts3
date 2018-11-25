@@ -20,8 +20,12 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.SerialChart;
+import gwt.material.design.amcharts.client.dataitem.ValueAxisDataItem;
 import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcharts.client.datafield.axis.IValueAxisDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.list.OrderedListTemplate;
+import gwt.material.design.amcore.client.list.SortedListTemplate;
 import gwt.material.design.amcore.client.properties.IOrientationPoint;
 import gwt.material.design.amcore.client.properties.IPoint;
 import gwt.material.design.amcharts.client.series.XYSeries;
@@ -74,6 +78,21 @@ public class ValueAxis extends Axis {
     @JsProperty
     public boolean strictMinMax;
 
+    @JsProperty
+    public SortedListTemplate<ValueAxisBreak> axisBreaks;
+
+    @JsProperty
+    public ListTemplate<ValueAxisDataItem> axisRanges;
+
+    @JsProperty
+    public IValueAxisDataFields dataFields;
+
+    @JsProperty
+    public ValueAxisDataItem dataItem;
+
+    @JsProperty
+    public OrderedListTemplate<ValueAxisDataItem> dataItems;
+
     @JsMethod
     public native IOrientationPoint anyToPoint(Number value);
 
@@ -82,11 +101,6 @@ public class ValueAxis extends Axis {
 
     @JsMethod
     public native void copyFrom(ValueAxis source);
-
-    //TODO: ValueAxisDataItem fillRUle
-
-    @JsProperty
-    public IValueAxisDataFields dataFields;
 
     @JsMethod
     public native String formatLabel(Number value);
@@ -120,4 +134,13 @@ public class ValueAxis extends Axis {
 
     @JsMethod
     public native void zoomToValues(Number start, Number end, boolean skipRangeEvent, boolean instantly);
+
+    @JsMethod
+    public native void appendDataItem(ValueAxisDataItem dataItem);
+
+    @JsMethod
+    public native ValueAxisDataItem createSeriesRange(XYSeries series);
+
+    @JsMethod
+    public native void fillRule(ValueAxisDataItem dataItem);
 }

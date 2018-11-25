@@ -66,6 +66,9 @@ public class EventDispatcher<T> {
     public native void on(String event, Functions.Func1<Object> callback, Object source);
 
     @JsMethod
+    public native void on(String event, Functions.Func1<Object> callback);
+
+    @JsMethod
     public native void onAll(Functions.Func1<Object> callback, Object source);
 
     @JsMethod

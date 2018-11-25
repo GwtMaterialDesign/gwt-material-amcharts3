@@ -29,6 +29,7 @@ import gwt.material.design.amcore.client.export.Export;
 import gwt.material.design.amcore.client.color.DesaturateFilter;
 import gwt.material.design.amcore.client.formatter.DateFormatter;
 import gwt.material.design.amcore.client.formatter.NumberFormatter;
+import gwt.material.design.amcore.client.properties.ISpriteAnimationOptions;
 import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.jscore.client.api.core.Element;
@@ -202,7 +203,8 @@ public class Sprite extends BaseObjectsEvents {
 
     //TODO: IKeyboardOptions keyboardOptions
 
-    //TODO: Language language
+    @JsProperty
+    public Language language;
 
     @JsProperty
     public Object marginBottom;
@@ -420,7 +422,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean togglable;
 
-    //TODO: TOoltip tooltip
+    @JsProperty
+    public Tooltip tooltip;
 
     //TODO: Sprite tooltipColorSource
 
@@ -481,6 +484,13 @@ public class Sprite extends BaseObjectsEvents {
 
     @JsProperty
     public ListTemplate<DesaturateFilter> filters;
+
+    @JsMethod
+    public native Animation animate(ISpriteAnimationOptions[] animationOptions, int duration);
+
+
+    @JsMethod
+    public native Animation animate(ISpriteAnimationOptions[] animationOptions, int duration, Object easing);
 
     @JsMethod
     public native void hide();

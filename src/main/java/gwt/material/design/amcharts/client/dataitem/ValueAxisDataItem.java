@@ -17,21 +17,24 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.axis;
+package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcharts.client.axis.AxisBreak;
+import gwt.material.design.amcharts.client.axis.AxisFill;
+import gwt.material.design.amcharts.client.axis.AxisLabel;
+import gwt.material.design.amcharts.client.axis.Grid;
+import gwt.material.design.amcharts.client.tick.AxisTick;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.properties.IPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+public class ValueAxisDataItem extends AxisDataItem {
 
     @JsProperty
-    public Axis axis;
+    public Number endValue;
 
     @JsProperty
-    public boolean inside;
-
-    @JsProperty
-    public Object location;
+    public Number value;
 }

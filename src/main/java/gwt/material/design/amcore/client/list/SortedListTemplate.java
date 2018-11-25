@@ -17,21 +17,24 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.axis;
+package gwt.material.design.amcore.client.list;
 
-import gwt.material.design.amcore.client.ui.Label;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+@JsType(isNative = true, namespace = "am4core")
+public class SortedListTemplate<T extends Object> extends SortedList<T> {
 
     @JsProperty
-    public Axis axis;
+    public T template;
 
-    @JsProperty
-    public boolean inside;
+    @JsMethod
+    public native void copyFrom(SortedListTemplate source);
 
-    @JsProperty
-    public Object location;
+    @JsMethod
+    public native T create(Object make);
+
+    @JsMethod
+    public native T create();
 }

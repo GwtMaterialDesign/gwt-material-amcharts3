@@ -17,36 +17,56 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client;
+package gwt.material.design.amcore.client.list;
 
-import gwt.material.design.amcharts.client.datafield.chart.IChartDataFields;
-import gwt.material.design.amcharts.client.legend.Legend;
-import gwt.material.design.amcore.client.base.Component;
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true)
-public class Chart extends Component {
+@JsType(isNative = true, namespace = "am4core")
+public class OrderedList<T extends Object> {
+
+    //TODO: EventDispatcher
 
     @JsProperty
-    public Container chartAndLegendContainer;
+    public T first;
 
     @JsProperty
-    public Container chartContainer;
+    public T last;
 
     @JsProperty
-    public Legend legend;
+    public int length;
 
     @JsProperty
-    public ListTemplate<Label> titles;
-
-    @JsProperty
-    public IChartDataFields dataFields;
+    public T[] values;
 
     @JsMethod
-    public native void copyFrom(Chart source);
+    public native void clear();
+
+    @JsMethod
+    public native boolean contains(T value);
+
+    @JsMethod
+    public native void each(Object object);
+
+    @JsMethod
+    public native T getIndex(int index);
+
+    @JsMethod
+    public native int indexOf(T value);
+
+    @JsMethod
+    public native void insert(T value);
+
+    @JsMethod
+    public native List<T> iterator();
+
+    @JsMethod
+    public native void remove(T value);
+
+    @JsMethod
+    public native void setAll(T[] values);
+
+    @JsMethod
+    public native OrderedList<T> slice(int start, int end);
 }

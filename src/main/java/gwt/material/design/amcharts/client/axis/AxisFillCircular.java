@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,19 +19,25 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+public class AxisFillCircular extends AxisFill {
 
     @JsProperty
-    public Axis axis;
+    public Number cornerRadius;
 
+    /**
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
+     */
     @JsProperty
-    public boolean inside;
+    public Object innerRadius;
 
+    /**
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
+     */
     @JsProperty
-    public Object location;
+    public Object radius;
 }

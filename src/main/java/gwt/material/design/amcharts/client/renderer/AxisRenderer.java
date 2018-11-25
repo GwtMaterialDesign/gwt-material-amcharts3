@@ -19,10 +19,11 @@
  */
 package gwt.material.design.amcharts.client.renderer;
 
-import gwt.material.design.amcharts.client.axis.AxisLabel;
-import gwt.material.design.amcharts.client.axis.Grid;
+import gwt.material.design.amcharts.client.axis.*;
+import gwt.material.design.amcharts.client.tick.AxisTick;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.list.ListTemplate;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -30,8 +31,80 @@ import jsinterop.annotations.JsType;
 public class AxisRenderer extends Container {
 
     @JsProperty
+    public Axis axis;
+
+    @JsProperty
+    public ListTemplate<AxisFill> axisFills;
+
+    @JsProperty
+    public Number axisLength;
+
+    @JsProperty
+    public Container breakContainer;
+
+    @JsProperty
+    public Number cellEndLocation;
+
+    @JsProperty
+    public Number cellStartLocation;
+
+    @JsProperty
+    public boolean fullWidthTooltip;
+
+    @JsProperty
     public ListTemplate<Grid> grid;
 
     @JsProperty
+    public Container gridContainer;
+
+    @JsProperty
+    public boolean inside;
+
+    @JsProperty
+    public boolean inversed;
+
+    @JsProperty
     public ListTemplate<AxisLabel> labels;
+
+    @JsProperty
+    public AxisLine line;
+
+    @JsProperty
+    public Number maxLabelPosition;
+
+    @JsProperty
+    public Number minGridDistance;
+
+    @JsProperty
+    public Number minLabelPosition;
+
+    @JsProperty
+    public boolean opposite;
+
+    @JsProperty
+    public ListTemplate<AxisTick> ticks;
+
+    @JsProperty
+    public Number tooltipLocation;
+
+    @JsMethod
+    public native Number coordinateToPosition(Number coordinate);
+
+    @JsMethod
+    public native void copyFrom(AxisRenderer source);
+
+    @JsMethod
+    public native AxisFill createFill(Axis axis);
+
+    @JsMethod
+    public native Grid createGrid();
+
+    @JsMethod
+    public native AxisLabel createLabel();
+
+    @JsMethod
+    public native AxisTick createTick();
+
+    @JsMethod
+    public native Number positionToCoordinate(Number position);
 }

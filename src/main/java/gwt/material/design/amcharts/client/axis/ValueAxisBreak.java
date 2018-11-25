@@ -19,19 +19,24 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcharts.client.dataitem.DataItem;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.IWavedShape;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+public class ValueAxisBreak extends AxisBreak {
 
     @JsProperty
-    public Axis axis;
+    public ValueAxis axis;
 
     @JsProperty
-    public boolean inside;
+    public Number endPosition;
 
     @JsProperty
-    public Object location;
+    public Number startPosition;
 }

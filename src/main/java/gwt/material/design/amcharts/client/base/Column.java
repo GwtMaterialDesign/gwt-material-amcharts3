@@ -19,13 +19,14 @@
  */
 package gwt.material.design.amcharts.client.base;
 
+import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.ui.RoundedRectangle;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class Column {
+public class Column extends Container {
 
     @JsProperty
     public RoundedRectangle column;

@@ -20,10 +20,15 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcore.client.base.Sprite;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class Grid extends Sprite {
 
+    @JsProperty
+    public Axis axis;
 
+    @JsProperty
+    public int location;
 }

@@ -19,19 +19,22 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+public class GridCircular extends Grid {
 
+    /**
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
+     */
     @JsProperty
-    public Axis axis;
+    public Object innerRadius;
 
+    /**
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
+     */
     @JsProperty
-    public boolean inside;
-
-    @JsProperty
-    public Object location;
+    public Object radius;
 }

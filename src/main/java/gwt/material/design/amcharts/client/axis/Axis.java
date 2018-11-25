@@ -20,16 +20,17 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.Chart;
-import gwt.material.design.amcore.client.ui.Label;
-import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcharts.client.datafield.axis.IAxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
-import gwt.material.design.amcore.client.properties.IPoint;
 import gwt.material.design.amcharts.client.renderer.AxisRenderer;
 import gwt.material.design.amcharts.client.series.XYSeries;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.list.SortedListTemplate;
+import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,7 +41,8 @@ public class Axis extends Sprite {
     @JsProperty
     public boolean autoDispose;
 
-    //TODO: SortedListTemplate axisBreaks
+    @JsProperty
+    public SortedListTemplate<AxisBreak> axisBreaks;
 
     @JsProperty
     public Number axisFullLength;
@@ -75,25 +77,29 @@ public class Axis extends Sprite {
     @JsProperty
     public Label title;
 
+    @JsProperty
+    public IAxisDataFields dataFields;
+
     @JsMethod
     public native IOrientationPoint anyToPoint(Number value);
 
     @JsMethod
     public native Number anyToPosition(Number value);
 
-    /* TODO:
     @JsMethod
-    public native void appendDataItem(AxisDataItem dataItem);*/
+    public native void appendDataItem(AxisDataItem dataItem);
 
     @JsMethod
     public native void copyFrom(Axis axis);
 
-    // TODO: createSeriesRange
+    @JsMethod
+    public native AxisDataItem createSeriesRange(XYSeries series);
 
-    // TODO: fillRule
+    @JsMethod
+    public native void fillRule(AxisDataItem dataItem);
 
-    @JsProperty
-    public IAxisDataFields dataFields;
+    @JsMethod
+    public native void fillRule(AxisDataItem dataItem, Number index);
 
     @JsMethod
     public native String getPositionLabel(Number position);

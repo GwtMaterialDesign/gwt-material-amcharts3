@@ -20,6 +20,11 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.datafield.axis.IDateAxisDataFields;
+import gwt.material.design.amcharts.client.dataitem.DateAxisDataItem;
+import gwt.material.design.amcharts.client.series.XYSeries;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.list.OrderedListTemplate;
+import gwt.material.design.amcore.client.list.SortedListTemplate;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,6 +36,27 @@ public class DateAxis extends ValueAxis {
 
     @JsProperty
     public IDateAxisDataFields dataFields;
+
+    @JsProperty
+    public SortedListTemplate<DateAxisBreak> axisBreaks;
+
+    @JsProperty
+    public ListTemplate<DateAxisDataItem> axisRanges;
+
+    @JsProperty
+    public DateAxisDataItem dataItem;
+
+    @JsProperty
+    public OrderedListTemplate<DateAxisDataItem> dataItems;
+
+    @JsMethod
+    public native void appendDataItem(DateAxisDataItem dataItem);
+
+    @JsMethod
+    public native DateAxisDataItem createSeriesRange(XYSeries series);
+
+    @JsMethod
+    public native void fillRule(DateAxisDataItem dataItem);
 
     @JsMethod
     public native void zoomToDates(Date startDate, Date endDate);

@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,62 +17,57 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.axis;
+package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcharts.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.properties.IPoint;
-import gwt.material.design.amcore.client.properties.IWavedShape;
+import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisBreak extends Container {
+
+@JsType(isNative = true, namespace = "am4core")
+public class Tooltip extends Container {
 
     @JsProperty
-    public Number adjustedEndValue;
+    public Number animationDuration;
 
     @JsProperty
-    public Number adjustedStartValue;
+    public Object animationEasing;
 
     @JsProperty
-    public Axis axis;
+    public boolean autoTextColor;
 
     @JsProperty
-    public Number breakSize;
+    public boolean fitPointerToBounds;
 
     @JsProperty
-    public List<DataItem> dataItems;
+    public boolean getFillFromObject;
 
     @JsProperty
-    public IWavedShape endLine;
+    public boolean getStrokeFromObject;
 
     @JsProperty
-    public IPoint endPoint;
+    public String html;
 
     @JsProperty
-    public Number endPosition;
+    public Label label;
+
+    /**
+     * @see gwt.material.design.amcore.client.constants.PointOrientation
+     */
+    @JsProperty
+    public String pointerOrientation;
 
     @JsProperty
-    public Number endValue;
-
-    @JsProperty
-    public IWavedShape fillShape;
-
-    @JsProperty
-    public IWavedShape startLine;
-
-    @JsProperty
-    public IPoint startPoint;
-
-    @JsProperty
-    public Number startPosition;
-
-    @JsProperty
-    public Number startValue;
+    public String text;
 
     @JsMethod
-    public native void dispose();
+    public native void copyFrom(Tooltip source);
+
+    @JsMethod
+    public native void pointTo(IPoint point);
+
+    @JsMethod
+    public native void pointTo(IPoint point, boolean instantly);
 }

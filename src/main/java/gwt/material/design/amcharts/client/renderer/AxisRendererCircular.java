@@ -17,71 +17,56 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcore.client.ui;
+package gwt.material.design.amcharts.client.renderer;
 
-import gwt.material.design.amcore.client.base.AMElement;
+import gwt.material.design.amcharts.client.axis.*;
+import gwt.material.design.amcharts.client.tick.AxisTick;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.properties.IPoint;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true)
-public class Label extends Container {
+@JsType(isNative = true, namespace = "am4charts")
+public class AxisRendererCircular extends AxisRenderer {
 
     @JsProperty
-    public Number availableHeight;
+    public Number axisLength;
 
     @JsProperty
-    public String currentText;
-
-    @JsProperty
-    public String ellipsis;
-
-    @JsProperty
-    public boolean fullWords;
-
-    @JsProperty
-    public boolean hideOversized;
-
-    @JsProperty
-    public String html;
-
-    @JsProperty
-    public boolean ignoreFormatting;
-
-    @JsProperty
-    public boolean isOversized;
-
-    @JsProperty
-    public boolean selectable;
-
-    @JsProperty
-    public String text;
+    public Number endAngle;
 
     /**
-     * @see gwt.material.design.amcore.client.constants.TextAlign
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
      */
     @JsProperty
-    public String textAlign;
+    public Object innerRadius;
 
     @JsProperty
-    public boolean truncate;
+    public Number pixelInnerRadius;
 
     @JsProperty
-    public boolean wrap;
+    public Number pixelRadius;
+
+    @JsProperty
+    public Number startAngle;
+
+    @JsProperty
+    public boolean useChartAngles;
 
     @JsMethod
-    public native AMElement getSvgElement(String text);
+    public native AxisFillCircular createFill(Axis axis);
 
     @JsMethod
-    public native AMElement getSvgElement(String text, String style);
+    public native GridCircular createGrid();
 
     @JsMethod
-    public native void hardInvalidate();
+    public native AxisLabelCircular createLabel();
 
     @JsMethod
-    public native void measureElement();
+    public native Number positionToAngle(Number position);
 
     @JsMethod
-    public native void setDataItem(Object dataItem);
+    public native IPoint positionToPoint(Number position);
 }

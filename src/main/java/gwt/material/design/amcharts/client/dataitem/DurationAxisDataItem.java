@@ -17,21 +17,15 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.axis;
+package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import java.util.Date;
+
 @JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+public class DurationAxisDataItem extends ValueAxisDataItem {
 
-    @JsProperty
-    public Axis axis;
 
-    @JsProperty
-    public boolean inside;
-
-    @JsProperty
-    public Object location;
 }

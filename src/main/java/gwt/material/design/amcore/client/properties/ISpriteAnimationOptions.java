@@ -17,21 +17,30 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.axis;
+package gwt.material.design.amcore.client.properties;
 
-import gwt.material.design.amcore.client.ui.Label;
+import gwt.material.design.amcore.client.animation.Morpher;
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisLabel extends Label {
+@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+public class ISpriteAnimationOptions {
+
+    /**
+     * Accepts {@link gwt.material.design.amcore.client.base.Percent}, {@link gwt.material.design.amcore.client.color.Color},
+     * {@link Number} or {@link String}
+     */
+    @JsProperty
+    public Object from;
 
     @JsProperty
-    public Axis axis;
+    public Object property;
 
+    /**
+     * Accepts {@link gwt.material.design.amcore.client.base.Percent}, {@link gwt.material.design.amcore.client.color.Color},
+     * {@link Number} or {@link String}
+     */
     @JsProperty
-    public boolean inside;
-
-    @JsProperty
-    public Object location;
+    public Object to;
 }
