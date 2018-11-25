@@ -17,19 +17,35 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.base;
+package gwt.material.design.amcharts.client.node;
 
+import gwt.material.design.amcharts.client.ChordDiagram;
+import gwt.material.design.amcharts.client.FlowDiagram;
+import gwt.material.design.amcharts.client.axis.AxisLabelCircular;
+import gwt.material.design.amcharts.client.dataitem.FlowDiagramDataItem;
+import gwt.material.design.amcharts.client.dataitem.LegendDataItem;
+import gwt.material.design.amcharts.client.legend.LegendSettings;
 import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.base.Percent;
-import gwt.material.design.amcore.client.base.Sprite;
-import gwt.material.design.amcore.client.properties.IPoint;
-import gwt.material.design.amcore.client.constants.Orientation;
+import gwt.material.design.amcore.client.base.Slice;
+import gwt.material.design.amcore.client.color.Color;
+import gwt.material.design.amcore.client.list.List;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+
 @JsType(isNative = true, namespace = "am4charts")
-public class FunnelSlice extends Container {
+public class ChordNode extends FlowDiagramNode {
 
+    @JsProperty
+    public ChordDiagram chart;
 
+    @JsProperty
+    public AxisLabelCircular label;
+
+    @JsProperty
+    public Slice slice;
+
+    @JsMethod
+    public native void copyFrom(ChordNode source);
 }

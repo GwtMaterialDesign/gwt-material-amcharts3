@@ -21,17 +21,17 @@ package gwt.material.design.amcore.client.base;
 
 import gwt.material.design.amcore.client.adapter.Adapter;
 import gwt.material.design.amcore.client.animation.Animation;
+import gwt.material.design.amcore.client.color.DesaturateFilter;
 import gwt.material.design.amcore.client.constants.Align;
 import gwt.material.design.amcore.client.constants.Valign;
-import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.export.Export;
-import gwt.material.design.amcore.client.color.DesaturateFilter;
 import gwt.material.design.amcore.client.formatter.DateFormatter;
 import gwt.material.design.amcore.client.formatter.NumberFormatter;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.properties.ISpriteAnimationOptions;
 import gwt.material.design.amcore.client.state.SpriteState;
-import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -480,7 +480,7 @@ public class Sprite extends BaseObjectsEvents {
 
 
     @JsProperty
-    public DictionaryTemplate<SpriteState> states;
+    public DictionaryTemplate<String, SpriteState> states;
 
     @JsProperty
     public ListTemplate<DesaturateFilter> filters;

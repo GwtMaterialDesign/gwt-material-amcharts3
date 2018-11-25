@@ -47,7 +47,7 @@ public class CategoryAxis extends Axis {
     public OrderedListTemplate<CategoryAxisDataItem> dataItems;
 
     @JsProperty
-    public Dictionary<CategoryAxisDataItem> dataItemsByCategory;
+    public Dictionary<String, CategoryAxisDataItem> dataItemsByCategory;
 
     @JsMethod
     public native IOrientationPoint anyToPoint(String category);

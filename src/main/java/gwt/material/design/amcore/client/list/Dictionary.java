@@ -22,5 +22,5 @@ package gwt.material.design.amcore.client.list;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class Dictionary<T> {
+public class Dictionary<T, V> {
 }

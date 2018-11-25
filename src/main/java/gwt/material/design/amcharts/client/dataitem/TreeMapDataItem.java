@@ -19,15 +19,17 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcore.client.color.Color;
 import gwt.material.design.amcharts.client.series.TreeMapSeries;
+import gwt.material.design.amcore.client.color.Color;
+import gwt.material.design.amcore.client.list.OrderedListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class TreeMapDataItem extends DataItem {
+public class TreeMapDataItem extends XYChartDataItem {
 
-    //TODO: children
+    @JsProperty
+    public OrderedListTemplate<TreeMapDataItem> children;
 
     @JsProperty
     public Color color;
@@ -44,7 +46,8 @@ public class TreeMapDataItem extends DataItem {
     @JsProperty
     public TreeMapSeries series;
 
-    //TODO: seriesDataItem
+    @JsProperty
+    public TreeMapSeriesDataItem seriesDataItem;
 
     @JsProperty
     public Number value;

@@ -17,24 +17,27 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.series;
+package gwt.material.design.amcharts.client.column;
 
-import gwt.material.design.amcharts.client.column.CandleStick;
-import gwt.material.design.amcharts.client.datafield.series.ICandlestickSeriesDataFields;
-import gwt.material.design.amcharts.client.dataitem.CandlestickSeriesDataItem;
-import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.ui.Line;
+import gwt.material.design.amcore.client.ui.RoundedRectangle;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class CandlestickSeries extends ColumnSeries {
+public class CandleStick extends Column {
 
     @JsProperty
-    public ListTemplate<CandleStick> columns;
+    public Line highLine;
 
     @JsProperty
-    public ICandlestickSeriesDataFields dataFields;
+    public Line lowLine;
 
-    @JsProperty
-    public CandlestickSeriesDataItem dataItem;
+    @JsMethod
+    public native void copyFrom(CandleStick source);
+
+    @JsMethod
+    public native void createAssets();
 }

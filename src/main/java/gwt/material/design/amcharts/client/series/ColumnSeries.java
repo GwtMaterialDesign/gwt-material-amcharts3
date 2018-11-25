@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.base.Column;
+import gwt.material.design.amcharts.client.column.Column;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.series.IColumnSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;

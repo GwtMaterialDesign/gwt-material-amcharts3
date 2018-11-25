@@ -19,24 +19,10 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.column.Column;
-import gwt.material.design.amcore.client.list.Dictionary;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
 @JsType(isNative = true, namespace = "am4charts")
-public class ColumnSeriesDataItem extends XYSeriesDataItem {
+public class ConeSeriesDataItem extends ColumnSeriesDataItem {
 
-    @JsProperty
-    public Column column;
-
-    @JsProperty
-    public boolean droppedFromOpen;
-
-    @JsProperty
-    public boolean droppedFromPrevious;
-
-    @JsProperty
-    public Dictionary<String, Column> rangesColumns;
 }

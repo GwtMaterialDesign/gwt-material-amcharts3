@@ -17,26 +17,12 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.dataitem;
+package gwt.material.design.ammaps.client.dataitem;
 
-import gwt.material.design.amcharts.client.column.Column;
-import gwt.material.design.amcore.client.list.Dictionary;
-import jsinterop.annotations.JsProperty;
+import gwt.material.design.amcharts.client.dataitem.XYSeriesDataItem;
 import jsinterop.annotations.JsType;
 
+@JsType(isNative = true, namespace = "am4maps")
+public class MapArcSeriesDataItem extends MapLineSeriesDataItem {
 
-@JsType(isNative = true, namespace = "am4charts")
-public class ColumnSeriesDataItem extends XYSeriesDataItem {
-
-    @JsProperty
-    public Column column;
-
-    @JsProperty
-    public boolean droppedFromOpen;
-
-    @JsProperty
-    public boolean droppedFromPrevious;
-
-    @JsProperty
-    public Dictionary<String, Column> rangesColumns;
 }

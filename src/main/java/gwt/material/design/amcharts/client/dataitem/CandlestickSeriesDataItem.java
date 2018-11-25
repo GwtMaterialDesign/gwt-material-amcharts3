@@ -17,24 +17,36 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.series;
+package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.column.CandleStick;
-import gwt.material.design.amcharts.client.datafield.series.ICandlestickSeriesDataFields;
-import gwt.material.design.amcharts.client.dataitem.CandlestickSeriesDataItem;
-import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcharts.client.axis.AxisBreak;
+import gwt.material.design.amcharts.client.axis.AxisFill;
+import gwt.material.design.amcharts.client.axis.AxisLabel;
+import gwt.material.design.amcharts.client.axis.Grid;
+import gwt.material.design.amcharts.client.tick.AxisTick;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.properties.IPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class CandlestickSeries extends ColumnSeries {
+public class CandlestickSeriesDataItem extends ColumnSeriesDataItem {
 
     @JsProperty
-    public ListTemplate<CandleStick> columns;
+    public Number closeValueX;
 
     @JsProperty
-    public ICandlestickSeriesDataFields dataFields;
+    public Number closeValueY;
 
     @JsProperty
-    public CandlestickSeriesDataItem dataItem;
+    public Number highValueX;
+
+    @JsProperty
+    public Number highValueY;
+
+    @JsProperty
+    public Number lowValueX;
+
+    @JsProperty
+    public Number lowValueY;
 }

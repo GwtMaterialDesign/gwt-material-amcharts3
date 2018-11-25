@@ -19,24 +19,47 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.column.Column;
-import gwt.material.design.amcore.client.list.Dictionary;
+import gwt.material.design.amcharts.client.tick.Tick;
+import gwt.material.design.amcore.client.animation.Animation;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.ui.Label;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-
 @JsType(isNative = true, namespace = "am4charts")
-public class ColumnSeriesDataItem extends XYSeriesDataItem {
+public class PercentSeriesDataItem extends SeriesDataItem {
 
     @JsProperty
-    public Column column;
+    public String category;
 
     @JsProperty
-    public boolean droppedFromOpen;
+    public boolean hiddenInLegend;
 
     @JsProperty
-    public boolean droppedFromPrevious;
+    public Label label;
 
     @JsProperty
-    public Dictionary<String, Column> rangesColumns;
+    public LegendDataItem legendDataItem;
+
+    @JsProperty
+    public Sprite slice;
+
+    @JsProperty
+    public Tick tick;
+
+    @JsMethod
+    public native Animation hide();
+
+    @JsMethod
+    public native Animation hide(Number duration, Number delay, Number toValue, String fields[]);
+
+    @JsMethod
+    public native void setVisibility(boolean value);
+
+    @JsMethod
+    public native void setVisibility(boolean value, boolean noChangeValue);
+
+    @JsMethod
+    public native void show();
 }

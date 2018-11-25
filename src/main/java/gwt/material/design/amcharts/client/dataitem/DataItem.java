@@ -23,6 +23,7 @@ import gwt.material.design.amcore.client.animation.Animation;
 import gwt.material.design.amcore.client.base.BaseObjectsEvents;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.constants.CalculatedValue;
+import gwt.material.design.amcore.client.properties.IAnimationOptions;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -91,7 +92,11 @@ public class DataItem extends BaseObjectsEvents {
     @JsProperty
     public Object workingLocations;
 
-    //TODO: animate
+    @JsMethod
+    public native Animation animate(IAnimationOptions[] animationOptions, Number duration);
+
+    @JsMethod
+    public native Animation animate(IAnimationOptions[] animationOptions, Number duration, Object easing);
 
     @JsMethod
     public native void dispose();

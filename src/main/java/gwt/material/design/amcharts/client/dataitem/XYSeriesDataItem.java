@@ -19,23 +19,47 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.base.Column;
-import gwt.material.design.amcore.client.list.Dictionary;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import java.util.Date;
+
 @JsType(isNative = true, namespace = "am4charts")
-public class XYSeriesDataItem {
+public class XYSeriesDataItem extends SeriesDataItem {
 
     @JsProperty
-    public Column column;
+    public String categoryX;
 
     @JsProperty
-    public boolean droppedFromOpen;
+    public String categoryY;
 
     @JsProperty
-    public boolean droppedFromPrevious;
+    public Date dateX;
 
     @JsProperty
-    public Dictionary<Column> rangesColumns;
+    public Date dateY;
+
+    @JsProperty
+    public String openCategoryX;
+
+    @JsProperty
+    public String openCategoryY;
+
+    @JsProperty
+    public Date openDateX;
+
+    @JsProperty
+    public Date openDateY;
+
+    @JsProperty
+    public Number openValueX;
+
+    @JsProperty
+    public Number openValueY;
+
+    @JsProperty
+    public Number valueX;
+
+    @JsProperty
+    public Number valueY;
 }

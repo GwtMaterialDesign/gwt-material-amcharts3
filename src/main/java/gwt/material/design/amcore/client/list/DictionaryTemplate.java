@@ -23,8 +23,8 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class DictionaryTemplate<T extends Object> extends Dictionary {
+public class DictionaryTemplate<T, V> extends Dictionary<T, V> {
 
     @JsMethod
-    public native T create(String key);
+    public native V create(String key);
 }

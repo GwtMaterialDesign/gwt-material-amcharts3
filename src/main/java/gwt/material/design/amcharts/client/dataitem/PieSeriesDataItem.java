@@ -17,24 +17,16 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.series;
+package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.column.CandleStick;
-import gwt.material.design.amcharts.client.datafield.series.ICandlestickSeriesDataFields;
-import gwt.material.design.amcharts.client.dataitem.CandlestickSeriesDataItem;
-import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class CandlestickSeries extends ColumnSeries {
+public class PieSeriesDataItem extends PercentSeriesDataItem {
 
     @JsProperty
-    public ListTemplate<CandleStick> columns;
-
-    @JsProperty
-    public ICandlestickSeriesDataFields dataFields;
-
-    @JsProperty
-    public CandlestickSeriesDataItem dataItem;
+    public Number radiusValue;
 }

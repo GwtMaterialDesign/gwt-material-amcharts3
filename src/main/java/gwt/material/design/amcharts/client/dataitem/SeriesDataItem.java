@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class SeriesDataItem {
+public class SeriesDataItem extends DataItem {
 
     @JsProperty
     public Number value;
