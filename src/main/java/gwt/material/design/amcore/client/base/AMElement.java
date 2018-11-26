@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -77,7 +77,7 @@ public class AMElement {
     public native boolean isDisposed();
 
     @JsMethod
-    public native void moveTo(IPoint point);
+    public native void moveTo(Point point);
 
     @JsMethod
     public native void removeAttr(String attribute);

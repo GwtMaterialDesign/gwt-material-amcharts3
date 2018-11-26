@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.ICurvedColumnSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.CurvedColumnSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,6 +27,6 @@ import jsinterop.annotations.JsType;
 public class CurvedColumnSeries extends ColumnSeries {
 
     @JsProperty
-    public ICurvedColumnSeriesDataFields dataFields;
+    public CurvedColumnSeriesDataFields dataFields;
 
 }

@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
+import gwt.material.design.amcore.client.dataitem.DataItem;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")

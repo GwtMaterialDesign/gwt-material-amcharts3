@@ -19,7 +19,7 @@
  */
 package gwt.material.design.ammaps.client.series;
 
-import gwt.material.design.ammaps.client.datafields.IMapSplineSeriesDataFields;
+import gwt.material.design.ammaps.client.datafields.MapSplineSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class MapSplineSeries extends MapSeries {
 
     @JsProperty
-    public IMapSplineSeriesDataFields dataFields;
+    public MapSplineSeriesDataFields dataFields;
 }

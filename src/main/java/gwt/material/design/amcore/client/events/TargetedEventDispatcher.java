@@ -23,7 +23,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class TargetedEventDispatcher extends EventDispatcher {
+public class TargetedEventDispatcher<T> extends EventDispatcher<T> {
 
     @JsMethod
     public native void copyFrom(Object source);

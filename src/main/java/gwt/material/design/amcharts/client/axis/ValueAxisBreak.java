@@ -19,12 +19,6 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcharts.client.dataitem.DataItem;
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcore.client.properties.IPoint;
-import gwt.material.design.amcore.client.properties.IWavedShape;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

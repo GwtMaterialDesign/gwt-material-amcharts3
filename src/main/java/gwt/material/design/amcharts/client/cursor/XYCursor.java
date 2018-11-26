@@ -23,7 +23,7 @@ import gwt.material.design.amcharts.client.axis.Axis;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.constants.XYCursorBehavior;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
-import gwt.material.design.amcore.client.properties.IRange;
+import gwt.material.design.amcore.client.properties.Range;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -58,14 +58,14 @@ public class XYCursor extends Cursor {
     public Axis xAxis;
 
     @JsProperty
-    public IRange xRange;
+    public Range xRange;
 
     @JsProperty
     public Axis yAxis;
 
     @JsProperty
-    public IRange yRange;
+    public Range yRange;
 
     @JsProperty
-    public SpriteEventDispatcher events;
+    public SpriteEventDispatcher<XYCursor> events;
 }

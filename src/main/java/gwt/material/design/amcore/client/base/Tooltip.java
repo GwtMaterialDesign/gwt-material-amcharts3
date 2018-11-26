@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -66,8 +66,8 @@ public class Tooltip extends Container {
     public native void copyFrom(Tooltip source);
 
     @JsMethod
-    public native void pointTo(IPoint point);
+    public native void pointTo(Point point);
 
     @JsMethod
-    public native void pointTo(IPoint point, boolean instantly);
+    public native void pointTo(Point point, boolean instantly);
 }

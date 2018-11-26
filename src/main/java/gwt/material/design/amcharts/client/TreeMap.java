@@ -24,7 +24,7 @@ import gwt.material.design.amcore.client.color.ColorSet;
 import gwt.material.design.amcore.client.constants.Sorting;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.base.NavigationBar;
-import gwt.material.design.amcharts.client.datafield.chart.ITreeMapDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.TreeMapDataFields;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcharts.client.series.TreeMapSeries;
 import jsinterop.annotations.JsProperty;
@@ -72,7 +72,7 @@ public class TreeMap extends XYChart {
     public boolean zoomable;
 
     @JsProperty
-    public ITreeMapDataFields dataFields;
+    public TreeMapDataFields dataFields;
 
     @JsProperty
     public ListTemplate<TreeMapSeries> series;

@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.chart.IPercentChartDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.PercentChartDataFields;
 import gwt.material.design.amcharts.client.series.PercentSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class PercentChart extends SerialChart {
 
     @JsProperty
-    public IPercentChartDataFields dataFields;
+    public PercentChartDataFields dataFields;
 
     @JsProperty
     public ListTemplate<PercentSeries> series;

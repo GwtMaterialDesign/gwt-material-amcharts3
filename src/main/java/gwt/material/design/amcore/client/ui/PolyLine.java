@@ -19,8 +19,8 @@
  */
 package gwt.material.design.amcore.client.ui;
 
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -33,8 +33,8 @@ public class PolyLine extends Sprite {
     public Number distance;
 
     @JsProperty
-    public IPoint[] segments;
+    public Point[] segments;
 
     @JsMethod
-    public native IOrientationPoint positionToPoint(Number number);
+    public native OrientationPoint positionToPoint(Number number);
 }

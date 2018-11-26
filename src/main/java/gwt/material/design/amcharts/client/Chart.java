@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.datafield.chart.IChartDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.ChartDataFields;
 import gwt.material.design.amcharts.client.legend.Legend;
 import gwt.material.design.amcore.client.base.Component;
 import gwt.material.design.amcore.client.base.Container;
@@ -45,7 +45,7 @@ public class Chart extends Component {
     public ListTemplate<Label> titles;
 
     @JsProperty
-    public IChartDataFields dataFields;
+    public ChartDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(Chart source);

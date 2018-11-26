@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.dataitem;
 
 import gwt.material.design.amcharts.client.segments.LineSeriesSegment;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class LineSeriesDataItem extends XYSeriesDataItem {
 
     @JsProperty
-    public IPoint point;
+    public Point point;
 
     @JsProperty
     public LineSeriesSegment segment;

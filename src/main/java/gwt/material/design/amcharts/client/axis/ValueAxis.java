@@ -22,12 +22,12 @@ package gwt.material.design.amcharts.client.axis;
 import gwt.material.design.amcharts.client.SerialChart;
 import gwt.material.design.amcharts.client.dataitem.ValueAxisDataItem;
 import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcharts.client.datafield.axis.IValueAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.ValueAxisDataFields;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.list.OrderedListTemplate;
 import gwt.material.design.amcore.client.list.SortedListTemplate;
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -85,7 +85,7 @@ public class ValueAxis extends Axis {
     public ListTemplate<ValueAxisDataItem> axisRanges;
 
     @JsProperty
-    public IValueAxisDataFields dataFields;
+    public ValueAxisDataFields dataFields;
 
     @JsProperty
     public ValueAxisDataItem dataItem;
@@ -94,7 +94,7 @@ public class ValueAxis extends Axis {
     public OrderedListTemplate<ValueAxisDataItem> dataItems;
 
     @JsMethod
-    public native IOrientationPoint anyToPoint(Number value);
+    public native OrientationPoint anyToPoint(Number value);
 
     @JsMethod
     public native Number anyToPosition(Number value);
@@ -109,7 +109,7 @@ public class ValueAxis extends Axis {
     public native String getPositionLabel(Number position);
 
     @JsMethod
-    public native Number pointToPosition(IPoint point);
+    public native Number pointToPosition(Point point);
 
     @JsMethod
     public native Number positionToValue(Number position);
@@ -118,7 +118,7 @@ public class ValueAxis extends Axis {
     public native void showTooltipAt(Number value);
 
     @JsMethod
-    public native IOrientationPoint valueToPoint(Number value);
+    public native OrientationPoint valueToPoint(Number value);
 
     @JsMethod
     public native Number valueToPosition(Number value);

@@ -20,8 +20,8 @@
 package gwt.material.design.amcore.client.animation;
 
 import gwt.material.design.amcore.client.base.BaseObject;
-import gwt.material.design.amcore.client.properties.IMorphable;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Morphable;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -45,7 +45,7 @@ public class Morpher extends BaseObject {
     public boolean morphToSingle;
 
     @JsProperty
-    public IMorphable morphable;
+    public Morphable morphable;
 
     @JsProperty
     public Number scaleRatio;
@@ -57,7 +57,7 @@ public class Morpher extends BaseObject {
     public native Animation morphToCircle(Number radius, Number duration, Object easing);
 
     @JsMethod
-    public native Animation morphToPolygon(IPoint[] points, Number duration, Object easing);
+    public native Animation morphToPolygon(Point[] points, Number duration, Object easing);
 
     @JsMethod
     public native Animation morphToRectangle(Number width, Number height, Number duration, Object easing);

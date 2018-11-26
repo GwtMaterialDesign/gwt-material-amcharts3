@@ -21,7 +21,7 @@ package gwt.material.design.amcharts.client.cursor;
 
 import gwt.material.design.amcharts.client.Chart;
 import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.constants.CursorStick;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -34,10 +34,10 @@ public class Cursor extends Container {
     public Chart chart;
 
     @JsProperty
-    public IPoint downPoint;
+    public Point downPoint;
 
     @JsProperty
-    public IPoint upPoint;
+    public Point upPoint;
 
     @JsProperty
     public Number xPosition;
@@ -46,17 +46,17 @@ public class Cursor extends Container {
     public Number yPosition;
 
     @JsMethod
-    public native void triggerDown(IPoint point);
+    public native void triggerDown(Point point);
 
     @JsMethod
-    public native void triggerMove(IPoint point);
+    public native void triggerMove(Point point);
 
     /**
      * @param stick See {@link CursorStick}
      */
     @JsMethod
-    public native void triggerMove(IPoint point, String stick);
+    public native void triggerMove(Point point, String stick);
 
     @JsMethod
-    public native void triggerUp(IPoint point);
+    public native void triggerUp(Point point);
 }

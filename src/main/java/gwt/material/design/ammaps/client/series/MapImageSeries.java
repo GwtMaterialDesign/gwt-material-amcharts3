@@ -20,7 +20,7 @@
 package gwt.material.design.ammaps.client.series;
 
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.ammaps.client.datafields.IMapImageSeriesDataFields;
+import gwt.material.design.ammaps.client.datafields.MapImageSeriesDataFields;
 import gwt.material.design.ammaps.client.MapChart;
 import gwt.material.design.ammaps.client.base.MapImage;
 import jsinterop.annotations.JsMethod;
@@ -37,7 +37,7 @@ public class MapImageSeries extends MapSeries {
     public ListTemplate<MapImage> mapImages;
 
     @JsProperty
-    public IMapImageSeriesDataFields dataFields;
+    public MapImageSeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(MapImageSeries source);

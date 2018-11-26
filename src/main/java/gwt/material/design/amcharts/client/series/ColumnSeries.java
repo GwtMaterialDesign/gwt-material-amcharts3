@@ -21,7 +21,7 @@ package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.column.Column;
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.series.IColumnSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.ColumnSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -48,7 +48,7 @@ public class ColumnSeries extends XYSeries {
     public boolean simplifiedProcessing;
 
     @JsProperty
-    public IColumnSeriesDataFields dataFields;
+    public ColumnSeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(ColumnSeries source);

@@ -24,7 +24,7 @@ import gwt.material.design.amcore.client.Am4Core;
 import gwt.material.design.amcharts.client.SerialChart;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.data.DataSource;
-import gwt.material.design.ammaps.client.datafields.IMapChartDataFields;
+import gwt.material.design.ammaps.client.datafields.MapChartDataFields;
 import gwt.material.design.ammaps.client.projections.Projection;
 import gwt.material.design.ammaps.client.series.MapSeries;
 import jsinterop.annotations.JsOverlay;
@@ -53,5 +53,5 @@ public class MapChart extends SerialChart {
     public Projection projection;
 
     @JsProperty
-    public IMapChartDataFields dataFields;
+    public MapChartDataFields dataFields;
 }

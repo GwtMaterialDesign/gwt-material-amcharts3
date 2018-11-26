@@ -19,7 +19,7 @@
  */
 package gwt.material.design.ammaps.client.series;
 
-import gwt.material.design.ammaps.client.datafields.IMapArcSeriesDataFields;
+import gwt.material.design.ammaps.client.datafields.MapArcSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class MapArcSeries extends MapSeries {
 
     @JsProperty
-    public IMapArcSeriesDataFields dataFields;
+    public MapArcSeriesDataFields dataFields;
 }

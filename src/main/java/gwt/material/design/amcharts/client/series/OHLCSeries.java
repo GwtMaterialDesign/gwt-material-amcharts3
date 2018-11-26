@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IOHLCSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.OHLCSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class OHLCSeries extends CandlestickSeries {
 
     @JsProperty
-    public IOHLCSeriesDataFields dataFields;
+    public OHLCSeriesDataFields dataFields;
 }

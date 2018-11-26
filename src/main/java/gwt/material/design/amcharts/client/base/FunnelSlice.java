@@ -20,12 +20,6 @@
 package gwt.material.design.amcharts.client.base;
 
 import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.base.Percent;
-import gwt.material.design.amcore.client.base.Sprite;
-import gwt.material.design.amcore.client.properties.IPoint;
-import gwt.material.design.amcore.client.constants.Orientation;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")

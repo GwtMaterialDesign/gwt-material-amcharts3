@@ -21,7 +21,7 @@ package gwt.material.design.ammaps.client.base;
 
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.ui.PolyLine;
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
 import gwt.material.design.ammaps.client.properties.IGeoPoint;
 import gwt.material.design.ammaps.client.series.MapLineSeries;
 import jsinterop.annotations.JsMethod;
@@ -62,5 +62,5 @@ public class MapLine extends MapObject {
     public native void copyFrom(MapLine source);
 
     @JsMethod
-    public native IOrientationPoint positionToPoint(Number position);
+    public native OrientationPoint positionToPoint(Number position);
 }

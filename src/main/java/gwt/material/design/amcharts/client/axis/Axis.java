@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.Chart;
-import gwt.material.design.amcharts.client.datafield.axis.IAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.AxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.renderer.AxisRenderer;
 import gwt.material.design.amcharts.client.series.XYSeries;
@@ -28,8 +28,8 @@ import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.list.SortedListTemplate;
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -78,10 +78,10 @@ public class Axis extends Sprite {
     public Label title;
 
     @JsProperty
-    public IAxisDataFields dataFields;
+    public AxisDataFields dataFields;
 
     @JsMethod
-    public native IOrientationPoint anyToPoint(Number value);
+    public native OrientationPoint anyToPoint(Number value);
 
     @JsMethod
     public native Number anyToPosition(Number value);
@@ -108,7 +108,7 @@ public class Axis extends Sprite {
     public native void invalidateSeries();
 
     @JsMethod
-    public native Number pointToPosition(IPoint point);
+    public native Number pointToPosition(Point point);
 
     @JsMethod
     public native Number positionToAngle(Number position);

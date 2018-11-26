@@ -19,12 +19,7 @@
  */
 package gwt.material.design.amcharts.client.renderer;
 
-import gwt.material.design.amcharts.client.axis.Axis;
-import gwt.material.design.amcharts.client.axis.AxisFillCircular;
-import gwt.material.design.amcharts.client.axis.AxisLabelCircular;
-import gwt.material.design.amcharts.client.axis.GridCircular;
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -69,5 +64,5 @@ public class AxisRendererRadial extends AxisRendererY {
     public Number startAngle;
 
     @JsMethod
-    public native IPoint positionToPoint(Number position);
+    public native Point positionToPoint(Number position);
 }

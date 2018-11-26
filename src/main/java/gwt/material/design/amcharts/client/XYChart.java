@@ -28,8 +28,8 @@ import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.constants.MouseWheelBehavior;
 import gwt.material.design.amcharts.client.cursor.XYCursor;
-import gwt.material.design.amcharts.client.datafield.chart.IXYChartDataFields;
-import gwt.material.design.amcore.client.properties.IRange;
+import gwt.material.design.amcharts.client.datafield.chart.XYChartDataFields;
+import gwt.material.design.amcore.client.properties.Range;
 import gwt.material.design.amcharts.client.scrollbar.XYChartScrollbar;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.*;
@@ -37,8 +37,8 @@ import jsinterop.annotations.*;
 @JsType(isNative = true, namespace = "am4charts")
 public class XYChart extends SerialChart {
 
+    protected XYChart() {}
 
-    //TODO: Find a way to inherit it from {@link Container}
     @JsOverlay
     public static final XYChart create(Widget container) {
         return (XYChart) Am4Core.create(container, Am4Charts.XYChart);
@@ -75,7 +75,7 @@ public class XYChart extends SerialChart {
     public Button zoomOutButton;
 
     @JsProperty
-    public IXYChartDataFields dataFields;
+    public XYChartDataFields dataFields;
 
     @JsProperty
     public ListTemplate<XYSeries> series;
@@ -90,5 +90,5 @@ public class XYChart extends SerialChart {
     public native void copyFrom(XYChart source);
 
     @JsMethod
-    public native IRange getUpdatedRange(Axis axis, IRange range);
+    public native Range getUpdatedRange(Axis axis, Range range);
 }

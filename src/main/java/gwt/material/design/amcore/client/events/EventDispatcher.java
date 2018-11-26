@@ -48,7 +48,7 @@ public class EventDispatcher<T> {
     public native void enableType(String type);
 
     @JsMethod
-    public native boolean has(String key, Functions.Func1<Object> callback, Object context);
+    public native boolean has(String key, Functions.Func1<EventTarget<T>> callback, Object context);
 
     @JsMethod
     public native boolean hasListeners();
@@ -60,18 +60,18 @@ public class EventDispatcher<T> {
     public native boolean isEnabled(String key);
 
     @JsMethod
-    public native void off(String key, Functions.Func1<Object> callback, Object context);
+    public native void off(String key, Functions.Func1<EventTarget<T>> callback, Object context);
 
     @JsMethod
-    public native void on(String event, Functions.Func1<Object> callback, Object source);
+    public native void on(String event, Functions.Func1<EventTarget<T>> callback, Object source);
 
     @JsMethod
-    public native void on(String event, Functions.Func1<Object> callback);
+    public native void on(String event, Functions.Func1<EventTarget<T>> callback);
 
     @JsMethod
-    public native void onAll(Functions.Func1<Object> callback, Object source);
+    public native void onAll(Functions.Func1<EventTarget<T>> callback, Object source);
 
     @JsMethod
-    public native void once(String event, Functions.Func1<Object> callback, Object source);
+    public native void once(String event, Functions.Func1<EventTarget<T>> callback, Object source);
 
 }

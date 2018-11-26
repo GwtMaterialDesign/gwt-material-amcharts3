@@ -19,13 +19,12 @@
  */
 package gwt.material.design.amcore.client.state;
 
-import gwt.material.design.amcore.client.properties.ISpriteProperties;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class SpriteState {
+public class SpriteState<T> {
 
     @JsProperty
-    public ISpriteProperties properties;
+    public T properties;
 }

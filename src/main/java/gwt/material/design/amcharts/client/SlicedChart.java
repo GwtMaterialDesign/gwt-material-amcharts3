@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.chart.ISlicedChartDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.SlicedChartDataFields;
 import gwt.material.design.amcharts.client.series.FunnelSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class SlicedChart extends PercentChart {
 
     @JsProperty
-    public ISlicedChartDataFields dataFields;
+    public SlicedChartDataFields dataFields;
 
     @JsProperty
     public ListTemplate<FunnelSeries> series;

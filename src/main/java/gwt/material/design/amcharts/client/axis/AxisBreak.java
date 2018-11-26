@@ -21,9 +21,9 @@ package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcharts.client.dataitem.DataItem;
-import gwt.material.design.amcore.client.properties.IPoint;
-import gwt.material.design.amcore.client.properties.IWavedShape;
+import gwt.material.design.amcore.client.dataitem.DataItem;
+import gwt.material.design.amcore.client.properties.Point;
+import gwt.material.design.amcore.client.properties.WavedShape;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -47,10 +47,10 @@ public class AxisBreak extends Container {
     public List<DataItem> dataItems;
 
     @JsProperty
-    public IWavedShape endLine;
+    public WavedShape endLine;
 
     @JsProperty
-    public IPoint endPoint;
+    public Point endPoint;
 
     @JsProperty
     public Number endPosition;
@@ -59,13 +59,13 @@ public class AxisBreak extends Container {
     public Number endValue;
 
     @JsProperty
-    public IWavedShape fillShape;
+    public WavedShape fillShape;
 
     @JsProperty
-    public IWavedShape startLine;
+    public WavedShape startLine;
 
     @JsProperty
-    public IPoint startPoint;
+    public Point startPoint;
 
     @JsProperty
     public Number startPosition;

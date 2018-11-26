@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcore.client.color;
 
-import gwt.material.design.amcore.client.properties.IGradientStop;
+import gwt.material.design.amcore.client.properties.GradientStop;
 import gwt.material.design.amcore.client.base.BaseObject;
 import gwt.material.design.amcore.client.base.Group;
 import jsinterop.annotations.JsMethod;
@@ -36,7 +36,7 @@ public class LinearGradient extends BaseObject {
     public Number rotation;
 
     @JsProperty
-    public IGradientStop stops;
+    public GradientStop stops;
 
     @JsMethod
     public native void addColor(Color color);

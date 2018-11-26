@@ -19,11 +19,11 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.base.FunnelSlice;
-import gwt.material.design.amcharts.client.tick.FunnelTick;
-import gwt.material.design.amcharts.client.datafield.series.IPercentSeriesDataFields;
+import gwt.material.design.amcharts.client.axis.AxisLabel;
+import gwt.material.design.amcharts.client.datafield.series.PercentSeriesDataFields;
+import gwt.material.design.amcharts.client.tick.Tick;
+import gwt.material.design.amcore.client.base.Slice;
 import gwt.material.design.amcore.client.color.ColorSet;
-import gwt.material.design.amcore.client.ui.Label;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -39,16 +39,16 @@ public class PercentSeries extends Series {
     public ColorSet colors;
 
     @JsProperty
-    public ListTemplate<Label> labels;
+    public ListTemplate<AxisLabel> labels;
 
     @JsProperty
-    public ListTemplate<FunnelSlice> slices;
+    public ListTemplate<Slice> slices;
 
     @JsProperty
-    public ListTemplate<FunnelTick> ticks;
+    public ListTemplate<Tick> ticks;
 
     @JsProperty
-    public IPercentSeriesDataFields dataFields;
+    public PercentSeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(PercentSeries source);

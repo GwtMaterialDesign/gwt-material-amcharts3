@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcore.client.ui;
 
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
 import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -41,5 +41,5 @@ public class Line extends Sprite {
     public Number y2;
 
     @JsMethod
-    public native IOrientationPoint positionToPoint(Number point);
+    public native OrientationPoint positionToPoint(Number point);
 }

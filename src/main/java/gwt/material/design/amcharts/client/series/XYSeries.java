@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.axis.Axis;
-import gwt.material.design.amcharts.client.datafield.series.IXYSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.XYSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -59,5 +59,5 @@ public class XYSeries extends Series {
     public native void show(Number duration);
 
     @JsProperty
-    public IXYSeriesDataFields dataFields;
+    public XYSeriesDataFields dataFields;
 }

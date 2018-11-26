@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client.dataitem;
 
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

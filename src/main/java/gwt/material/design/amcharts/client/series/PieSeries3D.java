@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IPieSeries3DDataFields;
+import gwt.material.design.amcharts.client.datafield.series.PieSeries3DDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -33,5 +33,5 @@ public class PieSeries3D extends PieSeries {
     public Number depth;
 
     @JsProperty
-    public IPieSeries3DDataFields dataFields;
+    public PieSeries3DDataFields dataFields;
 }

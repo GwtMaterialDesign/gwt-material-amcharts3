@@ -21,7 +21,7 @@ package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcharts.client.tick.ClockHand;
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.chart.IGaugeChartDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.GaugeChartDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -32,6 +32,6 @@ public class GaugeChart extends RadarChart {
     public ListTemplate<ClockHand> hands;
 
     @JsProperty
-    public IGaugeChartDataFields dataFields;
+    public GaugeChartDataFields dataFields;
 
 }

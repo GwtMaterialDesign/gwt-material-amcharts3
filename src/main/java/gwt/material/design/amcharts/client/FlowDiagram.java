@@ -24,7 +24,7 @@ import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.base.FlowDiagramLink;
 import gwt.material.design.amcore.client.constants.FlowDiagramSortBy;
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.chart.IFlowDiagramDataFields;
+import gwt.material.design.amcharts.client.datafield.chart.FlowDiagramDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -59,7 +59,7 @@ public class FlowDiagram extends Chart {
     public String sortBy;
 
     @JsProperty
-    public IFlowDiagramDataFields dataFields;
+    public FlowDiagramDataFields dataFields;
 
     @JsMethod
     public native void dispose();

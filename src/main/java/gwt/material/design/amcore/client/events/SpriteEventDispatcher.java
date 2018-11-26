@@ -22,6 +22,6 @@ package gwt.material.design.amcore.client.events;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class SpriteEventDispatcher extends TargetedEventDispatcher {
+public class SpriteEventDispatcher<T> extends TargetedEventDispatcher<T> {
 
 }

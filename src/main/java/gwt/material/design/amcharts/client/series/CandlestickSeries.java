@@ -20,7 +20,7 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.column.CandleStick;
-import gwt.material.design.amcharts.client.datafield.series.ICandlestickSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.CandlestickSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.CandlestickSeriesDataItem;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
@@ -33,7 +33,7 @@ public class CandlestickSeries extends ColumnSeries {
     public ListTemplate<CandleStick> columns;
 
     @JsProperty
-    public ICandlestickSeriesDataFields dataFields;
+    public CandlestickSeriesDataFields dataFields;
 
     @JsProperty
     public CandlestickSeriesDataItem dataItem;

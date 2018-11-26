@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IColumnSeries3DDataFields;
+import gwt.material.design.amcharts.client.datafield.series.ColumnSeries3DDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,6 +27,6 @@ import jsinterop.annotations.JsType;
 public class ColumnSeries3D extends ColumnSeries {
 
     @JsProperty
-    public IColumnSeries3DDataFields dataFields;
+    public ColumnSeries3DDataFields dataFields;
 
 }

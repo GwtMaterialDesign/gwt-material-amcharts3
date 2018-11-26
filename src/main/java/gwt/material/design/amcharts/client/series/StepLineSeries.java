@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IStepLineSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.StepLineSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -36,5 +36,5 @@ public class StepLineSeries extends LineSeries {
     public Number startLocation;
 
     @JsProperty
-    public IStepLineSeriesDataFields dataFields;
+    public StepLineSeriesDataFields dataFields;
 }

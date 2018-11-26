@@ -19,7 +19,9 @@
  */
 package gwt.material.design.amcharts.client.column;
 
+import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.ui.RoundedRectangle;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -33,4 +35,10 @@ public class Column extends Container {
 
     @JsMethod
     public native void copyFrom(Column source);
+
+    @JsProperty
+    public ColumnSeriesDataItem dataItem;
+
+    @JsProperty
+    public SpriteEventDispatcher<Column> events;
 }

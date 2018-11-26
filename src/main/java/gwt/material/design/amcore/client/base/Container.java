@@ -21,7 +21,7 @@ package gwt.material.design.amcore.client.base;
 
 import gwt.material.design.amcore.client.constants.Align;
 import gwt.material.design.amcore.client.constants.TextDecoration;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.constants.ContainerLayout;
 import gwt.material.design.amcore.client.constants.VerticalAlign;
 import gwt.material.design.amcore.client.list.List;
@@ -118,7 +118,7 @@ public class Container extends Sprite {
     public native void disposeChildren();
 
     @JsMethod
-    public native boolean fitsToBounds(IPoint point);
+    public native boolean fitsToBounds(Point point);
 
     @JsMethod
     public native void invalidate();

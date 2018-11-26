@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcharts.client.datafield.axis.IDateAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.DateAxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.DateAxisDataItem;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import gwt.material.design.amcore.client.list.ListTemplate;
@@ -35,7 +35,7 @@ import java.util.Date;
 public class DateAxis extends ValueAxis {
 
     @JsProperty
-    public IDateAxisDataFields dataFields;
+    public DateAxisDataFields dataFields;
 
     @JsProperty
     public SortedListTemplate<DateAxisBreak> axisBreaks;

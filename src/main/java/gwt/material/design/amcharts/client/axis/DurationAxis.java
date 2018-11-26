@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcharts.client.datafield.axis.IDurationAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.DurationAxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.DurationAxisDataItem;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import gwt.material.design.amcore.client.list.ListTemplate;
@@ -47,7 +47,7 @@ public class DurationAxis extends ValueAxis {
     public ListTemplate<DurationAxisDataItem> axisRanges;
 
     @JsProperty
-    public IDurationAxisDataFields dataFields;
+    public DurationAxisDataFields dataFields;
 
     @JsProperty
     public DurationAxisDataItem dataItem;

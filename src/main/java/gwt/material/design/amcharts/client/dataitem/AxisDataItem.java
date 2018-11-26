@@ -22,7 +22,8 @@ package gwt.material.design.amcharts.client.dataitem;
 import gwt.material.design.amcharts.client.axis.*;
 import gwt.material.design.amcharts.client.tick.AxisTick;
 import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.dataitem.DataItem;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -48,7 +49,7 @@ public class AxisDataItem extends DataItem {
     public AxisFill mask;
 
     @JsProperty
-    public IPoint point;
+    public Point point;
 
     @JsProperty
     public Number position;

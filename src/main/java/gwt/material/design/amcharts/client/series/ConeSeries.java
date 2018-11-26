@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IConeSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.ConeSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class ConeSeries extends ColumnSeries {
 
     @JsProperty
-    public IConeSeriesDataFields dataFields;
+    public ConeSeriesDataFields dataFields;
 }

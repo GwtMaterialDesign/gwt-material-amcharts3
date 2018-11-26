@@ -19,12 +19,22 @@
  */
 package gwt.material.design.amcore.client.ui;
 
+import com.google.gwt.user.client.ui.Widget;
+import gwt.material.design.amcore.client.Am4Core;
 import gwt.material.design.amcore.client.base.Sprite;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
 public class Image extends Sprite {
+
+    protected Image() {}
+
+    @JsOverlay
+    public static final Image create(Widget container) {
+        return (Image) Am4Core.create(container, Am4Core.Image);
+    }
 
     @JsProperty
     public Number heightRatio;

@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.properties.ILocale;
+import gwt.material.design.amcore.client.properties.Locale;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +30,7 @@ public class Language extends BaseObjectsEvents {
     //TODO: adapter
 
     @JsProperty
-    public ILocale locale;
+    public Locale locale;
 
     @JsMethod
     public native boolean isDefault();
@@ -39,23 +39,23 @@ public class Language extends BaseObjectsEvents {
     public native String translate(Object prompt);
 
     @JsMethod
-    public native String translate(Object prompt, ILocale locale, String[] rest);
+    public native String translate(Object prompt, Locale locale, String[] rest);
 
     @JsMethod
     public native String[] translateAll(Object[] keys);
 
     @JsMethod
-    public native String[] translateAll(Object[] keys, ILocale locale);
+    public native String[] translateAll(Object[] keys, Locale locale);
 
     @JsMethod
     public native String translateEmpty(Object prompt);
 
     @JsMethod
-    public native String translateEmpty(Object prompt, ILocale locale, String[] rest);
+    public native String translateEmpty(Object prompt, Locale locale, String[] rest);
 
     @JsMethod
     public native Object translateFunc(Object prompt);
 
     @JsMethod
-    public native Object translateFunc(Object prompt, ILocale locale);
+    public native Object translateFunc(Object prompt, Locale locale);
 }

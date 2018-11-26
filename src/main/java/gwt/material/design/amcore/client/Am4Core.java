@@ -22,9 +22,10 @@ package gwt.material.design.amcore.client;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.language.Locale;
+import gwt.material.design.amcore.client.language.Language;
 import gwt.material.design.amcore.client.theme.ChartTheme;
 import gwt.material.design.amcore.client.ui.Circle;
+import gwt.material.design.amcore.client.ui.Image;
 import gwt.material.design.amcore.client.ui.Rectangle;
 import gwt.material.design.amcore.client.ui.Trapezoid;
 import gwt.material.design.client.MaterialDesign;
@@ -41,6 +42,9 @@ public class Am4Core {
 
     @JsProperty(namespace = "am4core", name = "Trapezoid")
     public static Trapezoid Trapezoid;
+
+    @JsProperty(namespace = "am4core", name = "Image")
+    public static Image Image;
 
     @JsProperty(namespace = "am4core", name = "Circle")
     public static Circle Circle;
@@ -66,7 +70,7 @@ public class Am4Core {
     }
 
     @JsOverlay
-    public final static void useLanguage(Locale language) {
+    public final static void useLanguage(Language language) {
         MaterialDesign.injectJs(language.getResource());
     }
 }

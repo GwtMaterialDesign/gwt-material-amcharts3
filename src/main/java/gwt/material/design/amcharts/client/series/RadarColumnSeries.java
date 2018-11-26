@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.IRadarColumnSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.RadarColumnSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class RadarColumnSeries extends ColumnSeries {
 
     @JsProperty
-    public IRadarColumnSeriesDataFields dataFields;
+    public RadarColumnSeriesDataFields dataFields;
 }

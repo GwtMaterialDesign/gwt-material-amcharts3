@@ -20,7 +20,7 @@
 package gwt.material.design.amcore.client.ui;
 
 import gwt.material.design.amcore.client.animation.Morpher;
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,14 +29,14 @@ import jsinterop.annotations.JsType;
 public class Polygon extends Sprite {
 
     @JsProperty
-    public IPoint centerPoint;
+    public Point centerPoint;
 
     @JsProperty
-    public IPoint[] currentPoints;
+    public Point[] currentPoints;
 
     @JsProperty
     public Morpher morpher;
 
     @JsProperty
-    public IPoint[] points;
+    public Point[] points;
 }

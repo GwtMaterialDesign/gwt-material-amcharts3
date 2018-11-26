@@ -23,7 +23,7 @@ import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.ammaps.client.base.MapLine;
 import gwt.material.design.ammaps.client.MapChart;
 import gwt.material.design.ammaps.client.base.MapPolygon;
-import gwt.material.design.ammaps.client.datafields.IMapLineSeriesDataFields;
+import gwt.material.design.ammaps.client.datafields.MapLineSeriesDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +38,7 @@ public class MapLineSeries extends MapSeries {
     public ListTemplate<MapLine> mapPolygons;
 
     @JsProperty
-    public IMapLineSeriesDataFields dataFields;
+    public MapLineSeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(MapLineSeries source);

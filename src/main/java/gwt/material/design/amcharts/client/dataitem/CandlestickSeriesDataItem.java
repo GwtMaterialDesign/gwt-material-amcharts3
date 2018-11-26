@@ -19,13 +19,6 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.axis.AxisBreak;
-import gwt.material.design.amcharts.client.axis.AxisFill;
-import gwt.material.design.amcharts.client.axis.AxisLabel;
-import gwt.material.design.amcharts.client.axis.Grid;
-import gwt.material.design.amcharts.client.tick.AxisTick;
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.properties.IPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

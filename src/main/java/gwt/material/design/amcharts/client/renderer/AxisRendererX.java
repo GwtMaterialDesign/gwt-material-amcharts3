@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.renderer;
 
-import gwt.material.design.amcore.client.properties.IPoint;
+import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,8 +31,8 @@ public class AxisRendererX extends AxisRenderer {
     public Number axisLength;
 
     @JsMethod
-    public native Number pointToPosition(IPoint point);
+    public native Number pointToPosition(Point point);
 
     @JsMethod
-    public native IPoint positionToPoint(Number position);
+    public native Point positionToPoint(Number position);
 }

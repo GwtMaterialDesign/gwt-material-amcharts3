@@ -20,13 +20,13 @@
 package gwt.material.design.amcharts.client.axis;
 
 import gwt.material.design.amcharts.client.SerialChart;
-import gwt.material.design.amcharts.client.datafield.axis.ICategoryAxisDataFields;
+import gwt.material.design.amcharts.client.datafield.axis.CategoryAxisDataFields;
 import gwt.material.design.amcharts.client.dataitem.CategoryAxisDataItem;
 import gwt.material.design.amcharts.client.dataitem.XYSeriesDataItem;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import gwt.material.design.amcore.client.list.Dictionary;
 import gwt.material.design.amcore.client.list.OrderedListTemplate;
-import gwt.material.design.amcore.client.properties.IOrientationPoint;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +38,7 @@ public class CategoryAxis extends Axis {
     public SerialChart chart;
 
     @JsProperty
-    public ICategoryAxisDataFields dataFields;
+    public CategoryAxisDataFields dataFields;
 
     @JsProperty
     public CategoryAxisDataItem dataItem;
@@ -50,10 +50,10 @@ public class CategoryAxis extends Axis {
     public Dictionary<String, CategoryAxisDataItem> dataItemsByCategory;
 
     @JsMethod
-    public native IOrientationPoint anyToPoint(String category);
+    public native OrientationPoint anyToPoint(String category);
 
     @JsMethod
-    public native IOrientationPoint anyToPoint(String category, Number location);
+    public native OrientationPoint anyToPoint(String category, Number location);
 
     @JsMethod
     public native Number anyToPosition(String category);
@@ -65,10 +65,10 @@ public class CategoryAxis extends Axis {
     public native Number categoryToIndex(String category);
 
     @JsMethod
-    public native IOrientationPoint categoryToPoint(String category);
+    public native OrientationPoint categoryToPoint(String category);
 
     @JsMethod
-    public native IOrientationPoint categoryToPoint(String category, Number location);
+    public native OrientationPoint categoryToPoint(String category, Number location);
 
     @JsMethod
     public native String getPositionLabel(Number position);

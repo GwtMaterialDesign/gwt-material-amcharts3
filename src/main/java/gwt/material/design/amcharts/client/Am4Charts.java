@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcharts.client.legend.HeatLegend;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -49,5 +50,8 @@ public class Am4Charts {
 
     @JsProperty(name = "SlicedChart")
     public static SlicedChart SlicedChart;
+
+    @JsProperty(name = "HeatLegend")
+    public static HeatLegend HeatLegend;
 
 }

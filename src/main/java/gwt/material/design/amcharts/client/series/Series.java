@@ -21,19 +21,18 @@ package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.SerialChart;
 import gwt.material.design.amcharts.client.bullet.Bullet;
-import gwt.material.design.amcore.client.base.Component;
-import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcharts.client.datafield.series.ISeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.SeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.dataitem.LegendDataItem;
 import gwt.material.design.amcharts.client.legend.LegendSettings;
-import gwt.material.design.amcore.client.properties.IHeatRule;
+import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.properties.HeatRule;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.List;
 
 @JsType(isNative = true, namespace = JsPackage.GLOBAL)
 public class Series extends Component {
@@ -54,7 +53,7 @@ public class Series extends Component {
     public SerialChart chart;
 
     @JsProperty
-    public IHeatRule heatRules;
+    public List<HeatRule> heatRules;
 
     @JsProperty
     public boolean hiddenInLegend;
@@ -81,7 +80,7 @@ public class Series extends Component {
     public boolean skipFocusThreshold;
 
     @JsProperty
-    public ISeriesDataFields dataFields;
+    public SeriesDataFields dataFields;
 
     @JsMethod
     public native void copyFrom(Series source);

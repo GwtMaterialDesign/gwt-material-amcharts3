@@ -19,7 +19,7 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.datafield.series.ITreeMapSeriesDataFields;
+import gwt.material.design.amcharts.client.datafield.series.TreeMapSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.TreeMapDataItem;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,5 +34,5 @@ public class TreeMapSeries extends LineSeries {
     public TreeMapDataItem parentDataItem;
 
     @JsProperty
-    public ITreeMapSeriesDataFields dataFields;
+    public TreeMapSeriesDataFields dataFields;
 }

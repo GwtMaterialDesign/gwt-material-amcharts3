@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcore.client.base;
 
+import gwt.material.design.amcore.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.adapter.Adapter;
 import gwt.material.design.amcore.client.animation.Animation;
 import gwt.material.design.amcore.client.color.DesaturateFilter;
@@ -30,8 +31,10 @@ import gwt.material.design.amcore.client.formatter.DateFormatter;
 import gwt.material.design.amcore.client.formatter.NumberFormatter;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.properties.ISpriteAnimationOptions;
-import gwt.material.design.amcore.client.state.SpriteState;
+import gwt.material.design.amcore.client.properties.Point;
+import gwt.material.design.amcore.client.properties.SpriteAnimationOptions;
+import gwt.material.design.amcore.client.properties.SpriteProperties;
+import gwt.material.design.amcore.client.properties.SpritePropertyField;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -71,7 +74,8 @@ public class Sprite extends BaseObjectsEvents {
 
     //TODO: IStyleProperty[] cursorOverStyle;
 
-    //TODO: DataItem dataItem;
+    @JsProperty
+    public DataItem dataItem;
 
     @JsProperty
     public DateFormatter dateFormatter;
@@ -142,7 +146,11 @@ public class Sprite extends BaseObjectsEvents {
 
     //TODO: IHitOptions hitOptions
 
-    //TODO: HorizontalCenter horizontalCenter
+    /**
+     * @see gwt.material.design.amcore.client.constants.HorizontalCenter
+     */
+    @JsProperty
+    public String horizontalCenter;
 
     @JsProperty
     public boolean hoverOnFocus;
@@ -315,10 +323,10 @@ public class Sprite extends BaseObjectsEvents {
 
     //TODO: ListTemplate<Popup> popups
 
-    //TODO: ISpriteProperties properties
+    //TODO: SpriteProperties properties
 
     @JsProperty
-    public Object propertyFields;
+    public SpritePropertyField propertyFields;
 
     @JsProperty
     public String readerDescription;
@@ -393,7 +401,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean showSystemTooltip;
 
-    //TODO: Sprite Stats states
+    @JsProperty
+    public DictionaryTemplate<String, SpriteProperties> states;
 
     @JsProperty
     public Object stroke;
@@ -452,7 +461,11 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public String valign;
 
-    //TODO: VerticalCenter verticalCenter ;
+    /**
+     * @see gwt.material.design.amcore.client.constants.VerticalCenter
+     */
+    @JsProperty
+    public String verticalCenter;
 
     @JsProperty
     public boolean visible;
@@ -480,20 +493,148 @@ public class Sprite extends BaseObjectsEvents {
 
 
     @JsProperty
-    public DictionaryTemplate<String, SpriteState> states;
-
-    @JsProperty
     public ListTemplate<DesaturateFilter> filters;
 
     @JsMethod
-    public native Animation animate(ISpriteAnimationOptions[] animationOptions, int duration);
-
+    public native Animation animate(SpriteAnimationOptions[] animationOptions, int duration);
 
     @JsMethod
-    public native Animation animate(ISpriteAnimationOptions[] animationOptions, int duration, Object easing);
+    public native Animation animate(SpriteAnimationOptions[] animationOptions, int duration, Object easing);
+
+    @JsMethod
+    public native void appear();
+
+    @JsMethod
+    public native Animation applyCurrentState();
+
+    @JsMethod
+    public native Animation applyCurrentState(Number duration);
+
+    @JsMethod
+    public native void closeAllPopups();
+
+    @JsMethod
+    public native void closeModal();
+
+    @JsMethod
+    public native void copyFrom(Sprite source);
+
+    @JsMethod
+    public native void dispose();
+
+    /*TODO:
+    @JsMethod
+    public native ITheme[] getCurrentThemes;*/
+
+    @JsMethod
+    public native Number getPixelX(Number value);
+
+    @JsMethod
+    public native Number getPixelY(Number value);
+
+    @JsMethod
+    public native Object getPropertyValue(String propertyName);
+
+    @JsMethod
+    public native Number getRelativeX(Number value);
+
+    @JsMethod
+    public native Number getRelativeY(Number value);
+
+    @JsMethod
+    public native Point getSvgPoint(Point point);
 
     @JsMethod
     public native void hide();
+
+    @JsMethod
+    public native void hide(Number duration);
+
+    @JsMethod
+    public native void hideTooltip();
+
+    @JsMethod
+    public native void hideTooltip(Number duration);
+
+    @JsMethod
+    public native boolean hitTest(Sprite sprite);
+
+    @JsMethod
+    public native Sprite insertAfter(Sprite sprite);
+
+    @JsMethod
+    public native Sprite insertBefore(Sprite sprite);
+
+    @JsMethod
+    public native void invalidate();
+
+    @JsMethod
+    public native boolean isInTransition();
+
+    @JsMethod
+    public native boolean isInteractive();
+
+    @JsMethod
+    public native boolean isReady();
+
+    @JsMethod
+    public native Sprite margin(Number top, Number right, Number bottom, Number left);
+
+    @JsMethod
+    public native void moveTo(Point point);
+
+    @JsMethod
+    public native void moveTo(Point point, Number rotation, Number scale, boolean isDragged);
+
+    @JsMethod
+    public native void openModal(String text);
+
+    @JsMethod
+    public native void openModal(String text, String title);
+
+    @JsMethod
+    public native void openPopup(String text);
+
+    @JsMethod
+    public native void openPopup(String text, String title);
+
+    @JsMethod
+    public native Sprite padding(Number top, Number right, Number bottom, Number left);
+
+    @JsMethod
+    public native void setElement(AMElement element);
+
+    @JsMethod
+    public native boolean setPropertyValue(String property, Object value);
+
+    @JsMethod
+    public native boolean setPropertyValue(String property, Object value, boolean invalidate, boolean transform);
+
+   /*TODO:
+    @JsMethod
+    public native Animation setState(Object value)*/
+
+    @JsMethod
+    public native void setVisibility(boolean value);
+
+    @JsMethod
+    public native void show();
+
+    @JsMethod
+    public native void show(Number duration);
+
+    @JsMethod
+    public native void showTooltip();
+
+
+    @JsMethod
+    public native void showTooltip(Point point);
+
+    @JsMethod
+    public native void toBack();
+
+    @JsMethod
+    public native void toFront();
 
     @JsMethod
     public native void removeChildren();

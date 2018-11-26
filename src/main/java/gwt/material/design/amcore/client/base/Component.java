@@ -20,7 +20,6 @@
 package gwt.material.design.amcore.client.base;
 
 import gwt.material.design.amcore.client.data.DataSource;
-import gwt.material.design.amcore.client.properties.IComponentDataFields;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class Component extends Container {
 
     @JsProperty
-    public Object[] data;
+    public Object data;
 
     @JsProperty
     public IComponentDataFields dataFields;
