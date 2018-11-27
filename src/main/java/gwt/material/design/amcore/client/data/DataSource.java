@@ -25,6 +25,7 @@ import gwt.material.design.amcore.client.base.Language;
 import gwt.material.design.amcore.client.data.parser.DataParser;
 import gwt.material.design.amcore.client.formatter.DateFormatter;
 import gwt.material.design.amcore.client.properties.NetRequestOptions;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -74,4 +75,16 @@ public class DataSource extends BaseObjectsEvents {
 
     @JsProperty
     public String url;
+
+    @JsMethod
+    public native String addUrlParams(String url, Object params);
+
+    @JsMethod
+    public native void dispose();
+
+    @JsMethod
+    public native void load();
+
+    @JsMethod
+    public native String timestampUrl(String url);
 }

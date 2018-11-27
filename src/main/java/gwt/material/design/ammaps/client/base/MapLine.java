@@ -22,7 +22,7 @@ package gwt.material.design.ammaps.client.base;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.ui.PolyLine;
 import gwt.material.design.amcore.client.properties.OrientationPoint;
-import gwt.material.design.ammaps.client.properties.IGeoPoint;
+import gwt.material.design.ammaps.client.properties.GeoPoint;
 import gwt.material.design.ammaps.client.series.MapLineSeries;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -50,7 +50,7 @@ public class MapLine extends MapObject {
     public Number longitude;
 
     @JsProperty
-    public IGeoPoint multiGeoLine;
+    public GeoPoint multiGeoLine;
 
     @JsProperty
     public MapLineSeries series;

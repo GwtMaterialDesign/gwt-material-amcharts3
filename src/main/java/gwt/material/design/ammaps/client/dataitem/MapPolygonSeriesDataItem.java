@@ -19,9 +19,8 @@
  */
 package gwt.material.design.ammaps.client.dataitem;
 
-import gwt.material.design.ammaps.client.base.MapLine;
 import gwt.material.design.ammaps.client.base.MapPolygon;
-import gwt.material.design.ammaps.client.properties.IGeoPoint;
+import gwt.material.design.ammaps.client.properties.GeoPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -29,13 +28,13 @@ import jsinterop.annotations.JsType;
 public class MapPolygonSeriesDataItem extends MapSeriesDataItem {
 
     @JsProperty
-    public IGeoPoint geoPoint;
+    public GeoPoint geoPoint;
 
     @JsProperty
     public MapPolygon geoPolygon;
 
     @JsProperty
-    public IGeoPoint[] multiGeoPolygon;
+    public GeoPoint[] multiGeoPolygon;
 
     @JsProperty
     public Number[] multiPolygon;

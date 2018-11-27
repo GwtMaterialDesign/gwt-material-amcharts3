@@ -20,10 +20,14 @@
 package gwt.material.design.amcore.client.events;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
 public class TargetedEventDispatcher<T> extends EventDispatcher<T> {
+
+    @JsProperty
+    public Object target;
 
     @JsMethod
     public native void copyFrom(Object source);

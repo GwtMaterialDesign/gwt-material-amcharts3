@@ -17,27 +17,12 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.ammaps.client.dataitem;
+package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcharts.client.dataitem.SeriesDataItem;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4maps")
-public class MapSeriesDataItem extends SeriesDataItem {
+@JsType(isNative = true, namespace = "am4core")
+public class Modal extends Popup {
 
-    @JsProperty
-    public Number east;
 
-    @JsProperty
-    public Number north;
-
-    @JsProperty
-    public Number south;
-
-    @JsProperty
-    public Number value;
-
-    @JsProperty
-    public Number west;
 }

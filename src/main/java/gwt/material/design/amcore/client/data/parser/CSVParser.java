@@ -17,15 +17,30 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.ammaps.client.properties;
+package gwt.material.design.amcore.client.data.parser;
 
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
-public class IGeoPoint {
+@JsType(isNative = true, namespace = "am4core")
+public class CSVParser extends DataParser {
 
     @JsProperty
-    public Number latitude;
+    public String contentType;
 
     @JsProperty
-    public Number longitude;
+    public CSVOptions options;
+
+    @JsMethod
+    public native Object[] CSVToArray(String data, String delimiter);
+
+    @JsMethod
+    public native String getDelimiterFromData(String data);
+
+    @JsMethod
+    public native boolean isCSV();
+
+    @JsMethod
+    public native Object[] parse(String csv);
 }

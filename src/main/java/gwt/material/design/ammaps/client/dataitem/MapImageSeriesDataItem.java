@@ -20,7 +20,7 @@
 package gwt.material.design.ammaps.client.dataitem;
 
 import gwt.material.design.ammaps.client.base.MapImage;
-import gwt.material.design.ammaps.client.properties.IGeoPoint;
+import gwt.material.design.ammaps.client.properties.GeoPoint;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class MapImageSeriesDataItem extends MapSeriesDataItem {
 
     @JsProperty
-    public IGeoPoint geoPoint;
+    public GeoPoint geoPoint;
 
     @JsProperty
     public MapImage mapImage;

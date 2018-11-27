@@ -17,27 +17,24 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.ammaps.client.dataitem;
+package gwt.material.design.amcore.client.data.parser;
 
-import gwt.material.design.amcharts.client.dataitem.SeriesDataItem;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4maps")
-public class MapSeriesDataItem extends SeriesDataItem {
+@JsType(isNative = true, namespace = "am4core")
+public class JSONParser extends DataParser {
 
     @JsProperty
-    public Number east;
+    public String contentType;
 
     @JsProperty
-    public Number north;
+    public JSONOptions options;
 
-    @JsProperty
-    public Number south;
+    @JsMethod
+    public native boolean isJSON(String data);
 
-    @JsProperty
-    public Number value;
-
-    @JsProperty
-    public Number west;
+    @JsMethod
+    public native Object parse(String data);
 }

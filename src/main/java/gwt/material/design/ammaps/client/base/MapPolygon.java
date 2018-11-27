@@ -19,8 +19,19 @@
  */
 package gwt.material.design.ammaps.client.base;
 
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.state.SpriteState;
+import gwt.material.design.ammaps.client.properties.MapPolygonProperties;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4maps")
 public class MapPolygon extends MapObject {
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<MapPolygonProperties>> states;
+
+    @JsProperty
+    public SpriteEventDispatcher<MapPolygon> events;
 }

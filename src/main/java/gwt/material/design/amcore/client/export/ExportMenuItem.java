@@ -17,27 +17,36 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.ammaps.client.dataitem;
+package gwt.material.design.amcore.client.export;
 
-import gwt.material.design.amcharts.client.dataitem.SeriesDataItem;
+import gwt.material.design.amcore.client.base.InteractionObject;
+import gwt.material.design.amcore.client.list.List;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4maps")
-public class MapSeriesDataItem extends SeriesDataItem {
+@JsType(isNative = true)
+public class ExportMenuItem {
 
     @JsProperty
-    public Number east;
+    public List<ExportMenuItem> ascendants;
 
     @JsProperty
-    public Number north;
+    public String format;
 
     @JsProperty
-    public Number south;
+    public InteractionObject interactions;
 
     @JsProperty
-    public Number value;
+    public String label;
 
     @JsProperty
-    public Number west;
+    public ExportMenuItem[] menu;
+
+    //TODO: Options
+
+    @JsProperty
+    public Object type;
+
+    @JsProperty
+    public boolean unsupported;
 }

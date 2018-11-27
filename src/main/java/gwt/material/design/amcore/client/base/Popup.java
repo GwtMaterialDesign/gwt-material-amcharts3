@@ -17,17 +17,15 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcore.client.export;
+package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.base.BaseObject;
-import gwt.material.design.amcore.client.language.Language;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class ExportMenu extends BaseObject {
+public class Popup extends BaseObjectsEvents {
 
     /**
      * @see gwt.material.design.amcore.client.constants.Align
@@ -35,29 +33,56 @@ public class ExportMenu extends BaseObject {
     @JsProperty
     public String align;
 
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
+    @JsProperty
+    public Object bottom;
+
     @JsProperty
     public String classPrefix;
 
     @JsProperty
-    public Number closeDelay;
+    public boolean closable;
 
     @JsProperty
     public Element container;
 
     @JsProperty
+    public String content;
+
+    @JsProperty
     public boolean defaultStyles;
 
     @JsProperty
-    public ExportMenuItem[] items;
+    public boolean draggable;
 
     @JsProperty
-    public Language language;
+    public Object elements;
+
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
+    @JsProperty
+    public Object left;
 
     @JsProperty
-    public Number tabindex;
+    public String readerTitle;
 
     @JsProperty
-    public String tag;
+    public boolean showCurtain;
+
+    @JsProperty
+    public Sprite sprite;
+
+    @JsProperty
+    public String title;
+
+    /**
+     * Accepts {@link Number} or {@link Percent}
+     */
+    @JsProperty
+    public Object top;
 
     /**
      * @see gwt.material.design.amcore.client.constants.VerticalAlign
@@ -66,8 +91,14 @@ public class ExportMenu extends BaseObject {
     public String verticalAlign;
 
     @JsMethod
+    public native void close();
+
+    @JsMethod
+    public native void copyFrom(Popup source);
+
+    @JsMethod
     public native void dispose();
 
     @JsMethod
-    public native void draw();
+    public native void open();
 }

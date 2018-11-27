@@ -35,6 +35,7 @@ import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.properties.SpriteAnimationOptions;
 import gwt.material.design.amcore.client.properties.SpriteProperties;
 import gwt.material.design.amcore.client.properties.SpritePropertyField;
+import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -321,9 +322,11 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number pixelY;
 
-    //TODO: ListTemplate<Popup> popups
+    @JsProperty
+    public ListTemplate<Popup> popups;
 
-    //TODO: SpriteProperties properties
+    @JsProperty
+    public SpriteProperties properties;
 
     @JsProperty
     public SpritePropertyField propertyFields;
@@ -402,7 +405,7 @@ public class Sprite extends BaseObjectsEvents {
     public boolean showSystemTooltip;
 
     @JsProperty
-    public DictionaryTemplate<String, SpriteProperties> states;
+    public DictionaryTemplate<String, SpriteState<SpriteProperties>> states;
 
     @JsProperty
     public Object stroke;
@@ -587,16 +590,16 @@ public class Sprite extends BaseObjectsEvents {
     public native void moveTo(Point point, Number rotation, Number scale, boolean isDragged);
 
     @JsMethod
-    public native void openModal(String text);
+    public native Modal openModal(String text);
 
     @JsMethod
-    public native void openModal(String text, String title);
+    public native Modal openModal(String text, String title);
 
     @JsMethod
-    public native void openPopup(String text);
+    public native Popup openPopup(String text);
 
     @JsMethod
-    public native void openPopup(String text, String title);
+    public native Popup openPopup(String text, String title);
 
     @JsMethod
     public native Sprite padding(Number top, Number right, Number bottom, Number left);
