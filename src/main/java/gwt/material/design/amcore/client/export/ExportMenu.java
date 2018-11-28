@@ -20,7 +20,7 @@
 package gwt.material.design.amcore.client.export;
 
 import gwt.material.design.amcore.client.base.BaseObject;
-import gwt.material.design.amcore.client.language.Language;
+import gwt.material.design.amcore.client.base.Language;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;

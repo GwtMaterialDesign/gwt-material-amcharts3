@@ -5,7 +5,7 @@ import gwt.material.design.amcore.client.resources.LanguageClientBundle;
 
 import static gwt.material.design.jquery.client.api.JQuery.window;
 
-public enum Language implements LocaleResource {
+public enum Locale implements LocaleResource {
 
     de_CH(new LocaleResource() {
         @Override
@@ -153,7 +153,7 @@ public enum Language implements LocaleResource {
 
     LocaleResource resource;
 
-    Language(LocaleResource resource) {
+    Locale(LocaleResource resource) {
         this.resource = resource;
     }
 
