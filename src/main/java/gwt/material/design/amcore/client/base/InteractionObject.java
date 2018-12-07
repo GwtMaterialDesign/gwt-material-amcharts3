@@ -19,12 +19,12 @@
  */
 package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.events.EventDispatcher;
+import gwt.material.design.amcore.client.animation.InertiaOptions;
+import gwt.material.design.amcore.client.animation.InertialTypes;
 import gwt.material.design.amcore.client.events.InteractionObjectEventDispatcher;
+import gwt.material.design.amcore.client.list.Dictionary;
 import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcore.client.properties.HitOptions;
-import gwt.material.design.amcore.client.properties.HoverOptions;
-import gwt.material.design.amcore.client.properties.Pointer;
+import gwt.material.design.amcore.client.properties.*;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -60,7 +60,8 @@ public class InteractionObject extends BaseObject {
     @JsProperty
     public boolean inert;
 
-    //TODO: inertiaOptions
+    @JsProperty
+    public Dictionary<InertialTypes, InertiaOptions> inertiaOptions;
 
     @JsProperty
     public boolean isDown;
@@ -74,7 +75,8 @@ public class InteractionObject extends BaseObject {
     @JsProperty
     public boolean isHoverByTouch;
 
-    //TODO keyboardOptions
+    @JsProperty
+    public KeyboardOptions keyboardOptions;
 
     @JsProperty
     public List<Pointer> overPointers;
@@ -82,7 +84,8 @@ public class InteractionObject extends BaseObject {
     @JsProperty
     public boolean resizable;
 
-    //TODO swipeOptions
+    @JsProperty
+    public SwipeOptions swipeOptions;
 
     @JsProperty
     public boolean swipeable;

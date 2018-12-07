@@ -20,6 +20,8 @@
 package gwt.material.design.amcore.client.base;
 
 import gwt.material.design.amcore.client.data.DataSource;
+import gwt.material.design.amcore.client.dataitem.DataItem;
+import gwt.material.design.amcore.client.list.OrderedList;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +35,8 @@ public class Component extends Container {
     @JsProperty
     public IComponentDataFields dataFields;
 
-    //TODO: OrderedListTemplate < DataItem > dataItems
+    @JsProperty
+    public OrderedList<DataItem> dataItems;
 
     @JsProperty
     public Component dataProvider;
@@ -59,7 +62,8 @@ public class Component extends Container {
     @JsProperty
     public Object rangeChangeEasing;
 
-    //TODO: Responsive responsive
+    @JsProperty
+    public Responsive responsive;
 
     @JsProperty
     public boolean sequencedInterpolation;

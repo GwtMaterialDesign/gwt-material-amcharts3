@@ -17,28 +17,21 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.scrollbar;
+package gwt.material.design.amcore.client.properties;
 
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.ui.Button;
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class Scrollbar extends Container {
+@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+public class SwipeOptions {
 
     @JsProperty
-    public int animationDuration;
+    public Number horizontalThreshold;
 
     @JsProperty
-    public int animationEasing;
+    public Number time;
 
     @JsProperty
-    public int end;
-
-    @JsProperty
-    public boolean updateWhileMoving;
-
-    @JsProperty
-    public Button thumb;
+    public Number verticalThreshold;
 }

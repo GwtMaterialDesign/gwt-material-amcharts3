@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcharts.client.series.IRadarSeries;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.base.Percent;
@@ -59,7 +60,7 @@ public class RadarChart extends XYChart {
     public RadarChartDataFields dataFields;
 
     @JsProperty
-    public ListTemplate<RadarSeries> series;
+    public ListTemplate<Object> series;
 
     @JsProperty
     public RadarCursor cursor;

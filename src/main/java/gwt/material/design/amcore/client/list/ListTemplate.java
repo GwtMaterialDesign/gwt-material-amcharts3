@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class ListTemplate<T extends Object> extends List<T> {
+public class ListTemplate<T> extends List<T> {
 
     @JsProperty
     public T template;

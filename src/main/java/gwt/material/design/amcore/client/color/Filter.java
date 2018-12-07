@@ -19,10 +19,30 @@
  */
 package gwt.material.design.amcore.client.color;
 
+import gwt.material.design.amcore.client.base.BaseObject;
+import gwt.material.design.amcore.client.base.Group;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class Filter {
+public class Filter extends BaseObject {
 
+    @JsProperty
+    public Group filterElement;
 
+    @JsProperty
+    public Number height;
+
+    @JsProperty
+    public boolean isTemplate;
+
+    @JsProperty
+    public boolean nonScaling;
+
+    @JsProperty
+    public Number width;
+
+    @JsMethod
+    public native void copyFrom(Filter filter);
 }

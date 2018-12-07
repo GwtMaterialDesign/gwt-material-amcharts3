@@ -30,5 +30,5 @@ public class Grid extends Sprite {
     public Axis axis;
 
     @JsProperty
-    public int location;
+    public Number location;
 }

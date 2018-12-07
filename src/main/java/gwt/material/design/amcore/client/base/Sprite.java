@@ -19,34 +19,38 @@
  */
 package gwt.material.design.amcore.client.base;
 
-import gwt.material.design.amcore.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.adapter.Adapter;
+import gwt.material.design.amcore.client.adapter.SpriteAdapter;
 import gwt.material.design.amcore.client.animation.Animation;
-import gwt.material.design.amcore.client.color.DesaturateFilter;
+import gwt.material.design.amcore.client.animation.InertiaOptions;
+import gwt.material.design.amcore.client.animation.InertialTypes;
+import gwt.material.design.amcore.client.color.Filter;
 import gwt.material.design.amcore.client.constants.Align;
 import gwt.material.design.amcore.client.constants.Valign;
+import gwt.material.design.amcore.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.export.Export;
 import gwt.material.design.amcore.client.formatter.DateFormatter;
+import gwt.material.design.amcore.client.formatter.DurationFormatter;
 import gwt.material.design.amcore.client.formatter.NumberFormatter;
+import gwt.material.design.amcore.client.list.Dictionary;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.properties.Point;
-import gwt.material.design.amcore.client.properties.SpriteAnimationOptions;
-import gwt.material.design.amcore.client.properties.SpriteProperties;
-import gwt.material.design.amcore.client.properties.SpritePropertyField;
+import gwt.material.design.amcore.client.properties.*;
 import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import java.util.List;
+
 
 @JsType(isNative = true, namespace = "am4core")
 public class Sprite extends BaseObjectsEvents {
 
     @JsProperty
-    public Adapter adapter;
+    public Adapter<Sprite, SpriteAdapter> adapter;
 
     /**
      * @see Align
@@ -69,11 +73,14 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Object configField;
 
-    //TODO: IStyleProperty[] cursorDownStyle;
+    @JsProperty
+    public StyleProperty[] cursorDownStyle;
 
-    //TODO: ICursorOptions cursorOptions;
+    @JsProperty
+    public CursorOptions cursorOptions;
 
-    //TODO: IStyleProperty[] cursorOverStyle;
+    @JsProperty
+    public StyleProperty[] cursorOverStyle;
 
     @JsProperty
     public DataItem dataItem;
@@ -81,12 +88,14 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public DateFormatter dateFormatter;
 
-    //TODO: Sprite State defaultState
+    @JsProperty
+    public SpriteState<SpriteProperties> defaultState;
 
     @JsProperty
     public boolean disabled;
 
-    //TODO: SVGSVGElement dom
+    @JsProperty
+    public Object dom;
 
     @JsProperty
     public boolean draggable;
@@ -94,7 +103,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Object dummyData;
 
-    //TODO: DurationFormatter durationFormatter
+    @JsProperty
+    public DurationFormatter durationFormatter;
 
     @JsProperty
     public Number dx;
@@ -102,7 +112,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number dy;
 
-    //TODO: AMElement element;
+    @JsProperty
+    public AMElement element;
 
     @JsProperty
     public SpriteEventDispatcher events;
@@ -122,12 +133,14 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Object fill;
 
-    //TODO: ColorModifier fillModifier
+    @JsProperty
+    public Object fillModifier;
 
     @JsProperty
     public Number fillOpacity;
 
-    // List<Filter> filters
+    @JsProperty
+    public List<Filter> filters;
 
     @JsProperty
     public boolean focusable;
@@ -135,7 +148,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number globalScale;
 
-    //TODO Group group
+    @JsProperty
+    public Group group;
 
     @JsProperty
     public Object height;
@@ -143,9 +157,11 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean hidden;
 
-    //TODO: SpriteState hiddenState
+    @JsProperty
+    public SpriteState<SpriteProperties> hiddenState;
 
-    //TODO: IHitOptions hitOptions
+    @JsProperty
+    public HitOptions hitOptions;
 
     /**
      * @see gwt.material.design.amcore.client.constants.HorizontalCenter
@@ -156,7 +172,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean hoverOnFocus;
 
-    //TODO: IHoverOptions hoverOptions
+    @JsProperty
+    public HoverOptions hoverOptions;
 
     @JsProperty
     public boolean hoverable;
@@ -170,7 +187,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean inert;
 
-    //TODO: Dictionary InertialOptions
+    @JsProperty
+    public Dictionary<InertialTypes, InertiaOptions> inertiaOptions;
 
     @JsProperty
     public boolean inited;
@@ -181,7 +199,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number innerWidth;
 
-    //TODO: InteractioObject interactions
+    @JsProperty
+    public InteractionObject interactions;
 
     @JsProperty
     public boolean interactionsEnabled;
@@ -210,7 +229,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean isShowing;
 
-    //TODO: IKeyboardOptions keyboardOptions
+    @JsProperty
+    public KeyboardOptions keyboardOptions;
 
     @JsProperty
     public Language language;
@@ -245,7 +265,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number minWidth;
 
-    //TODO: Modal modal
+    @JsProperty
+    public Modal modal;
 
     @JsProperty
     public boolean nonScaling;
@@ -379,7 +400,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean resizable;
 
-    //TODO: Roles role
+    @JsProperty
+    public String role;
 
     @JsProperty
     public Number rollOutDelay;
@@ -393,7 +415,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number scale;
 
-    //TODO: ShapeRendering shapeRendering
+    @JsProperty
+    public Object shapeRendering;
 
     @JsProperty
     public boolean shouldClone;
@@ -413,7 +436,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public String strokeDasharray;
 
-    //TODO: ColorModifier strokeModifier
+    @JsProperty
+    public Object strokeModifier;
 
     @JsProperty
     public Number strokeOpacity;
@@ -421,9 +445,11 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Number strokeWidth;
 
-    //TODO: SVGCOntainer svgContainer
+    @JsProperty
+    public SVGContainer svgContainer;
 
-    //TODO: Swipe Options
+    @JsProperty
+    public SwipeOptions swipeOptions;
 
     @JsProperty
     public boolean swipeable;
@@ -437,11 +463,17 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public Tooltip tooltip;
 
-    //TODO: Sprite tooltipColorSource
+    @JsProperty
+    public Sprite tooltipColorSource;
 
-    //TODO: DataItem tooltipDataItem
+    @JsProperty
+    public DataItem tooltipDataItem;
 
-    //TODO: tooltipPosition
+    /**
+     * @see gwt.material.design.amcore.client.constants.TooltipPosition
+     */
+    @JsProperty
+    public String tooltipPosition;
 
     @JsProperty
     public String tooltipText;
@@ -491,13 +523,6 @@ public class Sprite extends BaseObjectsEvents {
     @JsProperty
     public boolean clickable;
 
-
-    /////////////////////////////////
-
-
-    @JsProperty
-    public ListTemplate<DesaturateFilter> filters;
-
     @JsMethod
     public native Animation animate(SpriteAnimationOptions[] animationOptions, int duration);
 
@@ -525,9 +550,8 @@ public class Sprite extends BaseObjectsEvents {
     @JsMethod
     public native void dispose();
 
-    /*TODO:
     @JsMethod
-    public native ITheme[] getCurrentThemes;*/
+    public native Object[] getCurrentThemes();
 
     @JsMethod
     public native Number getPixelX(Number value);
@@ -613,9 +637,11 @@ public class Sprite extends BaseObjectsEvents {
     @JsMethod
     public native boolean setPropertyValue(String property, Object value, boolean invalidate, boolean transform);
 
-   /*TODO:
     @JsMethod
-    public native Animation setState(Object value)*/
+    public native Animation setState(Object value);
+
+    @JsMethod
+    public native Animation setState(Object value, Number transitionDuration, Object easing);
 
     @JsMethod
     public native void setVisibility(boolean value);
@@ -641,4 +667,7 @@ public class Sprite extends BaseObjectsEvents {
 
     @JsMethod
     public native void removeChildren();
+
+    @JsMethod
+    public native void cornerRadius(int a, int b, int c, int d);
 }

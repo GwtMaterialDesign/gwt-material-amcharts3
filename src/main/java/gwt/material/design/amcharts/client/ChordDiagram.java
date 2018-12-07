@@ -19,9 +19,12 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcharts.client.node.ChordNode;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.datafield.chart.ChordDiagramDataFields;
 import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcore.client.list.Dictionary;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -40,7 +43,8 @@ public class ChordDiagram extends FlowDiagram {
     @JsProperty
     public Object innerRadius;
 
-    //TODO nodes
+    @JsProperty
+    public DictionaryTemplate<String, ChordNode> nodes;
 
     @JsProperty
     public boolean nonRibbon;

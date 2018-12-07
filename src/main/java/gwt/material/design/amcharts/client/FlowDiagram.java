@@ -19,10 +19,12 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcharts.client.node.FlowDiagramNode;
 import gwt.material.design.amcore.client.color.ColorSet;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.base.FlowDiagramLink;
 import gwt.material.design.amcore.client.constants.FlowDiagramSortBy;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.FlowDiagramDataFields;
 import jsinterop.annotations.JsMethod;
@@ -47,7 +49,8 @@ public class FlowDiagram extends Chart {
     @JsProperty
     public Number nodePadding;
 
-    //TODO: FlowDiagramNode nodes
+    @JsProperty
+    public DictionaryTemplate<String, FlowDiagramNode> nodes;
 
     @JsProperty
     public Container nodesContainer;

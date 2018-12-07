@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class Adapter {
+public class Adapter<T, V> {
 
     @JsProperty
     public EventDispatcher<Object> eventDispatcher;
@@ -35,10 +35,10 @@ public class Adapter {
     public Object object;
 
     @JsMethod
-    public native void add(String key, Functions.FuncRet1<Object> callback);
+    public native void add(String key, Functions.FuncRet2<T, V> callback);
 
     @JsMethod
-    public native void add(String key, Functions.FuncRet1<Object> callback, int priority, Object scope);
+    public native void add(String key, Functions.FuncRet2<T, V> callback, int priority, Object scope);
 
     @JsMethod
     public native void apply(String key, Object value);

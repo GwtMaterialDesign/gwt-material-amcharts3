@@ -20,6 +20,7 @@
 package gwt.material.design.amcore.client.base;
 
 import gwt.material.design.amcore.client.properties.Point;
+import gwt.material.design.amcore.client.properties.RectangleProperties;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -54,8 +55,6 @@ public class AMElement {
     @JsMethod
     public native AMElement addStyle(Object attributes);
 
-    //TODO: ISVGAttributes attr()
-
     @JsMethod
     public native AMElement attrNS(String namespace, String attribute, String value);
 
@@ -68,7 +67,8 @@ public class AMElement {
     @JsMethod
     public native String getAttrNS(String namespace, String attribute);
 
-    // TODO: IRectangle getBBox
+    @JsMethod
+    public native RectangleProperties getBBox();
 
     @JsMethod
     public native String getStyle(String attribute);

@@ -48,7 +48,8 @@ public class BaseObject {
     @JsMethod
     public native void dispose();
 
-    //TODO: Ithemes getCurrentThemes
+    @JsMethod
+    public native Object[] getCurrentThemes();
 
     @JsMethod
     public native boolean isDisposed();

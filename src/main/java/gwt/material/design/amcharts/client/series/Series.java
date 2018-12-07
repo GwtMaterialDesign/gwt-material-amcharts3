@@ -26,6 +26,8 @@ import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.dataitem.LegendDataItem;
 import gwt.material.design.amcharts.client.legend.LegendSettings;
 import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.properties.HeatRule;
@@ -81,6 +83,9 @@ public class Series extends Component {
 
     @JsProperty
     public SeriesDataFields dataFields;
+
+    @JsProperty
+    public Sprite labelsContainer;
 
     @JsMethod
     public native void copyFrom(Series source);

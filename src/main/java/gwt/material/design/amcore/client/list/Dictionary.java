@@ -19,8 +19,34 @@
  */
 package gwt.material.design.amcore.client.list;
 
+import gwt.material.design.jquery.client.api.Functions;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
 public class Dictionary<T, V> {
+
+    @JsMethod
+    public native void clear();
+
+    @JsMethod
+    public native void copyFrom(Dictionary<T, V> source);
+
+    @JsMethod
+    public native void each(Functions.Func2<T, V> values);
+
+   @JsMethod
+   public native  T getKey(T key);
+
+   @JsMethod
+   public native boolean hasKey(T key);
+
+   @JsMethod
+   public native void insertKey(T key, V value);
+
+   @JsMethod
+   public native void removeKey(T key);
+
+   @JsMethod
+   public native void setKey(T key, V value);
 }

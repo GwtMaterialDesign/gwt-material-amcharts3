@@ -25,10 +25,7 @@ import gwt.material.design.amcore.client.base.AmCoreOptions;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.language.Locale;
 import gwt.material.design.amcore.client.theme.ChartTheme;
-import gwt.material.design.amcore.client.ui.Circle;
-import gwt.material.design.amcore.client.ui.Image;
-import gwt.material.design.amcore.client.ui.Rectangle;
-import gwt.material.design.amcore.client.ui.Trapezoid;
+import gwt.material.design.amcore.client.ui.*;
 import gwt.material.design.client.MaterialDesign;
 import jsinterop.annotations.*;
 
@@ -46,6 +43,9 @@ public class Am4Core {
 
     @JsProperty(namespace = "am4core", name = "Trapezoid")
     public static Trapezoid Trapezoid;
+
+    @JsProperty(namespace = "am4core", name = "Label")
+    public static Label Label;
 
     @JsProperty(namespace = "am4core", name = "Image")
     public static Image Image;
@@ -65,16 +65,31 @@ public class Am4Core {
     }
 
     @JsMethod(namespace = "am4core")
-    public static native void useTheme(Object object);
+    private static native void useTheme(Object object);
+
+    @JsMethod(namespace = "am4core")
+    private static native void unuseTheme(Object object);
+
+    @JsMethod(namespace = "am4core")
+    public static native void unuseAllThemes();
 
     @JsOverlay
     public final static void useTheme(ChartTheme theme) {
-        theme.loadResource();
-        useTheme(theme.get());
+        if (theme != null) {
+            theme.loadResource();
+            useTheme(theme.get());
+        }
     }
 
     @JsOverlay
-    public final static void useLanguage(Locale locale) {
+    public final static void unuseTheme(ChartTheme theme) {
+        if (theme != null) {
+            unuseTheme(theme.get());
+        }
+    }
+
+    @JsOverlay
+    public final static void addLanguage(Locale locale) {
         MaterialDesign.injectJs(locale.getResource());
     }
 }

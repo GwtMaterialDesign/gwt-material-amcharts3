@@ -28,6 +28,8 @@ import gwt.material.design.amcharts.client.legend.LegendSettings;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.base.Slice;
 import gwt.material.design.amcore.client.color.Color;
+import gwt.material.design.amcore.client.events.AmEvent;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.List;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -45,6 +47,9 @@ public class ChordNode extends FlowDiagramNode {
 
     @JsProperty
     public Slice slice;
+
+    @JsProperty
+    public SpriteEventDispatcher<ChordNode> events;
 
     @JsMethod
     public native void copyFrom(ChordNode source);

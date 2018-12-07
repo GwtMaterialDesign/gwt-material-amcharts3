@@ -20,9 +20,11 @@
 package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.column.Column;
+import gwt.material.design.amcharts.client.properties.ColumnSeriesProperties;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.series.ColumnSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
+import gwt.material.design.amcore.client.state.SpriteState;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,13 +38,17 @@ public class ColumnSeries extends XYSeries {
     @JsProperty
     public ListTemplate<Column> columns;
 
-    //TODO : dropFromOpenState
+    @JsProperty
+    public SpriteState<ColumnSeriesProperties> dropFromOpenState;
 
-    //TODO: dropFromPreviousState
+    @JsProperty
+    public SpriteState<ColumnSeriesProperties> dropFromPreviousState;
 
-    //TODO: riseFromOpenState
+    @JsProperty
+    public SpriteState<ColumnSeriesProperties> riseFromOpenState;
 
-    //TODO: riseFromPreviousState
+    @JsProperty
+    public SpriteState<ColumnSeriesProperties> riseFromPreviousState;
 
     @JsProperty
     public boolean simplifiedProcessing;

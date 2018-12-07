@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class SortedListTemplate<T extends Object> extends SortedList<T> {
+public class SortedListTemplate<T> extends SortedList<T> {
 
     @JsProperty
     public T template;

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class SortedList<T extends Object> extends OrderedList<T> {
+public class SortedList<T> extends OrderedList<T> {
 
    @JsMethod
    public native int indexOf(T value);

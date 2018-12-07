@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client;
 
 import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcharts.client.axis.Axis;
+import gwt.material.design.amcore.client.scrollbar.Scrollbar;
 import gwt.material.design.amcore.client.Am4Core;
 import gwt.material.design.amcore.client.ui.Button;
 import gwt.material.design.amcore.client.base.Container;
@@ -30,7 +31,6 @@ import gwt.material.design.amcore.client.constants.MouseWheelBehavior;
 import gwt.material.design.amcharts.client.cursor.XYCursor;
 import gwt.material.design.amcharts.client.datafield.chart.XYChartDataFields;
 import gwt.material.design.amcore.client.properties.Range;
-import gwt.material.design.amcharts.client.scrollbar.XYChartScrollbar;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import jsinterop.annotations.*;
 
@@ -60,10 +60,10 @@ public class XYChart extends SerialChart {
     public Container plotContainer;
 
     @JsProperty
-    public XYChartScrollbar scrollbarX;
+    public Scrollbar scrollbarX;
 
     @JsProperty
-    public XYChartScrollbar scrollbarY;
+    public Scrollbar scrollbarY;
 
     @JsProperty
     public List<Axis> xAxes;

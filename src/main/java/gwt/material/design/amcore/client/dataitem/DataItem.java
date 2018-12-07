@@ -19,11 +19,13 @@
  */
 package gwt.material.design.amcore.client.dataitem;
 
+import gwt.material.design.amcore.client.adapter.Adapter;
+import gwt.material.design.amcore.client.adapter.DataItemAdapter;
 import gwt.material.design.amcore.client.animation.Animation;
 import gwt.material.design.amcore.client.base.BaseObjectsEvents;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.constants.CalculatedValue;
-import gwt.material.design.amcore.client.properties.AnimationOptions;
+import gwt.material.design.amcore.client.animation.AnimationOptions;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +35,8 @@ import java.util.Date;
 @JsType(isNative = true, namespace = "am4charts")
 public class DataItem extends BaseObjectsEvents {
 
-    //TODO: adapter
+    @JsProperty
+    public Adapter<DataItem, DataItemAdapter> adapter;
 
     @JsProperty
     public Animation[] animations;

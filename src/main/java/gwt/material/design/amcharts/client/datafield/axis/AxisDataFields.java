@@ -20,8 +20,12 @@
 package gwt.material.design.amcharts.client.datafield.axis;
 
 import gwt.material.design.amcore.client.base.IComponentDataFields;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
 public class AxisDataFields extends IComponentDataFields {
+
+    @JsProperty
+    public String category;
 }

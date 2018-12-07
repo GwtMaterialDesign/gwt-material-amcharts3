@@ -19,14 +19,18 @@
  */
 package gwt.material.design.amcore.client.list;
 
+import gwt.material.design.amcore.client.events.AmEvent;
+import gwt.material.design.amcore.client.events.EventDispatcher;
+import gwt.material.design.amcore.client.events.SortedListEvents;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class OrderedList<T extends Object> {
+public class OrderedList<T> {
 
-    //TODO: EventDispatcher
+    @JsProperty
+    public EventDispatcher<AmEvent<SortedListEvents<T>>> events;
 
     @JsProperty
     public T first;

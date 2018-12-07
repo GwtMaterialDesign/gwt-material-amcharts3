@@ -53,7 +53,8 @@ public class ColorSet {
     @JsProperty
     public Number step;
 
-    //TODO: IColorSetStepOptions stepOptions
+    @JsProperty
+    public ColorSetStepOptions stepOptions;
 
     @JsProperty
     public boolean wrap;

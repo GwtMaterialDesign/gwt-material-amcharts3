@@ -19,7 +19,6 @@
  */
 package gwt.material.design.amcore.client.theme;
 
-import gwt.material.design.amcore.client.resources.CoreClientBundle;
 import gwt.material.design.amcore.client.resources.ThemeClientBundle;
 import gwt.material.design.client.MaterialDesignBase;
 

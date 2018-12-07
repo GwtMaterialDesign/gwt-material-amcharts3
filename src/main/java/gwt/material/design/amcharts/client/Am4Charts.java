@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcharts.client.bullet.CircleBullet;
 import gwt.material.design.amcharts.client.legend.HeatLegend;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -53,5 +54,8 @@ public class Am4Charts {
 
     @JsProperty(name = "HeatLegend")
     public static HeatLegend HeatLegend;
+
+    @JsProperty(name = "CircleBullet")
+    public static CircleBullet CircleBullet;
 
 }

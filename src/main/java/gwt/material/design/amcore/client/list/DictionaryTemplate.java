@@ -20,11 +20,18 @@
 package gwt.material.design.amcore.client.list;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
 public class DictionaryTemplate<T, V> extends Dictionary<T, V> {
 
+    @JsProperty
+    public V template;
+
     @JsMethod
     public native V create(String key);
+
+    @JsMethod
+    public native void copyFrom(DictionaryTemplate<T, V> source);
 }

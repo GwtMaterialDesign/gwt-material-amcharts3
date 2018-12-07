@@ -52,20 +52,37 @@ public class XYSeriesDataFields extends SeriesDataFields {
     @JsProperty
     public String openValueX;
 
-    //TODO CalculatedValue - openValueXShow
+    /**
+     * @see gwt.material.design.amcore.client.constants.CalculatedValue
+     */
+    @JsProperty
+    public String openValueXShow;
 
     @JsProperty
     public String openValueY;
 
-    //TODO CalculatedValue - openValueYShow
+    /**
+     * @see gwt.material.design.amcore.client.constants.CalculatedValue
+     */
+    @JsProperty
+    public String openValueYShow;
 
     @JsProperty
     public String valueX;
 
-    //TODO CalculatedValue - valueXShow
+    /**
+     * @see gwt.material.design.amcore.client.constants.CalculatedValue
+     */
+    @JsProperty
+    public String valueXShow;
 
     @JsProperty
     public String valueY;
 
-    //TODO CalculatedValue - valueYShow
+    /**
+     * @see gwt.material.design.amcore.client.constants.CalculatedValue
+     */
+    @JsProperty
+    public String valueYShow;
+
 }

@@ -19,12 +19,13 @@
  */
 package gwt.material.design.amcharts.client.series;
 
-import gwt.material.design.amcharts.client.axis.AxisLabel;
+import gwt.material.design.amcharts.client.axis.AxisLabelCircular;
 import gwt.material.design.amcharts.client.datafield.series.PercentSeriesDataFields;
 import gwt.material.design.amcharts.client.tick.Tick;
 import gwt.material.design.amcore.client.base.Slice;
 import gwt.material.design.amcore.client.color.ColorSet;
 import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,7 +40,7 @@ public class PercentSeries extends Series {
     public ColorSet colors;
 
     @JsProperty
-    public ListTemplate<AxisLabel> labels;
+    public ListTemplate<AxisLabelCircular> labels;
 
     @JsProperty
     public ListTemplate<Slice> slices;

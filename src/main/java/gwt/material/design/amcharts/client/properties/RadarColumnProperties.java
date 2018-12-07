@@ -17,32 +17,15 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcore.client.properties;
+package gwt.material.design.amcharts.client.properties;
 
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
-public class AnimationOptions {
+public class RadarColumnProperties extends ColumnProperties {
 
     @JsProperty
-    public Object childObject;
-
-    @JsProperty
-    public Object dummyData;
-
-    //TODO:
-    /*@JsProperty
-    public IAnimationOption from;*/
-
-    @JsProperty
-    public Object property;
-
-    //TODO:
-    /*@JsProperty
-    public IAnimationOption to;*/
-
-    @JsProperty
-    public Object updateMethod;
+    public int cornerRadius;
 }
