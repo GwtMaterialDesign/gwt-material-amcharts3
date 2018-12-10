@@ -20,6 +20,9 @@
 package gwt.material.design.amcharts.client.bullet;
 
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.ui.Label;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -33,14 +36,24 @@ public class Bullet extends Container {
     public boolean isDynamic;
 
     @JsProperty
-    public Number locationX;
+    public double locationX;
 
     @JsProperty
-    public Number locationY;
+    public double locationY;
 
     @JsProperty
     public String xField;
 
     @JsProperty
     public String yField;
+
+    @JsProperty
+    public Label label;
+
+    @JsProperty
+    public SpriteEventDispatcher<Bullet> events;
+
+    @JsMethod
+    public native void deepInvalidate();
+
 }

@@ -51,14 +51,14 @@ public class Morpher extends BaseObject {
     public Number scaleRatio;
 
     @JsMethod
-    public native Animation morphBack(Number duration, Object easing);
+    public native Animation morphBack(int duration, Object easing);
 
     @JsMethod
-    public native Animation morphToCircle(Number radius, Number duration, Object easing);
+    public native Animation morphToCircle(double radius, int duration, Object easing);
 
     @JsMethod
-    public native Animation morphToPolygon(Point[] points, Number duration, Object easing);
+    public native Animation morphToPolygon(Point[] points, int duration, Object easing);
 
     @JsMethod
-    public native Animation morphToRectangle(Number width, Number height, Number duration, Object easing);
+    public native Animation morphToRectangle(double width, double height, int duration, Object easing);
 }

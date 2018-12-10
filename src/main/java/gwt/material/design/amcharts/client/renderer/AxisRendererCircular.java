@@ -32,7 +32,7 @@ public class AxisRendererCircular extends AxisRenderer {
     public Number axisLength;
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
@@ -47,7 +47,7 @@ public class AxisRendererCircular extends AxisRenderer {
     public Number pixelRadius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
     public boolean useChartAngles;
@@ -62,8 +62,8 @@ public class AxisRendererCircular extends AxisRenderer {
     public native AxisLabelCircular createLabel();
 
     @JsMethod
-    public native Number positionToAngle(Number position);
+    public native Number positionToAngle(double position);
 
     @JsMethod
-    public native Point positionToPoint(Number position);
+    public native Point positionToPoint(double position);
 }

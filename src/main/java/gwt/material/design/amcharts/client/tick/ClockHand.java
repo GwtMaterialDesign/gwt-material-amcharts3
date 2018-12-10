@@ -72,5 +72,5 @@ public class ClockHand extends Container {
     public native void showValue(Object value);
 
     @JsMethod
-    public native void showValue(Object value, Number duration, Object easing);
+    public native void showValue(Object value, int duration, Object easing);
 }

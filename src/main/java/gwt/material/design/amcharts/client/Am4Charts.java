@@ -31,6 +31,10 @@ public class Am4Charts {
     @JsProperty(name = "PieChart")
     public static PieChart PieChart;
 
+    @JsProperty(name = "SerialChart")
+    public static SerialChart SerialChart;
+
+
     @JsProperty(name = "XYChart")
     public static XYChart XYChart;
 

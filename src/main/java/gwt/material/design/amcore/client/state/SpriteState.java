@@ -19,6 +19,10 @@
  */
 package gwt.material.design.amcore.client.state;
 
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.color.Filter;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -26,5 +30,35 @@ import jsinterop.annotations.JsType;
 public class SpriteState<T> {
 
     @JsProperty
+    public ListTemplate<Filter> filters;
+
+    @JsProperty
+    public boolean isTemplate;
+
+    @JsProperty
+    public String name;
+
+    @JsProperty
     public T properties;
+
+    @JsProperty
+    public Object propertyFields;
+
+    @JsProperty
+    public Sprite sprite;
+
+    @JsProperty
+    public int transitionDuration;
+
+    @JsProperty
+    public Object transitionEasing;
+
+    @JsMethod
+    public native void copyFrom(SpriteState source);
+
+    @JsMethod
+    public native T getPropertyValue(String key);
+
+    @JsMethod
+    public native void reset();
 }

@@ -19,14 +19,13 @@
  */
 package gwt.material.design.amcore.client.formatter;
 
+import com.google.gwt.core.client.JsDate;
 import gwt.material.design.amcore.client.base.BaseObject;
 import gwt.material.design.amcore.client.base.Language;
 import gwt.material.design.amcore.client.base.Sprite;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true, namespace = "am4core")
 public class DateFormatter extends BaseObject {
@@ -59,8 +58,8 @@ public class DateFormatter extends BaseObject {
     public native String format(Object source, String format);
 
     @JsMethod
-    public native Date parse(Object source);
+    public native JsDate parse(Object source);
 
     @JsMethod
-    public native Date parse(Object source, String format);
+    public native JsDate parse(Object source, String format);
 }

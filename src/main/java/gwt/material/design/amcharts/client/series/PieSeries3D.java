@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class PieSeries3D extends PieSeries {
 
     @JsProperty
-    public Number angle;
+    public double angle;
 
     @JsProperty
     public Number depth;

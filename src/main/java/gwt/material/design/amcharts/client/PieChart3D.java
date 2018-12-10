@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class PieChart3D extends PieChart {
 
     @JsProperty
-    public Number angle;
+    public double angle;
 
     @JsProperty
     public Number depth;

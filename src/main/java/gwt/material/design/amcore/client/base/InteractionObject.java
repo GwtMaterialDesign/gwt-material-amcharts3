@@ -91,7 +91,7 @@ public class InteractionObject extends BaseObject {
     public boolean swipeable;
 
     @JsProperty
-    public Number tabindex;
+    public int tabindex;
 
     @JsProperty
     public boolean trackable;

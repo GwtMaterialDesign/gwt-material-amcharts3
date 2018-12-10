@@ -19,10 +19,9 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
+import com.google.gwt.core.client.JsDate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class DateAxisBreak extends ValueAxisBreak {
@@ -31,8 +30,8 @@ public class DateAxisBreak extends ValueAxisBreak {
     public DateAxis axis;
 
     @JsProperty
-    public Date endDate;
+    public JsDate endDate;
 
     @JsProperty
-    public Date startDate;
+    public JsDate startDate;
 }

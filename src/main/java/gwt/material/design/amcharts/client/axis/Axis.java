@@ -60,7 +60,7 @@ public class Axis extends Sprite {
     public boolean cursorTooltipEnabled;
 
     @JsProperty
-    public Number endLocation;
+    public double endLocation;
 
     @JsProperty
     public AxisLabel ghostLabel;
@@ -72,7 +72,7 @@ public class Axis extends Sprite {
     public List<XYSeries> series;
 
     @JsProperty
-    public Number startLocation;
+    public double startLocation;
 
     @JsProperty
     public Label title;
@@ -80,11 +80,14 @@ public class Axis extends Sprite {
     @JsProperty
     public AxisDataFields dataFields;
 
+    @JsProperty
+    public boolean mouseEnabled;
+
     @JsMethod
     public native OrientationPoint anyToPoint(Number value);
 
     @JsMethod
-    public native Number anyToPosition(Number value);
+    public native double anyToPosition(Number value);
 
     @JsMethod
     public native void appendDataItem(AxisDataItem dataItem);
@@ -99,23 +102,23 @@ public class Axis extends Sprite {
     public native void fillRule(AxisDataItem dataItem);
 
     @JsMethod
-    public native void fillRule(AxisDataItem dataItem, Number index);
+    public native void fillRule(AxisDataItem dataItem, int index);
 
     @JsMethod
-    public native String getPositionLabel(Number position);
+    public native String getPositionLabel(double position);
 
     @JsMethod
     public native void invalidateSeries();
 
     @JsMethod
-    public native Number pointToPosition(Point point);
+    public native double pointToPosition(Point point);
 
     @JsMethod
-    public native Number positionToAngle(Number position);
+    public native double positionToAngle(double position);
 
     @JsMethod
-    public native void showTooltipAtPosition(Number position);
+    public native void showTooltipAtPosition(double position);
 
     @JsMethod
-    public native void toAxisPosition(Number position);
+    public native void toAxisPosition(double position);
 }

@@ -70,6 +70,9 @@ public class Label extends Container {
     @JsProperty
     public boolean wrap;
 
+    @JsProperty
+    public boolean isMeasured;
+
     @JsMethod
     public native AMElement getSvgElement(String text);
 

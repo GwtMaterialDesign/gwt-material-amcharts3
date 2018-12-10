@@ -19,10 +19,9 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
+import com.google.gwt.core.client.JsDate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class XYSeriesDataItem extends SeriesDataItem {
@@ -34,10 +33,10 @@ public class XYSeriesDataItem extends SeriesDataItem {
     public String categoryY;
 
     @JsProperty
-    public Date dateX;
+    public JsDate dateX;
 
     @JsProperty
-    public Date dateY;
+    public JsDate dateY;
 
     @JsProperty
     public String openCategoryX;
@@ -46,10 +45,10 @@ public class XYSeriesDataItem extends SeriesDataItem {
     public String openCategoryY;
 
     @JsProperty
-    public Date openDateX;
+    public JsDate openDateX;
 
     @JsProperty
-    public Date openDateY;
+    public JsDate openDateY;
 
     @JsProperty
     public Number openValueX;

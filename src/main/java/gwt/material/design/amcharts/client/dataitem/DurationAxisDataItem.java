@@ -19,10 +19,7 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class DurationAxisDataItem extends ValueAxisDataItem {

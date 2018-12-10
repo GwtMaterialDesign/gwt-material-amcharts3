@@ -22,6 +22,7 @@ package gwt.material.design.amcharts.client.renderer;
 import gwt.material.design.amcharts.client.axis.*;
 import gwt.material.design.amcharts.client.tick.AxisTick;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -43,10 +44,10 @@ public class AxisRenderer extends Container {
     public Container breakContainer;
 
     @JsProperty
-    public Number cellEndLocation;
+    public double cellEndLocation;
 
     @JsProperty
-    public Number cellStartLocation;
+    public double cellStartLocation;
 
     @JsProperty
     public boolean fullWidthTooltip;
@@ -70,13 +71,13 @@ public class AxisRenderer extends Container {
     public AxisLine line;
 
     @JsProperty
-    public Number maxLabelPosition;
+    public double maxLabelPosition;
 
     @JsProperty
     public Number minGridDistance;
 
     @JsProperty
-    public Number minLabelPosition;
+    public double minLabelPosition;
 
     @JsProperty
     public boolean opposite;
@@ -87,8 +88,11 @@ public class AxisRenderer extends Container {
     @JsProperty
     public Number tooltipLocation;
 
+    @JsProperty
+    public Sprite baseGrid;
+
     @JsMethod
-    public native Number coordinateToPosition(Number coordinate);
+    public native double coordinateToPosition(Number coordinate);
 
     @JsMethod
     public native void copyFrom(AxisRenderer source);
@@ -106,5 +110,5 @@ public class AxisRenderer extends Container {
     public native AxisTick createTick();
 
     @JsMethod
-    public native Number positionToCoordinate(Number position);
+    public native Number positionToCoordinate(double position);
 }

@@ -137,7 +137,7 @@ public class Sprite extends BaseObjectsEvents {
     public Object fillModifier;
 
     @JsProperty
-    public Number fillOpacity;
+    public double fillOpacity;
 
     @JsProperty
     public List<Filter> filters;
@@ -278,7 +278,7 @@ public class Sprite extends BaseObjectsEvents {
     public NumberFormatter numberFormatter;
 
     @JsProperty
-    public Number opacity;
+    public double opacity;
 
     @JsProperty
     public Number outerHeight;
@@ -404,7 +404,7 @@ public class Sprite extends BaseObjectsEvents {
     public String role;
 
     @JsProperty
-    public Number rollOutDelay;
+    public int rollOutDelay;
 
     @JsProperty
     public Number rotation;
@@ -440,7 +440,7 @@ public class Sprite extends BaseObjectsEvents {
     public Object strokeModifier;
 
     @JsProperty
-    public Number strokeOpacity;
+    public double strokeOpacity;
 
     @JsProperty
     public Number strokeWidth;
@@ -455,7 +455,7 @@ public class Sprite extends BaseObjectsEvents {
     public boolean swipeable;
 
     @JsProperty
-    public Number tabindex;
+    public int tabindex;
 
     @JsProperty
     public boolean togglable;
@@ -518,7 +518,7 @@ public class Sprite extends BaseObjectsEvents {
     public Object y;
 
     @JsProperty
-    public Number zIndex;
+    public int zIndex;
 
     @JsProperty
     public boolean clickable;
@@ -536,7 +536,7 @@ public class Sprite extends BaseObjectsEvents {
     public native Animation applyCurrentState();
 
     @JsMethod
-    public native Animation applyCurrentState(Number duration);
+    public native Animation applyCurrentState(int duration);
 
     @JsMethod
     public native void closeAllPopups();
@@ -575,13 +575,13 @@ public class Sprite extends BaseObjectsEvents {
     public native void hide();
 
     @JsMethod
-    public native void hide(Number duration);
+    public native void hide(int duration);
 
     @JsMethod
     public native void hideTooltip();
 
     @JsMethod
-    public native void hideTooltip(Number duration);
+    public native void hideTooltip(int duration);
 
     @JsMethod
     public native boolean hitTest(Sprite sprite);
@@ -641,7 +641,7 @@ public class Sprite extends BaseObjectsEvents {
     public native Animation setState(Object value);
 
     @JsMethod
-    public native Animation setState(Object value, Number transitionDuration, Object easing);
+    public native Animation setState(Object value, int transitionDuration, Object easing);
 
     @JsMethod
     public native void setVisibility(boolean value);
@@ -650,7 +650,7 @@ public class Sprite extends BaseObjectsEvents {
     public native void show();
 
     @JsMethod
-    public native void show(Number duration);
+    public native void show(int duration);
 
     @JsMethod
     public native void showTooltip();

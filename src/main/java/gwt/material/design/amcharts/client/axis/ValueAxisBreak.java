@@ -29,8 +29,8 @@ public class ValueAxisBreak extends AxisBreak {
     public ValueAxis axis;
 
     @JsProperty
-    public Number endPosition;
+    public double endPosition;
 
     @JsProperty
-    public Number startPosition;
+    public double startPosition;
 }

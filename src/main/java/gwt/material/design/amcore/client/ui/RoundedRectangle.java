@@ -28,17 +28,17 @@ import jsinterop.annotations.JsType;
 public class RoundedRectangle extends Sprite {
 
     @JsProperty
-    public Number cornerRadiusBottomLeft;
+    public double cornerRadiusBottomLeft;
 
     @JsProperty
-    public Number cornerRadiusBottomRight;
+    public double cornerRadiusBottomRight;
 
     @JsProperty
-    public Number cornerRadiusTopLeft;
+    public double cornerRadiusTopLeft;
 
     @JsProperty
-    public Number cornerRadiusTopRight;
+    public double cornerRadiusTopRight;
 
     @JsMethod
-    public native void cornerRadius(Number topLeft, Number topRight, Number belowLeft, Number belowRight);
+    public native void cornerRadius(double topLeft, double topRight, double belowLeft, double belowRight);
 }

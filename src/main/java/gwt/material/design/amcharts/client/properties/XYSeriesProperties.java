@@ -19,7 +19,6 @@
  */
 package gwt.material.design.amcharts.client.properties;
 
-import gwt.material.design.amcore.client.properties.ContainerProperties;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

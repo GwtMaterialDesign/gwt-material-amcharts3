@@ -19,9 +19,6 @@
  */
 package gwt.material.design.amcharts.client.dataitem;
 
-import gwt.material.design.amcharts.client.series.TreeMapSeries;
-import gwt.material.design.amcore.client.color.Color;
-import gwt.material.design.amcore.client.list.OrderedListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

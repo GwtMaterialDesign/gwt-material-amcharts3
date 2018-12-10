@@ -33,5 +33,5 @@ public class MapLineObject extends Container {
     public MapLine mapLine;
 
     @JsProperty
-    public Number position;
+    public double position;
 }

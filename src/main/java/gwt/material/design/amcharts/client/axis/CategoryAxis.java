@@ -53,43 +53,43 @@ public class CategoryAxis extends Axis {
     public native OrientationPoint anyToPoint(String category);
 
     @JsMethod
-    public native OrientationPoint anyToPoint(String category, Number location);
+    public native OrientationPoint anyToPoint(String category, double location);
 
     @JsMethod
-    public native Number anyToPosition(String category);
+    public native double anyToPosition(String category);
 
     @JsMethod
-    public native Number anyToPosition(String category, Number location);
+    public native double anyToPosition(String category, double location);
 
     @JsMethod
-    public native Number categoryToIndex(String category);
+    public native int categoryToIndex(String category);
 
     @JsMethod
     public native OrientationPoint categoryToPoint(String category);
 
     @JsMethod
-    public native OrientationPoint categoryToPoint(String category, Number location);
+    public native OrientationPoint categoryToPoint(String category, double location);
 
     @JsMethod
-    public native String getPositionLabel(Number position);
+    public native String getPositionLabel(double position);
 
     @JsMethod
-    public native XYSeriesDataItem getSeriesDataItem(XYSeries series, Number position);
+    public native XYSeriesDataItem getSeriesDataItem(XYSeries series, double position);
 
     @JsMethod
-    public native Number indexToPosition(int index);
+    public native double indexToPosition(int index);
 
     @JsMethod
-    public native Number indexToPosition(Number index, Number location);
+    public native double indexToPosition(int index, double location);
 
     @JsMethod
-    public native Number positionToIndex(Number position);
+    public native int positionToIndex(double position);
 
     @JsMethod
-    public native Number roundPosition(Number position);
+    public native double roundPosition(double position);
 
     @JsMethod
-    public native Number roundPosition(Number position, Number location);
+    public native double roundPosition(double position, double location);
 
     @JsMethod
     public native void zoomToCategories(String startCategory, String endCategory);

@@ -36,7 +36,7 @@ public class HeatLegend extends Container {
     public Container markerContainer;
 
     @JsProperty
-    public Number markerCount;
+    public int markerCount;
 
     @JsProperty
     public ListTemplate<RoundedRectangle> markers;

@@ -20,8 +20,11 @@
 package gwt.material.design.amcharts.client.column;
 
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
+import gwt.material.design.amcharts.client.properties.ColumnProperties;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.amcore.client.ui.RoundedRectangle;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -41,4 +44,7 @@ public class Column extends Container {
 
     @JsProperty
     public SpriteEventDispatcher<Column> events;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<ColumnProperties>> states;
 }

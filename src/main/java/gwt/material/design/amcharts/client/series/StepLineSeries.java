@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 public class StepLineSeries extends LineSeries {
 
     @JsProperty
-    public Number endLocation;
+    public double endLocation;
 
     @JsProperty
     public boolean noRisers;
 
     @JsProperty
-    public Number startLocation;
+    public double startLocation;
 
     @JsProperty
     public StepLineSeriesDataFields dataFields;

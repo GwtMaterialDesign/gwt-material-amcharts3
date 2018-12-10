@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class OrientationPoint extends Point {
 
     @JsProperty
-    public Number angle;
+    public double angle;
 }

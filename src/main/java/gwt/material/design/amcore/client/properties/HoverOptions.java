@@ -33,5 +33,5 @@ public class HoverOptions {
     public String touchOutBehavior;
 
     @JsProperty
-    public Number touchOutDelay;
+    public int touchOutDelay;
 }

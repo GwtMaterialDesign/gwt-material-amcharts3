@@ -35,7 +35,7 @@ public class ChordDiagram extends FlowDiagram {
     public Container chordContainer;
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -56,7 +56,7 @@ public class ChordDiagram extends FlowDiagram {
     public Object radius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
     public ChordDiagramDataFields dataFields;

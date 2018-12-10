@@ -129,7 +129,7 @@ public class SpriteProperties {
     public boolean nonScalingStroke;
 
     @JsProperty
-    public Number opacity;
+    public double opacity;
 
     @JsProperty
     public Number paddingBottom;
@@ -210,7 +210,7 @@ public class SpriteProperties {
     public Object strokeModifier;
 
     @JsProperty
-    public Number strokeOpacity;
+    public double strokeOpacity;
 
     @JsProperty
     public Number strokeWidth;
@@ -219,7 +219,7 @@ public class SpriteProperties {
     public boolean swipeable;
 
     @JsProperty
-    public Number tabindex;
+    public int tabindex;
 
     @JsProperty
     public boolean togglable;
@@ -285,5 +285,5 @@ public class SpriteProperties {
     public Object y;
 
     @JsProperty
-    public Number zIndex;
+    public int zIndex;
 }

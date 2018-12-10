@@ -34,10 +34,10 @@ public class BulletProperties extends ContainerProperties {
     public boolean isDynamic;
 
     @JsProperty
-    public Number locationX;
+    public double locationX;
 
     @JsProperty
-    public Number locationY;
+    public double locationY;
 
     @JsProperty
     public String xField;

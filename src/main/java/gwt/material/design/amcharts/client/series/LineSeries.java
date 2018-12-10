@@ -38,10 +38,10 @@ public class LineSeries extends XYSeries {
     public ListTemplate<LineSeriesSegment> segments;
 
     @JsProperty
-    public Number tensionX;
+    public double tensionX;
 
     @JsProperty
-    public Number tensionY;
+    public double tensionY;
 
     @JsProperty
     public LineSeriesDataFields dataFields;

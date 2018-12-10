@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client.series;
 
 import gwt.material.design.amcharts.client.column.Column;
 import gwt.material.design.amcharts.client.properties.ColumnSeriesProperties;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.series.ColumnSeriesDataFields;
 import gwt.material.design.amcharts.client.dataitem.ColumnSeriesDataItem;
@@ -49,6 +50,12 @@ public class ColumnSeries extends XYSeries {
 
     @JsProperty
     public SpriteState<ColumnSeriesProperties> riseFromPreviousState;
+
+    @JsProperty
+    public SpriteState<ColumnSeriesProperties> defaultState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<ColumnSeriesProperties>> states;
 
     @JsProperty
     public boolean simplifiedProcessing;

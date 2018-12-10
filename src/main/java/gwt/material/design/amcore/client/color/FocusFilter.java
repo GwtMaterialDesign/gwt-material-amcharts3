@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class FocusFilter extends Filter {
 
     @JsProperty
-    public Number opacity;
+    public double opacity;
 
     @JsProperty
     public Color stroke;

@@ -19,13 +19,11 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcharts.client.series.IRadarSeries;
-import gwt.material.design.amcore.client.base.Container;
-import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.base.Percent;
 import gwt.material.design.amcharts.client.cursor.RadarCursor;
 import gwt.material.design.amcharts.client.datafield.chart.RadarChartDataFields;
-import gwt.material.design.amcharts.client.series.RadarSeries;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -33,7 +31,7 @@ import jsinterop.annotations.JsType;
 public class RadarChart extends XYChart {
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -54,7 +52,7 @@ public class RadarChart extends XYChart {
     public Object radius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
     public RadarChartDataFields dataFields;

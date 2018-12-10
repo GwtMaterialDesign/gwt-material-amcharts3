@@ -28,13 +28,13 @@ import jsinterop.annotations.JsType;
 public class AxisRendererRadial extends AxisRendererY {
 
     @JsProperty
-    public Number axisAngle;
+    public double axisAngle;
 
     @JsProperty
     public Number axisLength;
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * @see gwt.material.design.amcore.client.constants.GridType
@@ -61,8 +61,8 @@ public class AxisRendererRadial extends AxisRendererY {
     public Object radius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsMethod
-    public native Point positionToPoint(Number position);
+    public native Point positionToPoint(double position);
 }

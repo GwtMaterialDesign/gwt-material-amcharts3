@@ -52,7 +52,7 @@ public class PercentSeriesDataItem extends SeriesDataItem {
     public native Animation hide();
 
     @JsMethod
-    public native Animation hide(Number duration, Number delay, Number toValue, String fields[]);
+    public native Animation hide(int duration, int delay, Number toValue, String fields[]);
 
     @JsMethod
     public native void setVisibility(boolean value);

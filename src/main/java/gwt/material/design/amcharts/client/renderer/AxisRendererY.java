@@ -31,8 +31,8 @@ public class AxisRendererY extends AxisRenderer {
     public Number axisLength;
 
     @JsMethod
-    public native Number pointToPosition(Point point);
+    public native double pointToPosition(Point point);
 
     @JsMethod
-    public native Point positionToPoint(Number position);
+    public native Point positionToPoint(double position);
 }

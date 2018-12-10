@@ -20,10 +20,7 @@
 package gwt.material.design.amcore.client.adapter;
 
 import gwt.material.design.amcore.client.dataitem.DataItem;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true)
 public class DataItemAdapter extends DataItem {

@@ -43,5 +43,8 @@ public class Image extends Sprite {
     public String href;
 
     @JsProperty
-    public Number widthRatio;
+    public Object widthRatio;
+
+    @JsProperty
+    public Image propertyFields;
 }

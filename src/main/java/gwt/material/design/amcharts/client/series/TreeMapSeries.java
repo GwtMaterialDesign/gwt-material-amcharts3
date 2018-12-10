@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
-public class TreeMapSeries extends LineSeries {
+public class TreeMapSeries extends ColumnSeries {
 
     @JsProperty
     public Number level;

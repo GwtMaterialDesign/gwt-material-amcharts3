@@ -50,7 +50,7 @@ public class FlowDiagramLink extends Container {
     public String colorMode;
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     @JsProperty
     public LinearGradient gradient;
@@ -68,10 +68,10 @@ public class FlowDiagramLink extends Container {
     public Object middleLine;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
-    public Number tooltipLocation;
+    public double tooltipLocation;
 
     @JsMethod
     public native void copyFrom(FlowDiagramLink source);

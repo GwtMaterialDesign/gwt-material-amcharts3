@@ -38,5 +38,5 @@ public class DropShadowFilter extends Filter {
     public Number dy;
 
     @JsProperty
-    public Number opacity;
+    public double opacity;
 }

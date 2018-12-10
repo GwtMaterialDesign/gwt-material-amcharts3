@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcore.client.data;
 
+import com.google.gwt.core.client.JsDate;
 import gwt.material.design.amcore.client.base.BaseObjectsEvents;
 import gwt.material.design.amcore.client.base.Component;
 import gwt.material.design.amcore.client.base.Language;
@@ -28,8 +29,6 @@ import gwt.material.design.amcore.client.properties.NetRequestOptions;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true)
 public class    DataSource extends BaseObjectsEvents {
@@ -59,7 +58,7 @@ public class    DataSource extends BaseObjectsEvents {
     public Language language;
 
     @JsProperty
-    public Date lastLoad;
+    public JsDate lastLoad;
 
     @JsProperty
     public DataParser parser;

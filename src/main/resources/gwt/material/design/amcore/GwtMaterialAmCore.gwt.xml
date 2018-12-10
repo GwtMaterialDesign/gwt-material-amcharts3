@@ -31,6 +31,9 @@
     <inherits name='gwt.material.design.GwtMaterialDesignBase'/>
     <inherits name="com.google.gwt.dom.DOM"/>
 
+    <!-- GWT JSON -->
+    <inherits name="com.google.gwt.json.JSON"/>
+
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>
 

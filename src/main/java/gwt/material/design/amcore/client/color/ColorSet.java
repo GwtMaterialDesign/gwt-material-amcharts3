@@ -51,7 +51,7 @@ public class ColorSet {
     public boolean shuffle;
 
     @JsProperty
-    public Number step;
+    public int step;
 
     @JsProperty
     public ColorSetStepOptions stepOptions;
@@ -66,8 +66,8 @@ public class ColorSet {
     public native void reset();
 
     @JsMethod
-    public native Color getIndex(Number index);
+    public native Color getIndex(int index);
 
     @JsMethod
-    public native void generate(Number count);
+    public native void generate(int count);
 }

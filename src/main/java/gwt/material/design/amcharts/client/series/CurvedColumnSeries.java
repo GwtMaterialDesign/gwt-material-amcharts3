@@ -19,7 +19,9 @@
  */
 package gwt.material.design.amcharts.client.series;
 
+import gwt.material.design.amcharts.client.column.CurvedColumn;
 import gwt.material.design.amcharts.client.datafield.series.CurvedColumnSeriesDataFields;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -29,4 +31,6 @@ public class CurvedColumnSeries extends ColumnSeries {
     @JsProperty
     public CurvedColumnSeriesDataFields dataFields;
 
+    @JsProperty
+    public ListTemplate<CurvedColumn> columns;
 }

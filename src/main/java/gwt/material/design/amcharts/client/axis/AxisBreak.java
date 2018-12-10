@@ -53,7 +53,7 @@ public class AxisBreak extends Container {
     public Point endPoint;
 
     @JsProperty
-    public Number endPosition;
+    public double endPosition;
 
     @JsProperty
     public Number endValue;
@@ -68,7 +68,7 @@ public class AxisBreak extends Container {
     public Point startPoint;
 
     @JsProperty
-    public Number startPosition;
+    public double startPosition;
 
     @JsProperty
     public Number startValue;

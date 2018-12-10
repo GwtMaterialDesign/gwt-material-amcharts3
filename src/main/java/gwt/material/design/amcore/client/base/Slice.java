@@ -19,6 +19,15 @@
  */
 package gwt.material.design.amcore.client.base;
 
+import gwt.material.design.amcore.client.adapter.Adapter;
+import gwt.material.design.amcore.client.adapter.SliceAdapter;
+import gwt.material.design.amcore.client.adapter.SpriteAdapter;
+import gwt.material.design.amcore.client.color.Color;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.properties.SliceProperties;
+import gwt.material.design.amcore.client.properties.SpriteProperties;
+import gwt.material.design.amcore.client.state.SpriteState;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -26,13 +35,16 @@ import jsinterop.annotations.JsType;
 public class Slice extends Container {
 
     @JsProperty
-    public Number arc;
+    public Adapter<Slice, SliceAdapter> adapter;
 
     @JsProperty
-    public Number cornerRadius;
+    public double arc;
 
     @JsProperty
-    public Number innerCornerRadius;
+    public double cornerRadius;
+
+    @JsProperty
+    public double innerCornerRadius;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -41,20 +53,26 @@ public class Slice extends Container {
     public Object innerRadius;
 
     @JsProperty
-    public Number pixelInnerRadius;
+    public double pixelInnerRadius;
 
     @JsProperty
-    public Number radius;
+    public double radius;
 
     @JsProperty
-    public Number radiusY;
+    public double radiusY;
 
     @JsProperty
-    public Number shiftRadius;
+    public double shiftRadius;
 
     @JsProperty
     public Sprite slice;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<SliceProperties>> states;
+
+    @JsMethod
+    public native Color lighten(double percent);
 }

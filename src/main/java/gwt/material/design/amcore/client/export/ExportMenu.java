@@ -39,7 +39,7 @@ public class ExportMenu extends BaseObject {
     public String classPrefix;
 
     @JsProperty
-    public Number closeDelay;
+    public int closeDelay;
 
     @JsProperty
     public Element container;
@@ -54,7 +54,7 @@ public class ExportMenu extends BaseObject {
     public Language language;
 
     @JsProperty
-    public Number tabindex;
+    public int tabindex;
 
     @JsProperty
     public String tag;

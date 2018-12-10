@@ -30,7 +30,7 @@ import jsinterop.annotations.JsType;
 public class Tooltip extends Container {
 
     @JsProperty
-    public Number animationDuration;
+    public int animationDuration;
 
     @JsProperty
     public Object animationEasing;

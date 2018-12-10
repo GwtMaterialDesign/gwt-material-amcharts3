@@ -30,7 +30,7 @@ import jsinterop.annotations.JsType;
 public class PieChart extends PercentChart {
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -45,7 +45,7 @@ public class PieChart extends PercentChart {
     public Object radius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
     public PieChartDataFields dataFields;

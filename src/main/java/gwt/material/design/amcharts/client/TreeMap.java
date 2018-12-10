@@ -23,6 +23,8 @@ import gwt.material.design.amcharts.client.axis.ValueAxis;
 import gwt.material.design.amcharts.client.dataitem.TreeMapSeriesDataItem;
 import gwt.material.design.amcore.client.color.ColorSet;
 import gwt.material.design.amcore.client.constants.Sorting;
+import gwt.material.design.amcore.client.events.AmEvent;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.base.NavigationBar;
 import gwt.material.design.amcharts.client.datafield.chart.TreeMapDataFields;
@@ -79,6 +81,9 @@ public class TreeMap extends XYChart {
 
     @JsProperty
     public ListTemplate<TreeMapSeries> series;
+
+    @JsProperty
+    public SpriteEventDispatcher<TreeMap> events;
 
     @JsMethod
     public native void zoomToSeriesDataItem(TreeMapSeriesDataItem dataItem);

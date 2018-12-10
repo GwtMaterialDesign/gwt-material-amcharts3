@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client;
 
 import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcharts.client.axis.Axis;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.scrollbar.Scrollbar;
 import gwt.material.design.amcore.client.Am4Core;
 import gwt.material.design.amcore.client.ui.Button;
@@ -80,11 +81,15 @@ public class XYChart extends SerialChart {
     @JsProperty
     public ListTemplate<XYSeries> series;
 
+    @JsProperty
+    public SpriteEventDispatcher<XYChart> events;
+
+
     @JsMethod
     public native void addData(Object[] rawDataItem);
 
     @JsMethod
-    public native void addData(Object[] rawDataItem, Number removeCount);
+    public native void addData(Object[] rawDataItem, int removeCount);
 
     @JsMethod
     public native void copyFrom(XYChart source);

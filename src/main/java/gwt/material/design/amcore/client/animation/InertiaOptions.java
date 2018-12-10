@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class InertiaOptions {
 
     @JsProperty
-    public Number duration;
+    public int duration;
 
     @JsProperty
     public Functions.FuncRet1<Number> easing;

@@ -47,7 +47,7 @@ public class XYSeries extends Series {
     public native void hide();
 
     @JsMethod
-    public native void hide(Number duration);
+    public native void hide(int duration);
 
     @JsMethod
     public native void hideTooltip();
@@ -56,7 +56,7 @@ public class XYSeries extends Series {
     public native void show();
 
     @JsMethod
-    public native void show(Number duration);
+    public native void show(int duration);
 
     @JsProperty
     public XYSeriesDataFields dataFields;

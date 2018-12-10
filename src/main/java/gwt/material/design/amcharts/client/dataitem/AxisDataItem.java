@@ -52,7 +52,7 @@ public class AxisDataItem extends DataItem {
     public Point point;
 
     @JsProperty
-    public Number position;
+    public double position;
 
     @JsProperty
     public Number value;

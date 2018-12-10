@@ -36,5 +36,5 @@ public class PolyLine extends Sprite {
     public Point[] segments;
 
     @JsMethod
-    public native OrientationPoint positionToPoint(Number number);
+    public native OrientationPoint positionToPoint(int number);
 }

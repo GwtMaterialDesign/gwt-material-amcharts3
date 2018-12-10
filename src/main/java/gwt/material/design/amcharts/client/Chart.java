@@ -47,6 +47,9 @@ public class Chart extends Component {
     @JsProperty
     public ChartDataFields dataFields;
 
+    @JsProperty
+    public Container bottomAxesContainer;
+
     @JsMethod
     public native void copyFrom(Chart source);
 }

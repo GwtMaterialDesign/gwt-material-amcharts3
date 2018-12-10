@@ -40,10 +40,10 @@ public class Cursor extends Container {
     public Point upPoint;
 
     @JsProperty
-    public Number xPosition;
+    public double xPosition;
 
     @JsProperty
-    public Number yPosition;
+    public double yPosition;
 
     @JsMethod
     public native void triggerDown(Point point);

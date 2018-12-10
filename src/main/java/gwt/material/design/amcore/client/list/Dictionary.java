@@ -36,16 +36,16 @@ public class Dictionary<T, V> {
     public native void each(Functions.Func2<T, V> values);
 
    @JsMethod
-   public native  T getKey(T key);
+   public native  V getKey(T key);
 
    @JsMethod
-   public native boolean hasKey(T key);
+   public native boolean hasKey(V key);
 
    @JsMethod
    public native void insertKey(T key, V value);
 
    @JsMethod
-   public native void removeKey(T key);
+   public native void removeKey(V key);
 
    @JsMethod
    public native void setKey(T key, V value);

@@ -19,9 +19,7 @@
  */
 package gwt.material.design.amcharts.client.column;
 
-import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.ui.Line;
-import gwt.material.design.amcore.client.ui.RoundedRectangle;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

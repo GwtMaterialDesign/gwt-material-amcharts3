@@ -19,18 +19,17 @@
  */
 package gwt.material.design.amcore.client.dataitem;
 
+import com.google.gwt.core.client.JsDate;
 import gwt.material.design.amcore.client.adapter.Adapter;
 import gwt.material.design.amcore.client.adapter.DataItemAdapter;
 import gwt.material.design.amcore.client.animation.Animation;
+import gwt.material.design.amcore.client.animation.AnimationOptions;
 import gwt.material.design.amcore.client.base.BaseObjectsEvents;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.constants.CalculatedValue;
-import gwt.material.design.amcore.client.animation.AnimationOptions;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-
-import java.util.Date;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class DataItem extends BaseObjectsEvents {
@@ -63,7 +62,7 @@ public class DataItem extends BaseObjectsEvents {
     public boolean ignoreMinMax;
 
     @JsProperty
-    public Number index;
+    public int index;
 
     @JsProperty
     public boolean isHiding;
@@ -75,7 +74,7 @@ public class DataItem extends BaseObjectsEvents {
     public Object locations;
 
     @JsProperty
-    public Number opacity;
+    public double opacity;
 
     @JsProperty
     public DataItem parent;
@@ -108,22 +107,22 @@ public class DataItem extends BaseObjectsEvents {
     public Object workingValue;
 
     @JsMethod
-    public native Animation animate(AnimationOptions[] animationOptions, Number duration);
+    public native Animation animate(AnimationOptions[] animationOptions, int duration);
 
     @JsMethod
-    public native Animation animate(AnimationOptions[] animationOptions, Number duration, Object easing);
+    public native Animation animate(AnimationOptions[] animationOptions, int duration, Object easing);
 
     @JsMethod
     public native void dispose();
 
     @JsMethod
-    public native Date getDate(String name);
+    public native JsDate getDate(String name);
 
     @JsMethod
-    public native Number getDuration();
+    public native int getDuration();
 
     @JsMethod
-    public native Number getDuration(Number duration);
+    public native int getDuration(int duration);
 
     @JsMethod
     public native Number getValue(String name);
@@ -141,7 +140,7 @@ public class DataItem extends BaseObjectsEvents {
     public native Animation hide();
 
     @JsMethod
-    public native Animation hide(Number duration, Number delay, Number toValue, String[] fields);
+    public native Animation hide(int duration, int delay, Number toValue, String[] fields);
 
     @JsMethod
     public native void setCalculatedValue(String name, Number value);
@@ -156,25 +155,25 @@ public class DataItem extends BaseObjectsEvents {
     public native void setCategory(String name, String value);
 
     @JsMethod
-    public native void setDate(String name, Date date);
+    public native void setDate(String name, JsDate date);
 
     @JsMethod
-    public native void setDate(String name, Date date, Number duration);
+    public native void setDate(String name, JsDate date, int duration);
 
     @JsMethod
     public native void setLocation(String name, Number value);
 
     @JsMethod
-    public native void setLocation(String name, Number value, Number duration, Number delay);
+    public native void setLocation(String name, double value, int duration, int delay);
 
     @JsMethod
     public native void setProperty(String name, Object value);
 
     @JsMethod
-    public native void setValue(String name, Number value);
+    public native void setValue(String name, double value);
 
     @JsMethod
-    public native void setValue(String name, Number value, Number duration, Number delay);
+    public native void setValue(String name, double value, int duration, int delay);
 
     @JsMethod
     public native void setVisibility(boolean value);
@@ -186,17 +185,17 @@ public class DataItem extends BaseObjectsEvents {
     public native void setWorkingLocation(String name, Number value);
 
     @JsMethod
-    public native void setWorkingLocation(String name, Number value, Number duration, Number delay);
+    public native void setWorkingLocation(String name, double value, int duration, int delay);
 
     @JsMethod
     public native void setWorkingValue(String name, Number value);
 
     @JsMethod
-    public native void setWorkingValue(String name, Number value, Number duration, Number delay);
+    public native void setWorkingValue(String name, double value, int duration, int delay);
 
     @JsMethod
     public native void show();
 
     @JsMethod
-    public native void show(Number duration, Number delay, String[] fields);
+    public native void show(int duration, int delay, String[] fields);
 }

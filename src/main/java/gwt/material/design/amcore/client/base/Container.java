@@ -130,5 +130,5 @@ public class Container extends Sprite {
     public native void removeChildren();
 
     @JsMethod
-    public native void setState(String value, Number transitionDuration, Object easing);
+    public native void setState(String value, int transitionDuration, Object easing);
 }

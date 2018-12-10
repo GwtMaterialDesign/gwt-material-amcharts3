@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class XYChart3D extends XYChart {
 
     @JsProperty
-    public Number angle;
+    public double angle;
 
     @JsProperty
     public Number depth;

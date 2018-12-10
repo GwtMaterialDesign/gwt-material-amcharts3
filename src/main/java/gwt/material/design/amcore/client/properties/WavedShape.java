@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class WavedShape extends Sprite {
 
     @JsProperty
-    public Number tension;
+    public double tension;
 
     @JsProperty
     public Number waveHeight;

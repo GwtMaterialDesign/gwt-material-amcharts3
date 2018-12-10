@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class RadarCursor extends XYCursor {
 
     @JsProperty
-    public Number endAngle;
+    public double endAngle;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -48,7 +48,7 @@ public class RadarCursor extends XYCursor {
     public Object radius;
 
     @JsProperty
-    public Number startAngle;
+    public double startAngle;
 
     @JsProperty
     public Number truePixelRadius;

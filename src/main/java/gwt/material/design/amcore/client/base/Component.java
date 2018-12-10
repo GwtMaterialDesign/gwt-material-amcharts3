@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcore.client.base;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import gwt.material.design.amcore.client.data.DataSource;
 import gwt.material.design.amcore.client.dataitem.DataItem;
 import gwt.material.design.amcore.client.list.OrderedList;
@@ -45,7 +46,7 @@ public class Component extends Container {
     public DataSource dataSource;
 
     @JsProperty
-    public Number interpolationDuration;
+    public int interpolationDuration;
 
     @JsProperty
     public Object interpolationEasing;
@@ -54,10 +55,10 @@ public class Component extends Container {
     public Number maxZoomFactor;
 
     @JsProperty
-    public Number parsingStepDuration;
+    public int parsingStepDuration;
 
     @JsProperty
-    public Number rangeChangeDuration;
+    public int rangeChangeDuration;
 
     @JsProperty
     public Object rangeChangeEasing;
@@ -69,7 +70,7 @@ public class Component extends Container {
     public boolean sequencedInterpolation;
 
     @JsProperty
-    public Number sequencedInterpolationDelay;
+    public int sequencedInterpolationDelay;
 
     @JsProperty
     public boolean skipRangeEvent;
@@ -78,7 +79,7 @@ public class Component extends Container {
     public Number zoomFactor;
 
     @JsMethod
-    public native void addData(Object[] rawDataItem, Number removeCount);
+    public native void addData(Object[] rawDataItem, int removeCount);
 
     @JsMethod
     public native void bindDataField(Object key, Object value);
@@ -102,19 +103,13 @@ public class Component extends Container {
     public native void reinit();
 
     @JsMethod
-    public native void removeData(Number count);
+    public native void removeData(int count);
 
-    //Irange zoom
-
-    @JsMethod
-    public native void zoomToIndexes(Number startIndex, Number endIndex);
-
-    @JsMethod
-    public native void zoomToIndexes(Number startIndex, Number endIndex, boolean skipRangeEvent, boolean instantly);
-
-    @JsMethod
-    public native void zoomToIndexes(int startIndex, int endIndex, boolean skipRangeEvent, boolean instantly);
+    //TODO: Irange zoom
 
     @JsMethod
     public native void zoomToIndexes(int startIndex, int endIndex);
+
+    @JsMethod
+    public native void zoomToIndexes(int startIndex, int endIndex, boolean skipRangeEvent, boolean instantly);
 }

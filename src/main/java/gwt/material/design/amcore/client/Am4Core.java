@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -24,6 +24,7 @@ import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcore.client.base.AmCoreOptions;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.language.Locale;
+import gwt.material.design.amcore.client.properties.Ease;
 import gwt.material.design.amcore.client.theme.ChartTheme;
 import gwt.material.design.amcore.client.ui.*;
 import gwt.material.design.client.MaterialDesign;
@@ -41,6 +42,9 @@ public class Am4Core {
     @JsProperty(namespace = "am4core", name = "Rectangle")
     public static Rectangle Rectangle;
 
+    @JsProperty(namespace = "am4core", name = "Triangle")
+    public static Rectangle Triangle;
+
     @JsProperty(namespace = "am4core", name = "Trapezoid")
     public static Trapezoid Trapezoid;
 
@@ -52,6 +56,9 @@ public class Am4Core {
 
     @JsProperty(namespace = "am4core", name = "Circle")
     public static Circle Circle;
+
+    @JsProperty(namespace = "am4core", name = "ease")
+    public static Ease ease;
 
     @JsMethod(namespace = "am4core")
     public static native Object create(String div, Object object);

@@ -46,16 +46,16 @@ public class ValueAxis extends Axis {
     public SerialChart chart;
 
     @JsProperty
-    public Number extraMax;
+    public double extraMax;
 
     @JsProperty
-    public Number extraMin;
+    public double extraMin;
 
     @JsProperty
     public boolean logarithmic;
 
     @JsProperty
-    public Number max;
+    public double max;
 
     @JsProperty
     public Number maxPrecision;
@@ -64,7 +64,7 @@ public class ValueAxis extends Axis {
     public Number maxZoomed;
 
     @JsProperty
-    public Number min;
+    public double min;
 
     @JsProperty
     public Number minZoomed;
@@ -73,7 +73,7 @@ public class ValueAxis extends Axis {
     public List<XYSeries> series;
 
     @JsProperty
-    public Number step;
+    public int step;
 
     @JsProperty
     public boolean strictMinMax;
@@ -97,7 +97,7 @@ public class ValueAxis extends Axis {
     public native OrientationPoint anyToPoint(Number value);
 
     @JsMethod
-    public native Number anyToPosition(Number value);
+    public native double anyToPosition(Number value);
 
     @JsMethod
     public native void copyFrom(ValueAxis source);
@@ -106,13 +106,13 @@ public class ValueAxis extends Axis {
     public native String formatLabel(Number value);
 
     @JsMethod
-    public native String getPositionLabel(Number position);
+    public native String getPositionLabel(double position);
 
     @JsMethod
-    public native Number pointToPosition(Point point);
+    public native double pointToPosition(Point point);
 
     @JsMethod
-    public native Number positionToValue(Number position);
+    public native Number positionToValue(double position);
 
     @JsMethod
     public native void showTooltipAt(Number value);
@@ -121,7 +121,7 @@ public class ValueAxis extends Axis {
     public native OrientationPoint valueToPoint(Number value);
 
     @JsMethod
-    public native Number valueToPosition(Number value);
+    public native double valueToPosition(Number value);
 
     @JsMethod
     public native Number xToValue(Number x);

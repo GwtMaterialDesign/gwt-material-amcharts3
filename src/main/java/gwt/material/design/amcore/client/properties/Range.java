@@ -27,11 +27,11 @@ import jsinterop.annotations.JsType;
 public class Range {
 
     @JsProperty
-    public Number end;
+    public double end;
 
     @JsProperty
     public String priority;
 
     @JsProperty
-    public Number start;
+    public double start;
 }

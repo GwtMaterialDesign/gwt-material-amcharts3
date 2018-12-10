@@ -30,11 +30,11 @@ public class AxisFill extends Sprite {
     public Axis axis;
 
     @JsProperty
-    public Number endPosition;
+    public double endPosition;
 
     @JsProperty
     public Object location;
 
     @JsProperty
-    public Number startPosition;
+    public double startPosition;
 }

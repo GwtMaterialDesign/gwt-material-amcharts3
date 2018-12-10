@@ -62,5 +62,5 @@ public class MapLine extends MapObject {
     public native void copyFrom(MapLine source);
 
     @JsMethod
-    public native OrientationPoint positionToPoint(Number position);
+    public native OrientationPoint positionToPoint(double position);
 }

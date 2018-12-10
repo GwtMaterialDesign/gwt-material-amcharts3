@@ -42,7 +42,7 @@ public class LinearGradient extends BaseObject {
     public native void addColor(Color color);
 
     @JsMethod
-    public native void addColor(Color color, Number opacity, Number offset);
+    public native void addColor(Color color, double opacity, Number offset);
 
     @JsMethod
     public native void copyFrom(LinearGradient source);

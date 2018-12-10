@@ -31,10 +31,10 @@ public class FunnelTick extends Tick {
     public Label label;
 
     @JsProperty
-    public Number locationX;
+    public double locationX;
 
     @JsProperty
-    public Number locationY;
+    public double locationY;
 
     @JsProperty
     public FunnelSlice slice;
