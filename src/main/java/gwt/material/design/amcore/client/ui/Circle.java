@@ -40,4 +40,7 @@ public class Circle extends Sprite {
      */
     @JsProperty
     public Object radius;
+
+    @JsProperty
+    public Object propertyFields;
 }

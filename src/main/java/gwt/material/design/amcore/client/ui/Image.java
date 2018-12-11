@@ -44,7 +44,4 @@ public class Image extends Sprite {
 
     @JsProperty
     public Object widthRatio;
-
-    @JsProperty
-    public Image propertyFields;
 }
