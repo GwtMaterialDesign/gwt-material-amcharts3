@@ -22,6 +22,7 @@ package gwt.material.design.amcharts.client.base;
 import gwt.material.design.amcharts.client.datafield.NavigationBarDataFields;
 import gwt.material.design.amcharts.client.dataitem.NavigationBarDataItem;
 import gwt.material.design.amcore.client.base.Component;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.ui.TextLink;
 import gwt.material.design.amcore.client.ui.Triangle;
@@ -45,4 +46,7 @@ public class NavigationBar extends Component {
 
     @JsProperty
     public NavigationBarDataItem dataItem;
+
+    @JsProperty
+    public SpriteEventDispatcher<NavigationBar> events;
 }

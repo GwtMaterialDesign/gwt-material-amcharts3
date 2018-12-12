@@ -33,13 +33,13 @@ public class Morpher extends BaseObject {
     public Animation[] animations;
 
     @JsProperty
-    public Number morphDuration;
+    public int morphDuration;
 
     @JsProperty
     public Object morphEasing;
 
     @JsProperty
-    public Number morphProgress;
+    public double morphProgress;
 
     @JsProperty
     public boolean morphToSingle;
@@ -48,7 +48,7 @@ public class Morpher extends BaseObject {
     public Morphable morphable;
 
     @JsProperty
-    public Number scaleRatio;
+    public double scaleRatio;
 
     @JsMethod
     public native Animation morphBack(int duration, Object easing);

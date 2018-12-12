@@ -23,6 +23,7 @@ import gwt.material.design.amcharts.client.node.ChordNode;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.datafield.chart.ChordDiagramDataFields;
 import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.Dictionary;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import jsinterop.annotations.JsProperty;
@@ -60,4 +61,8 @@ public class ChordDiagram extends FlowDiagram {
 
     @JsProperty
     public ChordDiagramDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<ChordDiagram> events;
+
 }

@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.PieChart3DDataFields;
 import gwt.material.design.amcharts.client.series.PieSeries3D;
@@ -39,4 +40,7 @@ public class PieChart3D extends PieChart {
 
     @JsProperty
     public ListTemplate<PieSeries3D> series;
+
+    @JsProperty
+    public SpriteEventDispatcher<PieChart3D> events;
 }

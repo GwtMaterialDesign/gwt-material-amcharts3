@@ -29,8 +29,5 @@ public class GwtMaterialAmMaps implements EntryPoint {
     public void onModuleLoad() {
         // Inject Am4chart resources
         MaterialDesignBase.injectJs(MapClientBundle.INSTANCE.mapJs());
-
-        //TODO: Move
-        MaterialDesignBase.injectJs(MapClientBundle.INSTANCE.worldLowJs());
     }
 }

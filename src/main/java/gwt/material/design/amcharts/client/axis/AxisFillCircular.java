@@ -19,7 +19,9 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
-import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.state.SpriteState;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -40,4 +42,16 @@ public class AxisFillCircular extends AxisFill {
      */
     @JsProperty
     public Object radius;
+
+    @JsProperty
+    public SpriteEventDispatcher<AxisFillCircular> events;
+
+    @JsProperty
+    public SpriteState<AxisFillCircular> defaultState;
+
+    @JsProperty
+    public SpriteState<AxisFillCircular> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<AxisFillCircular>> states;
 }

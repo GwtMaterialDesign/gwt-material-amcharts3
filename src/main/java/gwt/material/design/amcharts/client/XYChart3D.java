@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcharts.client.datafield.chart.XYChart3DDataFields;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -40,4 +41,7 @@ public class XYChart3D extends XYChart {
 
     @JsProperty
     public XYChart3DDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<XYChart3D> events;
 }

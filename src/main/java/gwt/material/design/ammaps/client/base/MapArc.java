@@ -17,22 +17,28 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.renderer;
+package gwt.material.design.ammaps.client.base;
 
-import gwt.material.design.amcore.client.properties.Point;
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.amcore.client.properties.OrientationPoint;
+import gwt.material.design.amcore.client.ui.PolyLine;
+import gwt.material.design.amcore.client.ui.Polyarc;
+import gwt.material.design.ammaps.client.properties.GeoPoint;
+import gwt.material.design.ammaps.client.series.MapArcSeries;
+import gwt.material.design.ammaps.client.series.MapLineSeries;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisRendererX3D extends AxisRendererX {
+@JsType(isNative = true, namespace = "am4maps")
+public class MapArc extends MapLine {
 
     @JsProperty
-    public int axisLength;
+    public Polyarc line;
 
-    @JsMethod
-    public native double pointToPosition(Point point);
+    @JsProperty
+    public MapArcSeries series;
 
-    @JsMethod
-    public native Point positionToPoint(double position);
+    @JsProperty
+    public boolean shortestDistance;
 }

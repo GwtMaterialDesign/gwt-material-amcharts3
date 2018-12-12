@@ -22,6 +22,7 @@ package gwt.material.design.ammaps.client.series;
 import gwt.material.design.amcore.client.data.DataSource;
 import gwt.material.design.amcharts.client.series.Series;
 import gwt.material.design.ammaps.client.datafields.MapSeriesDataFields;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

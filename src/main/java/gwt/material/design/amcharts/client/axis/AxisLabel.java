@@ -19,6 +19,11 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
+import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,4 +39,22 @@ public class AxisLabel extends Label {
 
     @JsProperty
     public Object location;
+
+    @JsProperty
+    public AxisDataItem dataItem;
+
+    @JsProperty
+    public List<AxisDataItem> dataItems;
+
+    @JsProperty
+    public SpriteEventDispatcher<AxisLabel> events;
+
+    @JsProperty
+    public SpriteState<AxisLabel> defaultState;
+
+    @JsProperty
+    public SpriteState<AxisLabel> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<AxisLabel>> states;
 }

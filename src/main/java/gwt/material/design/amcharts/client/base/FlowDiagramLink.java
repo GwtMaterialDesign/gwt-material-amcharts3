@@ -19,11 +19,13 @@
  */
 package gwt.material.design.amcharts.client.base;
 
+import gwt.material.design.amcharts.client.FlowDiagram;
 import gwt.material.design.amcharts.client.bullet.Bullet;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.color.LinearGradient;
 import gwt.material.design.amcore.client.constants.ColorMode;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.ui.Line;
 import gwt.material.design.amcore.client.ui.PolyLine;
@@ -72,6 +74,9 @@ public class FlowDiagramLink extends Container {
 
     @JsProperty
     public double tooltipLocation;
+
+    @JsProperty
+    public SpriteEventDispatcher<FlowDiagramLink> events;
 
     @JsMethod
     public native void copyFrom(FlowDiagramLink source);

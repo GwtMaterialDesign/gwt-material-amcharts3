@@ -17,22 +17,12 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.renderer;
+package gwt.material.design.ammaps.client.adapter;
 
-import gwt.material.design.amcore.client.properties.Point;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsProperty;
+import gwt.material.design.ammaps.client.base.MapLineObject;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisRendererX3D extends AxisRendererX {
+@JsType(isNative = true)
+public class MapLineObjectAdapters extends MapLineObject {
 
-    @JsProperty
-    public int axisLength;
-
-    @JsMethod
-    public native double pointToPosition(Point point);
-
-    @JsMethod
-    public native Point positionToPoint(double position);
 }

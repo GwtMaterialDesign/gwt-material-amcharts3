@@ -38,7 +38,7 @@ public class AxisRenderer extends Container {
     public ListTemplate<AxisFill> axisFills;
 
     @JsProperty
-    public Number axisLength;
+    public int axisLength;
 
     @JsProperty
     public Container breakContainer;

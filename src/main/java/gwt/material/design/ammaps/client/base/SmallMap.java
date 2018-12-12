@@ -17,22 +17,25 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.renderer;
+package gwt.material.design.ammaps.client.base;
 
-import gwt.material.design.amcore.client.properties.Point;
-import jsinterop.annotations.JsMethod;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.ui.Rectangle;
+import gwt.material.design.ammaps.client.MapChart;
+import gwt.material.design.ammaps.client.series.MapSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisRendererX3D extends AxisRendererX {
+@JsType(isNative = true, namespace = "am4maps")
+public class SmallMap extends Container {
 
     @JsProperty
-    public int axisLength;
+    public MapChart chart;
 
-    @JsMethod
-    public native double pointToPosition(Point point);
+    @JsProperty
+    public Rectangle rectangle ;
 
-    @JsMethod
-    public native Point positionToPoint(double position);
+    @JsProperty
+    public List<MapSeries> series ;
 }

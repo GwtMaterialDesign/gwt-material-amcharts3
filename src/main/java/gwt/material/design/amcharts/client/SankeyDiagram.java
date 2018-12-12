@@ -22,6 +22,7 @@ package gwt.material.design.amcharts.client;
 import gwt.material.design.amcharts.client.datafield.chart.SankeyDiagramDataFields;
 import gwt.material.design.amcore.client.constants.NodeAlign;
 import gwt.material.design.amcore.client.constants.Orientation;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -45,4 +46,7 @@ public class SankeyDiagram extends FlowDiagram {
 
     @JsProperty
     public SankeyDiagramDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<SankeyDiagram> events;
 }

@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class Tick extends Sprite {
 
     @JsProperty
-    public Number length;
+    public int length;
 }

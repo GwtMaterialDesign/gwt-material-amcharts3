@@ -46,5 +46,5 @@ public class BulletProperties extends ContainerProperties {
     public String yField;
 
     @JsProperty
-    public Number scale;
+    public double scale;
 }

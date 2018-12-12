@@ -31,7 +31,7 @@ public class AxisRendererRadial extends AxisRendererY {
     public double axisAngle;
 
     @JsProperty
-    public Number axisLength;
+    public int axisLength;
 
     @JsProperty
     public double endAngle;

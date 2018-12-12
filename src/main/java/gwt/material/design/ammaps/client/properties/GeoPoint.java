@@ -7,9 +7,9 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,16 +19,25 @@
  */
 package gwt.material.design.ammaps.client.properties;
 
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
 public class GeoPoint {
 
-    @JsProperty
-    public Number latitude;
+    private GeoPoint() {
+    }
+
+    @JsOverlay
+    public static GeoPoint create(double latitude, double longitude) {
+        GeoPoint geoPoint = new GeoPoint();
+        geoPoint.latitude = latitude;
+        geoPoint.longitude = longitude;
+        return geoPoint;
+    }
 
     @JsProperty
-    public Number longitude;
+    public double latitude;
+
+    @JsProperty
+    public double longitude;
 }

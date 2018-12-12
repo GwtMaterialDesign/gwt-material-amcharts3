@@ -23,6 +23,7 @@ import gwt.material.design.amcharts.client.cursor.RadarCursor;
 import gwt.material.design.amcharts.client.datafield.chart.RadarChartDataFields;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.base.Percent;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -62,4 +63,7 @@ public class RadarChart extends XYChart {
 
     @JsProperty
     public RadarCursor cursor;
+
+    @JsProperty
+    public SpriteEventDispatcher<RadarChart> events;
 }

@@ -22,7 +22,10 @@ package gwt.material.design.ammaps.client.base;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.state.SpriteState;
+import gwt.material.design.amcore.client.ui.Polygon;
+import gwt.material.design.ammaps.client.properties.GeoPoint;
 import gwt.material.design.ammaps.client.properties.MapPolygonProperties;
+import gwt.material.design.ammaps.client.series.MapPolygonSeries;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -30,8 +33,31 @@ import jsinterop.annotations.JsType;
 public class MapPolygon extends MapObject {
 
     @JsProperty
+    public double latitude;
+
+    @JsProperty
+    public double longitude;
+
+    @JsProperty
+    public GeoPoint[] multiGeoPolygon;
+
+    @JsProperty
+    public double pixelHeight;
+
+    @JsProperty
+    public double pixelWidth;
+
+    @JsProperty
+    public Polygon polygon;
+
+    @JsProperty
+    public MapPolygonSeries series;
+
+    @JsProperty
     public DictionaryTemplate<String, SpriteState<MapPolygonProperties>> states;
 
     @JsProperty
     public SpriteEventDispatcher<MapPolygon> events;
+
+
 }

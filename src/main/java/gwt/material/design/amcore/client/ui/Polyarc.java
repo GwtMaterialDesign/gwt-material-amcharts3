@@ -17,22 +17,17 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.renderer;
+package gwt.material.design.amcore.client.ui;
 
-import gwt.material.design.amcore.client.properties.Point;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisRendererX3D extends AxisRendererX {
+@JsType(isNative = true, namespace = "am4core")
+public class Polyarc extends PolyLine {
 
     @JsProperty
-    public int axisLength;
+    public double controlPointDistance;
 
-    @JsMethod
-    public native double pointToPosition(Point point);
-
-    @JsMethod
-    public native Point positionToPoint(double position);
+    @JsProperty
+    public double controlPointPosition;
 }

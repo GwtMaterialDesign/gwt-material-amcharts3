@@ -25,11 +25,11 @@ import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcharts.client.renderer.AxisRenderer;
 import gwt.material.design.amcharts.client.series.XYSeries;
 import gwt.material.design.amcore.client.base.Sprite;
-import gwt.material.design.amcore.client.list.List;
-import gwt.material.design.amcore.client.list.ListTemplate;
-import gwt.material.design.amcore.client.list.SortedListTemplate;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.*;
 import gwt.material.design.amcore.client.properties.OrientationPoint;
 import gwt.material.design.amcore.client.properties.Point;
+import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -45,10 +45,10 @@ public class Axis extends Sprite {
     public SortedListTemplate<AxisBreak> axisBreaks;
 
     @JsProperty
-    public Number axisFullLength;
+    public int axisFullLength;
 
     @JsProperty
-    public Number axisLength;
+    public int axisLength;
 
     @JsProperty
     public ListTemplate<AxisDataItem> axisRanges;
@@ -78,10 +78,28 @@ public class Axis extends Sprite {
     public Label title;
 
     @JsProperty
+    public boolean mouseEnabled;
+
+    @JsProperty
     public AxisDataFields dataFields;
 
     @JsProperty
-    public boolean mouseEnabled;
+    public AxisDataItem dataItem;
+
+    @JsProperty
+    public List<AxisDataItem> dataItems;
+
+    @JsProperty
+    public SpriteEventDispatcher<Axis> events;
+
+    @JsProperty
+    public SpriteState<Axis> defaultState;
+
+    @JsProperty
+    public SpriteState<Axis> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<Axis>> states;
 
     @JsMethod
     public native OrientationPoint anyToPoint(Number value);

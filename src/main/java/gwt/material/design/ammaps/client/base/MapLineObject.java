@@ -19,12 +19,17 @@
  */
 package gwt.material.design.ammaps.client.base;
 
+import gwt.material.design.amcore.client.adapter.Adapter;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.ammaps.client.adapter.MapLineObjectAdapters;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4maps")
 public class MapLineObject extends Container {
+
+    @JsProperty
+    public Adapter<MapLineObject, MapLineObjectAdapters> adapter;
 
     @JsProperty
     public boolean adjustRotation;

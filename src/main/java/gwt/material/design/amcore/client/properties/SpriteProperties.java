@@ -132,16 +132,16 @@ public class SpriteProperties {
     public double opacity;
 
     @JsProperty
-    public Number paddingBottom;
+    public double paddingBottom;
 
     @JsProperty
-    public Number paddingLeft;
+    public double paddingLeft;
 
     @JsProperty
-    public Number paddingRight;
+    public double paddingRight;
 
     @JsProperty
-    public Number paddingTop;
+    public double paddingTop;
 
     @JsProperty
     public String path;
@@ -186,10 +186,10 @@ public class SpriteProperties {
     public String role;
 
     @JsProperty
-    public Number rotation;
+    public double rotation;
 
     @JsProperty
-    public Number scale;
+    public double scale;
 
     /**
      * @see gwt.material.design.amcore.client.constants.ShapeRendering
@@ -204,7 +204,7 @@ public class SpriteProperties {
     public Object stroke;
 
     @JsProperty
-    public Number[] strokeDasharray;
+    public double[] strokeDasharray;
 
     @JsProperty
     public Object strokeModifier;
@@ -213,7 +213,7 @@ public class SpriteProperties {
     public double strokeOpacity;
 
     @JsProperty
-    public Number strokeWidth;
+    public double strokeWidth;
 
     @JsProperty
     public boolean swipeable;
@@ -237,10 +237,10 @@ public class SpriteProperties {
     public String tooltipText;
 
     @JsProperty
-    public Number tooltipX;
+    public double tooltipX;
 
     @JsProperty
-    public Number tooltipY;
+    public double tooltipY;
 
     @JsProperty
     public boolean trackable;

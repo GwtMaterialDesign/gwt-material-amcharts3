@@ -17,13 +17,14 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.ammaps.client.geodata;
+package gwt.material.design.ammaps.client.properties;
 
-import static gwt.material.design.jquery.client.api.JQuery.window;
+import gwt.material.design.amcore.client.properties.ContainerProperties;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
-public class WorldLow {
+@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+public class MapLineObjectProperties extends ContainerProperties {
 
-    public static Object get() {
-        return window().getPropertyObject("am4geodata_worldLow");
-    }
 }

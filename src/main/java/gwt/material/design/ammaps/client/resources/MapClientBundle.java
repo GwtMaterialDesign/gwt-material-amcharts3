@@ -28,8 +28,4 @@ public interface MapClientBundle extends ClientBundle {
 
     @Source("js/maps.js")
     TextResource mapJs();
-
-    @Source("js/geodata/worldLow.js")
-    TextResource worldLowJs();
-
 }

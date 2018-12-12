@@ -19,6 +19,9 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.state.SpriteState;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,8 +36,20 @@ public class AxisLabelCircular extends AxisLabel {
     public Object radius;
 
     @JsProperty
-    public Number relativeRotation;
+    public double relativeRotation;
 
     @JsMethod
-    public native Number pixelRadius(Number axisRadius);
+    public native double pixelRadius(double axisRadius);
+
+    @JsProperty
+    public SpriteEventDispatcher<AxisLabelCircular> events;
+
+    @JsProperty
+    public SpriteState<AxisLabelCircular> defaultState;
+
+    @JsProperty
+    public SpriteState<AxisLabelCircular> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<AxisLabelCircular>> states;
 }

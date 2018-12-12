@@ -23,6 +23,7 @@ import gwt.material.design.amcharts.client.datafield.chart.SerialChartDataFields
 import gwt.material.design.amcharts.client.series.Series;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.color.ColorSet;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -45,6 +46,9 @@ public class SerialChart extends Chart {
 
     @JsProperty
     public SerialChartDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<SerialChart> events;
 
     @JsMethod
     public native void copyFrom(SerialChart copyFrom);

@@ -64,7 +64,7 @@ public class Container extends Sprite {
     public String fontFamily;
 
     @JsProperty
-    public Number fontSize;
+    public double fontSize;
 
     @JsProperty
     public String fontWeight;

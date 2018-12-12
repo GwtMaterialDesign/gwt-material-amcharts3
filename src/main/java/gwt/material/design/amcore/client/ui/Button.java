@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
-@JsType(isNative = true)
+@JsType(isNative = true, namespace = "am4core")
 public class Button extends Container {
 
     @JsProperty

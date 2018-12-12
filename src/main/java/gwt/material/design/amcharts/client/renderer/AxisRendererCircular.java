@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class AxisRendererCircular extends AxisRenderer {
 
     @JsProperty
-    public Number axisLength;
+    public int axisLength;
 
     @JsProperty
     public double endAngle;
@@ -41,10 +41,16 @@ public class AxisRendererCircular extends AxisRenderer {
     public Object innerRadius;
 
     @JsProperty
-    public Number pixelInnerRadius;
+    public double pixelInnerRadius;
 
     @JsProperty
-    public Number pixelRadius;
+    public double pixelRadius;
+
+    /**
+     * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}
+     */
+    @JsProperty
+    public Object radius;
 
     @JsProperty
     public double startAngle;

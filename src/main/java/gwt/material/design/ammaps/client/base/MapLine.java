@@ -38,7 +38,7 @@ public class MapLine extends MapObject {
     public MapImage[] imagesToConnect;
 
     @JsProperty
-    public Number latitude;
+    public double latitude;
 
     @JsProperty
     public PolyLine line;
@@ -47,7 +47,7 @@ public class MapLine extends MapObject {
     public ListTemplate<MapLineObject> lineObjects;
 
     @JsProperty
-    public Number longitude;
+    public double longitude;
 
     @JsProperty
     public GeoPoint multiGeoLine;

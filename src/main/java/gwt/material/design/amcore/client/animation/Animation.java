@@ -19,8 +19,29 @@
  */
 package gwt.material.design.amcore.client.animation;
 
+import gwt.material.design.amcore.client.base.BaseObjectsEvents;
+import gwt.material.design.amcore.client.events.EventDispatcher;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4core")
-public class Animation {
+public class Animation extends BaseObjectsEvents {
+
+    @JsProperty
+    public AnimationOptions animationOptions;
+
+    @JsProperty
+    public boolean delayed;
+
+    @JsProperty
+    public int duration;
+
+    @JsProperty
+    public Object easing;
+
+    @JsProperty
+    public EventDispatcher<Animation> events;
+
+    @JsProperty
+    public int progress;
 }

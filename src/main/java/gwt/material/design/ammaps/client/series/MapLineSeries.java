@@ -35,7 +35,7 @@ public class MapLineSeries extends MapSeries {
     public MapChart chart;
 
     @JsProperty
-    public ListTemplate<MapLine> mapPolygons;
+    public ListTemplate<MapLine> mapLines;
 
     @JsProperty
     public MapLineSeriesDataFields dataFields;

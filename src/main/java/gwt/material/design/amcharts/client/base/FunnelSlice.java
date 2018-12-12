@@ -20,10 +20,37 @@
 package gwt.material.design.amcharts.client.base;
 
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.properties.Point;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class FunnelSlice extends Container {
 
+    @JsProperty
+    public Object bottomWidth;
 
+    @JsProperty
+    public double expandDistance;
+
+    @JsProperty
+    public String orientation;
+
+    @JsProperty
+    public Sprite slice;
+
+    @JsProperty
+    public Object topWidth;
+
+    @JsMethod
+    public native void copyFrom(FunnelSlice source);
+
+    @JsMethod
+    public native Point getPoint(double locationX, double locationY);
+
+    @JsProperty
+    public SpriteEventDispatcher<FlowDiagramLink> events;
 }

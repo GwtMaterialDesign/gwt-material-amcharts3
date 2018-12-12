@@ -27,14 +27,14 @@ import jsinterop.annotations.JsType;
 public class PointedShape extends Sprite {
 
     @JsProperty
-    public Number pointerBaseWidth;
+    public double pointerBaseWidth;
 
     @JsProperty
-    public Number pointerLength;
+    public int pointerLength;
 
     @JsProperty
-    public Number pointerX;
+    public double pointerX;
 
     @JsProperty
-    public Number pointerY;
+    public double pointerY;
 }

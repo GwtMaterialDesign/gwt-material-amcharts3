@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class List<T> {
 
     @JsProperty
-    public Number length;
+    public int length;
 
     @JsProperty
     public T[] values;

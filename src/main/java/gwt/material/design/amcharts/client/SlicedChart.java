@@ -19,9 +19,10 @@
  */
 package gwt.material.design.amcharts.client;
 
-import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.SlicedChartDataFields;
 import gwt.material.design.amcharts.client.series.FunnelSeries;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -33,4 +34,7 @@ public class SlicedChart extends PercentChart {
 
     @JsProperty
     public ListTemplate<FunnelSeries> series;
+
+    @JsProperty
+    public SpriteEventDispatcher<SlicedChart> events;
 }

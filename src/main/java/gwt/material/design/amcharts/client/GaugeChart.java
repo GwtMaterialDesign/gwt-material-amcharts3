@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client;
 
 import gwt.material.design.amcharts.client.tick.ClockHand;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.GaugeChartDataFields;
 import jsinterop.annotations.JsProperty;
@@ -33,5 +34,8 @@ public class GaugeChart extends RadarChart {
 
     @JsProperty
     public GaugeChartDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<GaugeChart> events;
 
 }

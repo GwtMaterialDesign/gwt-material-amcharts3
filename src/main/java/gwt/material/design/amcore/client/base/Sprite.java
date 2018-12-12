@@ -40,6 +40,7 @@ import gwt.material.design.amcore.client.properties.*;
 import gwt.material.design.amcore.client.state.SpriteState;
 import gwt.material.design.jscore.client.api.core.Element;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -146,7 +147,7 @@ public class Sprite extends BaseObjectsEvents {
     public boolean focusable;
 
     @JsProperty
-    public Number globalScale;
+    public double globalScale;
 
     @JsProperty
     public Group group;
@@ -194,10 +195,10 @@ public class Sprite extends BaseObjectsEvents {
     public boolean inited;
 
     @JsProperty
-    public Number innerHeight;
+    public double innerHeight;
 
     @JsProperty
-    public Number innerWidth;
+    public double innerWidth;
 
     @JsProperty
     public InteractionObject interactions;
@@ -248,22 +249,22 @@ public class Sprite extends BaseObjectsEvents {
     public Object marginTop;
 
     @JsProperty
-    public Number maxHeight;
+    public double maxHeight;
 
     @JsProperty
-    public Number maxWidth;
+    public double maxWidth;
 
     @JsProperty
-    public Number measuredHeight;
+    public double measuredHeight;
 
     @JsProperty
-    public Number measuredWidth;
+    public double measuredWidth;
 
     @JsProperty
-    public Number minHeight;
+    public double minHeight;
 
     @JsProperty
-    public Number minWidth;
+    public double minWidth;
 
     @JsProperty
     public Modal modal;
@@ -281,10 +282,10 @@ public class Sprite extends BaseObjectsEvents {
     public double opacity;
 
     @JsProperty
-    public Number outerHeight;
+    public double outerHeight;
 
     @JsProperty
-    public Number outerWidth;
+    public double outerWidth;
 
     @JsProperty
     public Object paddingBottom;
@@ -305,43 +306,43 @@ public class Sprite extends BaseObjectsEvents {
     public String path;
 
     @JsProperty
-    public Number pixelHeight;
+    public double pixelHeight;
 
     @JsProperty
-    public Number pixelMarginBottom;
+    public double pixelMarginBottom;
 
     @JsProperty
-    public Number pixelMarginLeft;
+    public double pixelMarginLeft;
 
     @JsProperty
-    public Number pixelMarginRight;
+    public double pixelMarginRight;
 
     @JsProperty
-    public Number pixelMarginTop;
+    public double pixelMarginTop;
 
     @JsProperty
-    public Number pixelPaddingBottom;
+    public double pixelPaddingBottom;
 
     @JsProperty
-    public Number pixelPaddingLeft;
+    public double pixelPaddingLeft;
 
     @JsProperty
-    public Number pixelPaddingRight;
+    public double pixelPaddingRight;
 
     @JsProperty
-    public Number pixelPaddingTop;
+    public double pixelPaddingTop;
 
     @JsProperty
     public boolean pixelPerfect;
 
     @JsProperty
-    public Number pixelWidth;
+    public double pixelWidth;
 
     @JsProperty
-    public Number pixelX;
+    public double pixelX;
 
     @JsProperty
-    public Number pixelY;
+    public double pixelY;
 
     @JsProperty
     public ListTemplate<Popup> popups;
@@ -368,34 +369,34 @@ public class Sprite extends BaseObjectsEvents {
     public Object realStroke;
 
     @JsProperty
-    public Number relativeMarginBottom;
+    public double relativeMarginBottom;
 
     @JsProperty
-    public Number relativeMarginLeft;
+    public double relativeMarginLeft;
 
     @JsProperty
-    public Number relativeMarginRight;
+    public double relativeMarginRight;
 
     @JsProperty
-    public Number relativeMarginTop;
+    public double relativeMarginTop;
 
     @JsProperty
-    public Number relativePaddingBottom;
+    public double relativePaddingBottom;
 
     @JsProperty
-    public Number relativePaddingLeft;
+    public double relativePaddingLeft;
 
     @JsProperty
-    public Number relativePaddingRight;
+    public double relativePaddingRight;
 
     @JsProperty
-    public Number relativePaddingTop;
+    public double relativePaddingTop;
 
     @JsProperty
-    public Number relativeX;
+    public double relativeX;
 
     @JsProperty
-    public Number relativeY;
+    public double relativeY;
 
     @JsProperty
     public boolean resizable;
@@ -407,13 +408,13 @@ public class Sprite extends BaseObjectsEvents {
     public int rollOutDelay;
 
     @JsProperty
-    public Number rotation;
+    public double rotation;
 
     @JsProperty
     public boolean rtl;
 
     @JsProperty
-    public Number scale;
+    public double scale;
 
     @JsProperty
     public Object shapeRendering;
@@ -443,7 +444,7 @@ public class Sprite extends BaseObjectsEvents {
     public double strokeOpacity;
 
     @JsProperty
-    public Number strokeWidth;
+    public double strokeWidth;
 
     @JsProperty
     public SVGContainer svgContainer;
@@ -626,7 +627,7 @@ public class Sprite extends BaseObjectsEvents {
     public native Popup openPopup(String text, String title);
 
     @JsMethod
-    public native Sprite padding(Number top, Number right, Number bottom, Number left);
+    public native Sprite padding(double top, double right, double bottom, double left);
 
     @JsMethod
     public native void setElement(AMElement element);

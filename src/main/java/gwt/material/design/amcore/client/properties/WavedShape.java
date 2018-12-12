@@ -31,8 +31,8 @@ public class WavedShape extends Sprite {
     public double tension;
 
     @JsProperty
-    public Number waveHeight;
+    public double waveHeight;
 
     @JsProperty
-    public Number waveLength;
+    public double waveLength;
 }

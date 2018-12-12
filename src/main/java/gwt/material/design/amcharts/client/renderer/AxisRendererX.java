@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class AxisRendererX extends AxisRenderer {
 
     @JsProperty
-    public Number axisLength;
+    public int axisLength;
 
     @JsMethod
     public native double pointToPosition(Point point);

@@ -19,13 +19,18 @@
  */
 package gwt.material.design.ammaps.client.series;
 
+import gwt.material.design.amcore.client.list.ListTemplate;
+import gwt.material.design.ammaps.client.base.MapArc;
 import gwt.material.design.ammaps.client.datafields.MapArcSeriesDataFields;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4maps")
-public class MapArcSeries extends MapSeries {
+public class MapArcSeries extends MapLineSeries {
 
     @JsProperty
     public MapArcSeriesDataFields dataFields;
+
+    @JsProperty
+    public ListTemplate<MapArc> mapLines;
 }

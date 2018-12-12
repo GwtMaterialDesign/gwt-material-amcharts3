@@ -19,8 +19,21 @@
  */
 package gwt.material.design.ammaps.client.projections;
 
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4maps")
 public class Projection {
+
+    @JsProperty
+    public double deltaGama;
+
+    @JsProperty
+    public double deltaLatitude;
+
+    @JsProperty
+    public double deltaLongitude;
+
+    @JsProperty
+    public double scale;
 }

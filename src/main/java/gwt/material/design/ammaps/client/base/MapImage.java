@@ -27,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class MapImage extends MapObject {
 
     @JsProperty
-    public Number latitude;
+    public double latitude;
 
     @JsProperty
-    public Number longitude;
+    public double longitude;
 
     @JsProperty
     public MapImageSeries series;

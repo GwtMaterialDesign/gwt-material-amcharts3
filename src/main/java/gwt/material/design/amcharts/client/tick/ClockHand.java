@@ -36,7 +36,7 @@ public class ClockHand extends Container {
     public Axis axis;
 
     @JsProperty
-    public Number endWidth;
+    public double endWidth;
 
     @JsProperty
     public Trapezoid hand;
@@ -63,14 +63,17 @@ public class ClockHand extends Container {
     public String rotationDirection;
 
     @JsProperty
-    public Number startWidth;
+    public double startWidth;
 
     @JsProperty
-    public Object value;
+    public double value;
 
     @JsMethod
-    public native void showValue(Object value);
+    public native void showValue(double value);
 
     @JsMethod
-    public native void showValue(Object value, int duration, Object easing);
+    public native void showValue(double value, int duration);
+
+    @JsMethod
+    public native void showValue(double value, int duration, Object easing);
 }

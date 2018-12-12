@@ -35,19 +35,19 @@ public class AMElement {
     public Object node;
 
     @JsProperty
-    public Number rotation;
+    public double rotation;
 
     @JsProperty
-    public Number scale;
+    public double scale;
 
     @JsProperty
     public String textContent;
 
     @JsProperty
-    public Number x;
+    public double x;
 
     @JsProperty
-    public Number y;
+    public double y;
 
     @JsMethod
     public native void addClass(String name);

@@ -19,9 +19,30 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
+import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcore.client.base.Sprite;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
+import gwt.material.design.amcore.client.list.List;
+import gwt.material.design.amcore.client.state.SpriteState;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = "am4charts")
 public class AxisLine extends Sprite {
+
+    @JsProperty
+    public AxisDataItem dataItem;
+
+    @JsProperty
+    public SpriteEventDispatcher<AxisLine> events;
+
+    @JsProperty
+    public SpriteState<AxisLine> defaultState;
+
+    @JsProperty
+    public SpriteState<AxisLine> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<AxisLine>> states;
 }

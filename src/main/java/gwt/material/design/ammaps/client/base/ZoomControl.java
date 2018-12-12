@@ -17,22 +17,29 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcharts.client.renderer;
+package gwt.material.design.ammaps.client.base;
 
-import gwt.material.design.amcore.client.properties.Point;
-import jsinterop.annotations.JsMethod;
+import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.ui.Button;
+import gwt.material.design.ammaps.client.MapChart;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "am4charts")
-public class AxisRendererX3D extends AxisRendererX {
+@JsType(isNative = true, namespace = "am4maps")
+public class ZoomControl extends Container {
 
     @JsProperty
-    public int axisLength;
+    public MapChart chart;
 
-    @JsMethod
-    public native double pointToPosition(Point point);
+    @JsProperty
+    public Button minusButton;
 
-    @JsMethod
-    public native Point positionToPoint(double position);
+    @JsProperty
+    public Button plusButton;
+
+    @JsProperty
+    public Container slider;
+
+    @JsProperty
+    public Button thumb;
 }

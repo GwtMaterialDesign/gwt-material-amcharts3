@@ -24,6 +24,7 @@ import gwt.material.design.amcore.client.color.ColorSet;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcharts.client.base.FlowDiagramLink;
 import gwt.material.design.amcore.client.constants.FlowDiagramSortBy;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcharts.client.datafield.chart.FlowDiagramDataFields;
@@ -44,10 +45,10 @@ public class FlowDiagram extends Chart {
     public Container linksContainer;
 
     @JsProperty
-    public Number minNodeSize;
+    public int minNodeSize;
 
     @JsProperty
-    public Number nodePadding;
+    public double nodePadding;
 
     @JsProperty
     public DictionaryTemplate<String, FlowDiagramNode> nodes;
@@ -63,6 +64,9 @@ public class FlowDiagram extends Chart {
 
     @JsProperty
     public FlowDiagramDataFields dataFields;
+
+    @JsProperty
+    public SpriteEventDispatcher<FlowDiagram> events;
 
     @JsMethod
     public native void dispose();

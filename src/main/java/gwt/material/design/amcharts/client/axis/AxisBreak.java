@@ -19,11 +19,17 @@
  */
 package gwt.material.design.amcharts.client.axis;
 
+import gwt.material.design.amcharts.client.datafield.axis.AxisDataFields;
+import gwt.material.design.amcharts.client.dataitem.AxisDataItem;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
+import gwt.material.design.amcore.client.list.DictionaryTemplate;
 import gwt.material.design.amcore.client.list.List;
 import gwt.material.design.amcore.client.dataitem.DataItem;
+import gwt.material.design.amcore.client.list.OrderedListTemplate;
 import gwt.material.design.amcore.client.properties.Point;
 import gwt.material.design.amcore.client.properties.WavedShape;
+import gwt.material.design.amcore.client.state.SpriteState;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -42,9 +48,6 @@ public class AxisBreak extends Container {
 
     @JsProperty
     public Number breakSize;
-
-    @JsProperty
-    public List<DataItem> dataItems;
 
     @JsProperty
     public WavedShape endLine;
@@ -72,6 +75,24 @@ public class AxisBreak extends Container {
 
     @JsProperty
     public Number startValue;
+
+    @JsProperty
+    public AxisDataItem dataItem;
+
+    @JsProperty
+    public List<AxisDataItem> dataItems;
+
+    @JsProperty
+    public SpriteEventDispatcher<AxisBreak> events;
+
+    @JsProperty
+    public SpriteState<AxisBreak> defaultState;
+
+    @JsProperty
+    public SpriteState<AxisBreak> hiddenState;
+
+    @JsProperty
+    public DictionaryTemplate<String, SpriteState<AxisBreak>> states;
 
     @JsMethod
     public native void dispose();

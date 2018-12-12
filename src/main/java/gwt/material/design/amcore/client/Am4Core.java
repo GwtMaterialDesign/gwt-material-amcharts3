@@ -23,6 +23,7 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Widget;
 import gwt.material.design.amcore.client.base.AmCoreOptions;
 import gwt.material.design.amcore.client.base.Container;
+import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.language.Locale;
 import gwt.material.design.amcore.client.properties.Ease;
 import gwt.material.design.amcore.client.theme.ChartTheme;
@@ -35,6 +36,9 @@ public class Am4Core {
 
     @JsProperty
     public static AmCoreOptions options;
+
+    @JsProperty(namespace = "am4core", name = "Sprite")
+    public static Sprite Sprite;
 
     @JsProperty(namespace = "am4core", name = "Container")
     public static Container Container;

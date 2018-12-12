@@ -19,6 +19,7 @@
  */
 package gwt.material.design.amcharts.client;
 
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.base.Percent;
 import gwt.material.design.amcharts.client.datafield.chart.PieChartDataFields;
@@ -52,4 +53,7 @@ public class PieChart extends PercentChart {
 
     @JsProperty
     public ListTemplate<PieSeries> series;
+
+    @JsProperty
+    public SpriteEventDispatcher<PieChart> events;
 }
