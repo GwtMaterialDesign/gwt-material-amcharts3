@@ -49,10 +49,10 @@ public class AxisRendererRadial extends AxisRendererY {
     public Object innerRadius;
 
     @JsProperty
-    public Number pixelInnerRadius;
+    public double pixelInnerRadius;
 
     @JsProperty
-    public Number pixelRadius;
+    public double pixelRadius;
 
     /**
      * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}

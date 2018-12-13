@@ -36,10 +36,10 @@ public class RadarCursor extends XYCursor {
     public Object innerRadius;
 
     @JsProperty
-    public Number pixelInnerRadius;
+    public double pixelInnerRadius;
 
     @JsProperty
-    public Number pixelRadius;
+    public double pixelRadius;
 
     /**
      * Accepts {@link Number} or {@link Percent}
@@ -51,5 +51,5 @@ public class RadarCursor extends XYCursor {
     public double startAngle;
 
     @JsProperty
-    public Number truePixelRadius;
+    public double truePixelRadius;
 }

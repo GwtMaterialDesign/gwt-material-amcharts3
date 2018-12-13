@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class AxisFillCircular extends AxisFill {
 
     @JsProperty
-    public Number cornerRadius;
+    public double cornerRadius;
 
     /**
      * Accepts {@link Number} or {@link gwt.material.design.amcore.client.base.Percent}

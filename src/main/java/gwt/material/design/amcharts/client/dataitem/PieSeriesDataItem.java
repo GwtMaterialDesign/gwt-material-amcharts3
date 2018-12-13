@@ -28,5 +28,5 @@ import jsinterop.annotations.JsType;
 public class PieSeriesDataItem extends PercentSeriesDataItem {
 
     @JsProperty
-    public Number radiusValue;
+    public double radiusValue;
 }

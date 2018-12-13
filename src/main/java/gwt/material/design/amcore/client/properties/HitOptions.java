@@ -27,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class HitOptions extends SpriteProperties {
 
     @JsProperty
-    public Number doubleHitTime;
+    public double doubleHitTime;
 
     @JsProperty
-    public Number hitTolerance;
+    public double hitTolerance;
 
     @JsProperty
     public boolean noFocus;

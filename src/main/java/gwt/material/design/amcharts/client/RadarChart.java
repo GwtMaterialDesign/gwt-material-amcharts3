@@ -41,7 +41,7 @@ public class RadarChart extends XYChart {
     public Object innerRadius;
 
     @JsProperty
-    public Number pixelInnerRadius;
+    public double pixelInnerRadius;
 
     @JsProperty
     public Container radarContainer;

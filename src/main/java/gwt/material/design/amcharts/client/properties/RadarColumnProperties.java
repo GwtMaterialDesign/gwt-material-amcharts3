@@ -27,5 +27,5 @@ import jsinterop.annotations.JsType;
 public class RadarColumnProperties extends ColumnProperties {
 
     @JsProperty
-    public int cornerRadius;
+    public double cornerRadius;
 }
