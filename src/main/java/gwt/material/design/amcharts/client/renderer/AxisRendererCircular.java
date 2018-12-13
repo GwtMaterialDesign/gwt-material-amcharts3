@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client.renderer;
 
 import gwt.material.design.amcharts.client.axis.*;
+import gwt.material.design.amcore.client.list.ListTemplate;
 import gwt.material.design.amcore.client.properties.Point;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
@@ -57,6 +58,9 @@ public class AxisRendererCircular extends AxisRenderer {
 
     @JsProperty
     public boolean useChartAngles;
+
+    @JsProperty
+    public ListTemplate<AxisLabelCircular> labels;
 
     @JsMethod
     public native AxisFillCircular createFill(Axis axis);

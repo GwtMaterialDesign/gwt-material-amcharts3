@@ -17,30 +17,12 @@
  * limitations under the License.
  * #L%
  */
-package gwt.material.design.amcore.client.animation;
+package gwt.material.design.amcore.client.adapter;
 
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
+import gwt.material.design.amcore.client.ui.Label;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
-public class AnimationOptions<T> {
+@JsType(isNative = true)
+public class LabelAdapter extends Label {
 
-    @JsProperty
-    public Object childObject;
-
-    @JsProperty
-    public Object dummyData;
-
-    @JsProperty
-    public T from;
-
-    @JsProperty
-    public Object property;
-
-    @JsProperty
-    public T to;
-
-    @JsProperty
-    public Object updateMethod;
 }

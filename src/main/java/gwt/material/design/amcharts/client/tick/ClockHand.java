@@ -21,6 +21,7 @@ package gwt.material.design.amcharts.client.tick;
 
 import gwt.material.design.amcharts.client.axis.Axis;
 import gwt.material.design.amcore.client.constants.RotationDirection;
+import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
 import gwt.material.design.amcore.client.ui.Circle;
 import gwt.material.design.amcore.client.base.Container;
 import gwt.material.design.amcore.client.base.Percent;
@@ -67,6 +68,9 @@ public class ClockHand extends Container {
 
     @JsProperty
     public double value;
+
+    @JsProperty
+    public SpriteEventDispatcher<ClockHand> events;
 
     @JsMethod
     public native void showValue(double value);
