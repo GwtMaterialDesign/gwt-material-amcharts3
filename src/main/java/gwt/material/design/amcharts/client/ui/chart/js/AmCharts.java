@@ -149,6 +149,21 @@ public class AmCharts {
      */
     public static native void makeChart(String elementId, Object value);
 
-    @JsMethod
-    public static native Object parseJSON(String value);
+    /**
+     * Loads a file from url and calls function handler with the result
+     */
+    @JsMethod(namespace = "AmCharts")
+    public static native void loadFile(String dataSetUrl, Object options, Functions.Func1<Object> data);
+
+    /**
+     * Parses JSON string into an object
+     */
+    @JsMethod(namespace = "AmCharts")
+    public static native Object parseJSON(Object value);
+
+    /**
+     * Prases CSV string into an object
+     */
+    @JsMethod(namespace = "AmCharts")
+    public static native Object parseCSV(Object value, Object options);
 }
